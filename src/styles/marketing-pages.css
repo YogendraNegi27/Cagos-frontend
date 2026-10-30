@@ -1,0 +1,480 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   MARKETING INNER PAGES — scoped dark / light theme
+   Used by .mkt-page (MarketingPageShell) and .auth-page (AuthPageShell).
+   Relies on cagos.css tokens: --bg, --ink, --ink-2, --ink-3, --line, --card…
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.mkt-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* ── Skip link ─────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--indigo);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0 0 12px 0;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* ── Scoped typography (do NOT leak globally) ──────────────────────── */
+.mkt-page .text-white:not(.mkt-on-dark):not(.mkt-btn-light) {
+  color: var(--ink);
+}
+.mkt-page .text-slate-100 { color: var(--ink); }
+.mkt-page .text-slate-200 { color: var(--ink-2); }
+.mkt-page .text-slate-300 { color: var(--ink-2); }
+.mkt-page .text-slate-400 { color: var(--ink-3); }
+.mkt-page .text-slate-500 { color: var(--ink-3); }
+.mkt-page .text-slate-600 { color: var(--ink-3); }
+.mkt-page .text-slate-700 { color: var(--ink-3); }
+
+/* Colored CTAs keep white label text */
+.mkt-page .glow-button,
+.mkt-page .bg-brand-600,
+.mkt-page .bg-brand-500,
+.mkt-page .bg-brand-600:hover,
+.mkt-page a.bg-brand-600,
+.mkt-page button.bg-brand-600 {
+  color: #ffffff !important;
+}
+
+.mkt-page .text-gradient-teal {
+  background: linear-gradient(135deg, var(--indigo) 0%, #0d9488 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ── Surfaces & borders ────────────────────────────────────────────── */
+.mkt-page .bg-canvas-900,
+.mkt-page.bg-canvas-900 { background: var(--bg) !important; }
+.mkt-page .bg-canvas-800 { background: var(--card) !important; }
+.mkt-page .bg-canvas-700 { background: var(--card-2) !important; }
+
+.mkt-page .border-white\/5,
+.mkt-page .border-white\/6,
+.mkt-page .border-white\/8,
+.mkt-page .border-white\/10,
+.mkt-page .border-white\/12,
+.mkt-page .border-white\/15,
+.mkt-page .border-white\/20 {
+  border-color: var(--line) !important;
+}
+
+.mkt-page .bg-white\/2 { background: color-mix(in srgb, var(--ink) 3%, transparent) !important; }
+.mkt-page .bg-white\/3 { background: color-mix(in srgb, var(--ink) 4%, transparent) !important; }
+.mkt-page .bg-white\/4 { background: color-mix(in srgb, var(--ink) 5%, transparent) !important; }
+.mkt-page .bg-white\/5 { background: color-mix(in srgb, var(--ink) 6%, transparent) !important; }
+.mkt-page .bg-white\/6 { background: color-mix(in srgb, var(--ink) 7%, transparent) !important; }
+.mkt-page .bg-white\/8 { background: color-mix(in srgb, var(--ink) 8%, transparent) !important; }
+.mkt-page .bg-white\/10 { background: color-mix(in srgb, var(--ink) 10%, transparent) !important; }
+.mkt-page .bg-white\/15 { background: color-mix(in srgb, var(--ink) 12%, transparent) !important; }
+
+.mkt-page .hover\:bg-white\/6:hover { background: color-mix(in srgb, var(--ink) 7%, transparent) !important; }
+.mkt-page .hover\:bg-white\/8:hover { background: color-mix(in srgb, var(--ink) 8%, transparent) !important; }
+.mkt-page .hover\:bg-white\/10:hover { background: color-mix(in srgb, var(--ink) 10%, transparent) !important; }
+.mkt-page .hover\:text-white:hover { color: var(--ink) !important; }
+
+/* ── Glass panels ──────────────────────────────────────────────────── */
+.mkt-page .glass {
+  background: color-mix(in srgb, var(--card) 88%, transparent) !important;
+  border: 1px solid var(--line) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.mkt-page .glass-md {
+  background: color-mix(in srgb, var(--card) 92%, transparent) !important;
+  border: 1px solid var(--line-2) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* ── Product mock UI — always dark app chrome ──────────────────────── */
+.mkt-page .glass-dark,
+.mkt-page .mkt-preview-dark {
+  color: #e2e8f0;
+  background: linear-gradient(165deg, #0d1628 0%, #0a1228 55%, #060c18 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 30px 60px -20px rgba(0, 0, 0, 0.55) !important;
+}
+
+.mkt-page .glass-dark .text-white,
+.mkt-page .mkt-preview-dark .text-white,
+.mkt-page .glass-dark .text-slate-300,
+.mkt-page .mkt-preview-dark .text-slate-300 {
+  color: #e2e8f0 !important;
+}
+
+.mkt-page .glass-dark .text-slate-400,
+.mkt-page .mkt-preview-dark .text-slate-400,
+.mkt-page .glass-dark .text-slate-500,
+.mkt-page .mkt-preview-dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.mkt-page .glass-dark .border-white\/8,
+.mkt-page .mkt-preview-dark .border-white\/8 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.mkt-page .glass-dark .bg-white\/3,
+.mkt-page .glass-dark .bg-white\/4,
+.mkt-page .mkt-preview-dark .bg-white\/3,
+.mkt-page .mkt-preview-dark .bg-white\/4 {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.mkt-page .mkt-on-dark {
+  color: #ffffff !important;
+}
+
+/* ── Hero ambient orbs ───────────────────────────────────────────── */
+[data-theme="light"] .mkt-page .bg-brand-600\/12,
+[data-theme="light"] .mkt-page .bg-brand-600\/15,
+[data-theme="light"] .mkt-page .bg-brand-600\/20 {
+  opacity: 0.35;
+}
+[data-theme="light"] .mkt-page .bg-teal-500\/10,
+[data-theme="light"] .mkt-page .bg-teal-500\/15 {
+  opacity: 0.3;
+}
+
+/* ── FAQ accordions ────────────────────────────────────────────────── */
+.mkt-page .rounded-2xl.border.cursor-pointer {
+  border-color: var(--line) !important;
+  background: var(--card) !important;
+}
+.mkt-page .rounded-2xl.border.cursor-pointer:hover {
+  border-color: color-mix(in srgb, var(--indigo) 35%, var(--line)) !important;
+}
+
+/* ── Form inputs (blog search, etc.) ───────────────────────────────── */
+.mkt-page input[type="text"],
+.mkt-page input[type="email"],
+.mkt-page input[type="search"] {
+  background: var(--card-inner) !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
+}
+.mkt-page input::placeholder {
+  color: var(--ink-3) !important;
+}
+.mkt-page input:focus {
+  border-color: color-mix(in srgb, var(--indigo) 50%, var(--line)) !important;
+  outline: none;
+}
+
+/* ── Blog cards ────────────────────────────────────────────────────── */
+.mkt-page a.bg-canvas-800 {
+  background: var(--card) !important;
+  border-color: var(--line) !important;
+  box-shadow: var(--shadow-card);
+}
+.mkt-page a.bg-canvas-800:hover {
+  border-color: color-mix(in srgb, var(--indigo) 40%, var(--line)) !important;
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ── VS comparison table surfaces ──────────────────────────────────── */
+.mkt-page .rounded-3xl.bg-slate-900,
+.mkt-page .rounded-2xl.bg-slate-900 {
+  background: var(--card) !important;
+  border: 1px solid var(--line) !important;
+}
+
+[data-theme="light"] .mkt-page .rounded-3xl.bg-slate-900,
+[data-theme="light"] .mkt-page .rounded-2xl.bg-slate-900 {
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Step numbers watermark ────────────────────────────────────────── */
+.mkt-page .text-white\/5 {
+  color: color-mix(in srgb, var(--ink) 8%, transparent) !important;
+}
+
+/* ── Glow button (light mode) ──────────────────────────────────────── */
+[data-theme="light"] .mkt-page .glow-button {
+  box-shadow: 0 4px 20px rgba(91, 80, 255, 0.35), 0 2px 8px rgba(91, 80, 255, 0.2) !important;
+}
+
+/* Blog prose inside marketing pages */
+.mkt-page .blog-prose h2,
+.mkt-page .blog-prose h3,
+.mkt-page .blog-prose h4,
+.mkt-page .blog-prose strong {
+  color: var(--ink);
+}
+.mkt-page .blog-prose p,
+.mkt-page .blog-prose li {
+  color: var(--ink-2);
+}
+.mkt-page .blog-prose a {
+  color: var(--indigo);
+}
+.mkt-page .blog-prose blockquote {
+  border-left-color: var(--indigo);
+  color: var(--ink-2);
+}
+.mkt-page .blog-prose code {
+  background: color-mix(in srgb, var(--ink) 8%, var(--card-inner));
+  color: var(--orange);
+}
+.mkt-page .blog-prose th {
+  background: var(--card-inner);
+  color: var(--ink);
+}
+.mkt-page .blog-prose th,
+.mkt-page .blog-prose td {
+  border-color: var(--line);
+}
+
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.auth-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.auth-page-brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+.auth-page-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 20px 48px;
+}
+
+.auth-page-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+.auth-page-footer a {
+  color: var(--ink-3);
+  text-decoration: none;
+  font-weight: 600;
+}
+.auth-page-footer a:hover {
+  color: var(--indigo);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 36px 32px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-card h1,
+.auth-card h2 {
+  text-align: center;
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.auth-card .auth-subtitle {
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.auth-icon-wrap {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--indigo), var(--indigo-2));
+  color: #fff;
+  box-shadow: 0 12px 30px -8px rgba(91, 80, 255, 0.45);
+}
+
+.auth-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+}
+
+.auth-input-group {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--card-inner);
+}
+
+.auth-input-prefix {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-3);
+  background: color-mix(in srgb, var(--ink) 4%, var(--card-inner));
+  border-right: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.auth-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+}
+.auth-input:focus {
+  outline: none;
+}
+
+.auth-input-standalone {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--card-inner);
+  color: var(--ink);
+  font-size: 14px;
+}
+.auth-input-standalone:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--indigo) 50%, var(--line));
+}
+
+.auth-btn-primary {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--indigo), var(--indigo-2));
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 10px 30px -8px rgba(91, 80, 255, 0.5);
+}
+.auth-btn-primary:hover:not(:disabled) {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+.auth-btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.auth-divider {
+  position: relative;
+  margin: 28px 0;
+  text-align: center;
+}
+.auth-divider span {
+  position: relative;
+  padding: 0 12px;
+  background: var(--card);
+  color: var(--ink-3);
+  font-size: 13px;
+}
+
+.auth-link {
+  color: var(--indigo);
+  font-weight: 700;
+  text-decoration: none;
+}
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.auth-error {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: color-mix(in srgb, #ef4444 12%, var(--card));
+  border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+  color: #f87171;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+[data-theme="light"] .auth-error {
+  color: #dc2626;
+}
+
+.auth-step-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.auth-step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--line-2);
+}
+.auth-step-dot.active {
+  background: var(--indigo);
+  width: 24px;
+}
+
+.auth-benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.auth-benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+}

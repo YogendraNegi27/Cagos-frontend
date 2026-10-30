@@ -1,0 +1,21 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+.dev.vars*
+.tanstack
+.design-backups
+.turbo
+.vite
+coverage
+*.tsbuildinfo
+.workerd
+.wrangler
+dev.vars
+*.log
+# routeTree.gen.ts is COMMITTED on purpose: the generator only runs inside the
+# Vite plugin, so `tsc --noEmit` in CI has no way to produce it. Without the
+# committed tree, createFileRoute() ids resolve to `undefined` and typecheck
+# fails on a clean clone. The plugin regenerates it on dev/build; a stale tree
+# fails typecheck, which is the safe direction.

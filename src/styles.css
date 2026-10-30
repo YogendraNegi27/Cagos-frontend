@@ -1,0 +1,1338 @@
+@import "./styles/cagos.css";
+@import "./styles/marketing-pages.css";
+@import "./styles/base.css";
+@source "../src/**/*.{ts,tsx}";
+
+/* ═══════════════════════════════════════════════════════════════════════
+   BLOG PROSE — styles applied to dangerouslySetInnerHTML content (CMS body)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.blog-prose { font-size: 1.05rem; line-height: 1.75; }
+.blog-prose > * + * { margin-top: 1.25rem; }
+.blog-prose h2 {
+  font-size: 1.875rem; font-weight: 800; letter-spacing: -0.01em;
+  margin-top: 2.5rem; margin-bottom: 0.75rem; color: #ffffff;
+}
+.blog-prose h3 {
+  font-size: 1.375rem; font-weight: 700;
+  margin-top: 2rem; margin-bottom: 0.5rem; color: #ffffff;
+}
+.blog-prose h4 {
+  font-size: 1.125rem; font-weight: 700; margin-top: 1.5rem; color: #f1f5f9;
+}
+.blog-prose p { color: #cbd5e1; }
+.blog-prose a {
+  color: #60a5fa; text-decoration: underline; text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.blog-prose a:hover { color: #93c5fd; }
+.blog-prose strong { color: #ffffff; font-weight: 700; }
+.blog-prose em { color: #e2e8f0; }
+.blog-prose ul, .blog-prose ol { padding-left: 1.5rem; }
+.blog-prose ul { list-style-type: disc; }
+.blog-prose ol { list-style-type: decimal; }
+.blog-prose li { margin-bottom: 0.5rem; color: #cbd5e1; }
+.blog-prose li > ul, .blog-prose li > ol { margin-top: 0.5rem; }
+.blog-prose blockquote {
+  border-left: 3px solid #3b82f6; padding-left: 1.25rem;
+  font-style: italic; color: #e2e8f0; margin: 1.5rem 0;
+}
+.blog-prose code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.9em; padding: 0.15rem 0.4rem; border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.08); color: #f59e0b;
+}
+.blog-prose pre {
+  background: rgba(0, 0, 0, 0.4); padding: 1rem 1.25rem; border-radius: 0.75rem;
+  overflow-x: auto; font-size: 0.875rem; border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.blog-prose pre code { background: transparent; color: #e2e8f0; padding: 0; }
+.blog-prose img {
+  border-radius: 0.75rem; margin: 1.5rem 0; max-width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.blog-prose hr { border-color: rgba(255, 255, 255, 0.08); margin: 2.5rem 0; }
+.blog-prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+.blog-prose th, .blog-prose td { border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.625rem 0.875rem; text-align: left; }
+.blog-prose th { background: rgba(255, 255, 255, 0.04); color: #ffffff; font-weight: 700; }
+
+/* Light theme prose overrides */
+[data-theme="light"] .blog-prose h2,
+[data-theme="light"] .blog-prose h3,
+[data-theme="light"] .blog-prose h4,
+[data-theme="light"] .blog-prose strong { color: #0f172a; }
+[data-theme="light"] .blog-prose p,
+[data-theme="light"] .blog-prose li { color: #334155; }
+[data-theme="light"] .blog-prose em { color: #475569; }
+[data-theme="light"] .blog-prose a { color: #2563eb; }
+[data-theme="light"] .blog-prose a:hover { color: #1d4ed8; }
+[data-theme="light"] .blog-prose code { background: rgba(0, 0, 0, 0.05); color: #b45309; }
+[data-theme="light"] .blog-prose pre { background: #0f172a; border-color: rgba(0, 0, 0, 0.08); }
+[data-theme="light"] .blog-prose pre code { color: #e2e8f0; }
+[data-theme="light"] .blog-prose th { background: rgba(0, 0, 0, 0.04); color: #0f172a; }
+[data-theme="light"] .blog-prose th,
+[data-theme="light"] .blog-prose td { border-color: rgba(0, 0, 0, 0.08); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MARKETING SITE — LIGHT THEME OVERRIDES
+   Applied when <html data-theme="light"> is set by ThemeContext.
+   Dark theme is the default (no overrides needed — shared styles handle it).
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variable overrides for custom canvas colors ─────────────────── */
+[data-theme="light"] {
+  /* Warm off-white page background — use #FFFEFB everywhere "white" reads as
+     the page surface. Cards/elevations stay pure white for contrast. */
+  --color-canvas-900: #FFFEFB;
+  --color-canvas-800: #f8fafc;
+  --color-canvas-700: #f1f5f9;
+  --color-canvas-600: #e2e8f0;
+  --background: #FFFEFB;
+  --color-background: #FFFEFB;
+}
+
+/* Apply warm off-white to the html/body surface explicitly so areas outside
+   any section background (e.g. rubber-band scroll on macOS) match. */
+html[data-theme="light"],
+html[data-theme="light"] body {
+  background-color: #FFFEFB !important;
+}
+
+/* ── Glassmorphism light variants ────────────────────────────────────── */
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+}
+[data-theme="light"] .glass-md {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+[data-theme="light"] .glass-dark {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ── Glow button — softer in light mode ─────────────────────────────── */
+[data-theme="light"] .glow-button {
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35), 0 2px 8px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* ── Text color overrides ─────────────────────────────────────────────
+   In dark mode: text-white = white, text-slate-400 = grey
+   In light mode: flip them to dark equivalents
+   ────────────────────────────────────────────────────────────────────── */
+[data-theme="light"] .text-white   { color: #0f172a !important; }
+[data-theme="light"] .text-slate-100 { color: #0f172a !important; }
+[data-theme="light"] .text-slate-200 { color: #1e293b !important; }
+[data-theme="light"] .text-slate-300 { color: #334155 !important; }
+[data-theme="light"] .text-slate-400 { color: #64748b !important; }
+[data-theme="light"] .text-slate-500 { color: #94a3b8 !important; }
+[data-theme="light"] .text-slate-600 { color: #94a3b8 !important; }
+[data-theme="light"] .text-slate-700 { color: #94a3b8 !important; }
+
+/* ── Hardcoded dark hex backgrounds → light equivalents ─────────────── */
+[data-theme="light"] [class*="bg-\[#070d1a\]"],
+[data-theme="light"] [class*="bg-\[#060c18\]"],
+[data-theme="light"] [class*="bg-\[#09101e\]"],
+[data-theme="light"] [class*="bg-\[#0a1020\]"] { background-color: #f8fafc !important; }
+
+[data-theme="light"] [class*="bg-\[#0d1628\]"],
+[data-theme="light"] [class*="bg-\[#0a1526\]"],
+[data-theme="light"] [class*="bg-\[#0a1a2e\]"],
+[data-theme="light"] [class*="bg-\[#0a1228\]"] { background-color: #FFFEFB !important; }
+
+/* ── Border color flip ───────────────────────────────────────────────── */
+[data-theme="light"] .border-white\/8,
+[data-theme="light"] .border-white\/5,
+[data-theme="light"] .border-white\/6  { border-color: rgba(0, 0, 0, 0.08) !important; }
+[data-theme="light"] .border-white\/10 { border-color: rgba(0, 0, 0, 0.1)  !important; }
+[data-theme="light"] .border-white\/12 { border-color: rgba(0, 0, 0, 0.12) !important; }
+
+/* ── Hover states that use white/X opacity ───────────────────────────── */
+[data-theme="light"] .hover\:bg-white\/8:hover  { background-color: rgba(0, 0, 0, 0.04) !important; }
+[data-theme="light"] .hover\:bg-white\/10:hover { background-color: rgba(0, 0, 0, 0.06) !important; }
+[data-theme="light"] .hover\:bg-white\/12:hover { background-color: rgba(0, 0, 0, 0.08) !important; }
+[data-theme="light"] .hover\:bg-white\/6:hover  { background-color: rgba(0, 0, 0, 0.03) !important; }
+
+/* ── bg-white/* semi-transparent (used as dark section content) ─────── */
+[data-theme="light"] .bg-white\/4   { background-color: rgba(0, 0, 0, 0.02) !important; }
+[data-theme="light"] .bg-white\/3   { background-color: rgba(0, 0, 0, 0.015) !important; }
+[data-theme="light"] .bg-white\/2   { background-color: rgba(0, 0, 0, 0.01) !important; }
+[data-theme="light"] .bg-white\/8   { background-color: rgba(0, 0, 0, 0.04) !important; }
+[data-theme="light"] .bg-white\/\[0\.03\],
+[data-theme="light"] [class*="bg-white/[0.0"] { background-color: rgba(0, 0, 0, 0.015) !important; }
+
+/* ── Avatar border on canvas background ─────────────────────────────── */
+[data-theme="light"] .border-canvas-900 { border-color: #FFFEFB !important; }
+
+/* ── Noise overlay — reduce in light mode ───────────────────────────── */
+[data-theme="light"] .noise-overlay::after { opacity: 0.012 !important; }
+
+/* ── Gradient orbs — more subtle in light mode ──────────────────────── */
+[data-theme="light"] .animate-orbit-slow,
+[data-theme="light"] .animate-orbit-medium,
+[data-theme="light"] .animate-orbit-fast { opacity: 0.5; }
+
+/* ── Dot grid — invert for light ─────────────────────────────────────── */
+[data-theme="light"] [style*="radial-gradient(circle at 1px 1px, #60a5fa"] {
+  opacity: 0.06 !important;
+}
+
+/* ── Hero trust badge text ───────────────────────────────────────────── */
+[data-theme="light"] .text-teal-400 { color: #0d9488 !important; }
+[data-theme="light"] .text-teal-500 { color: #0d9488 !important; }
+
+/* ── Dashboard mockup in light mode ─────────────────────────────────── */
+[data-theme="light"] .bg-\[\#0d1628\] { background-color: #1e293b !important; }
+
+/* ── Perspective grid floor — hide in light mode ────────────────────── */
+[data-theme="light"] [style*="perspective(480px)"] { opacity: 0.06 !important; }
+
+/* ── Wave divider fill ───────────────────────────────────────────────── */
+[data-theme="light"] .wave-fill-next { fill: #f8fafc !important; }
+.hero-wave-fill { fill: #09101e; }
+[data-theme="light"] .hero-wave-fill { fill: #f8fafc !important; }
+
+/* ── SolutionsSection decorative cards ─────────────────────────────────
+   The two `bg-slate-800 border-slate-700` cards on the right side flip
+   to light surfaces in light mode. The hover state stays brand-blue. */
+[data-theme="light"] section .bg-slate-800.border-slate-700,
+[data-theme="light"] section .rounded-3xl.bg-slate-800 {
+  background-color: #FFFEFB !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 18px -4px rgba(15,23,42,0.08) !important;
+}
+
+/* SolutionsSection icon holder (small square inside the bullet list) */
+[data-theme="light"] section .w-10.h-10.bg-slate-800 {
+  background-color: #f1f5f9 !important;
+}
+
+/* ── SeamlessSection: dashboard browser chrome + mini panels overrides ── */
+[data-theme="light"] .bg-slate-900\/60 { background-color: rgba(241,245,249,0.85) !important; }
+[data-theme="light"] .bg-slate-900\/95 { background-color: rgba(255,254,251,0.98) !important; }
+[data-theme="light"] .bg-slate-900\/80 { background-color: rgba(15,23,42,0.82) !important; }
+[data-theme="light"] .border-slate-700 { border-color: #cbd5e1 !important; }
+[data-theme="light"] .border-slate-800 { border-color: #e2e8f0 !important; }
+
+/* ── Pricing card name and feature list — slate-200 already flipped ──── */
+[data-theme="light"] .border-amber-200 { border-color: #fcd34d !important; }
+[data-theme="light"] .bg-amber-100 { background-color: #fef3c7 !important; }
+[data-theme="light"] .text-amber-700 { color: #b45309 !important; }
+
+/* ── Navbar light mode ───────────────────────────────────────────────── */
+[data-theme="light"] nav .text-slate-300 { color: #475569 !important; }
+[data-theme="light"] nav .text-slate-400 { color: #64748b !important; }
+[data-theme="light"] nav .text-slate-500 { color: #94a3b8 !important; }
+[data-theme="light"] nav .hover\:text-white:hover { color: #0f172a !important; }
+[data-theme="light"] nav .border-white\/8 { border-color: rgba(0,0,0,0.08) !important; }
+[data-theme="light"] nav .border-white\/10 { border-color: rgba(0,0,0,0.10) !important; }
+[data-theme="light"] nav .hover\:border-white\/20:hover { border-color: rgba(0,0,0,0.14) !important; }
+[data-theme="light"] .text-gradient-teal { color: #0d9488 !important; /* fallback for non-gradient support */ }
+
+/* ── FAQ accordion light mode ────────────────────────────────────────── */
+[data-theme="light"] .bg-white\/4,
+[data-theme="light"] .bg-white\/2 { background-color: #f8fafc !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   LIGHT-MODE BUG FIXES
+   The original styles only override `bg-[hex]` selectors. Tailwind
+   gradient stops (`from-[hex]`, `to-[hex]`) and the slate-800/900/950
+   palette used in the footer were never flipped — that's why the
+   marquee/carousel edges and the entire footer stayed dark in light mode.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Marquee + testimonial carousel fade overlays ──────────────────────
+   TrustBanner uses `bg-gradient-to-r from-[#09101e]` (and to-l version)
+   to fade the scrolling firm logos. TestimonialsSection does the same
+   with `from-[#0a1020]`. Replace the gradient entirely so it fades
+   from the page background instead of from dark navy. */
+[data-theme="light"] .bg-gradient-to-r[class*="from-\[\#09101e\]"],
+[data-theme="light"] .bg-gradient-to-r[class*="from-\[\#0a1020\]"] {
+  background: linear-gradient(to right, #f8fafc, rgba(248,250,252,0)) !important;
+}
+[data-theme="light"] .bg-gradient-to-l[class*="from-\[\#09101e\]"],
+[data-theme="light"] .bg-gradient-to-l[class*="from-\[\#0a1020\]"] {
+  background: linear-gradient(to left, #f8fafc, rgba(248,250,252,0)) !important;
+}
+
+/* ── Testimonials stats block + PainSection card ───────────────────────
+   Both use `rounded-3xl bg-slate-900` as an elevated dark surface.
+   In light mode flip to a clean white card with slate border + soft
+   shadow. Targeting `.rounded-3xl.bg-slate-900` avoids hitting the
+   ProductTabs hover tooltips which use `rounded-2xl`. */
+[data-theme="light"] .rounded-3xl.bg-slate-900 {
+  background-color: #FFFEFB !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 18px -4px rgba(15,23,42,0.08) !important;
+}
+[data-theme="light"] .rounded-3xl.bg-slate-900 .text-white   { color: #0f172a !important; }
+[data-theme="light"] .rounded-3xl.bg-slate-900 .text-slate-300 { color: #334155 !important; }
+[data-theme="light"] .rounded-3xl.bg-slate-900 .text-slate-500 { color: #64748b !important; }
+[data-theme="light"] .rounded-3xl.bg-slate-900 .border-slate-800 { border-color: #e2e8f0 !important; }
+
+/* ── MegaFooter — full light-mode flip ─────────────────────────────────
+   Footer was completely dark navy with white text in light mode. */
+[data-theme="light"] footer.bg-slate-950 {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+[data-theme="light"] footer .bg-slate-900 { background-color: #FFFEFB !important; }
+[data-theme="light"] footer .bg-slate-800 { background-color: #e2e8f0 !important; }
+[data-theme="light"] footer .border-slate-800,
+[data-theme="light"] footer .border-slate-700,
+[data-theme="light"] footer [class*="border-slate-800/"] { border-color: #e2e8f0 !important; }
+
+[data-theme="light"] footer .text-white     { color: #0f172a !important; }
+[data-theme="light"] footer .text-slate-400 { color: #475569 !important; }
+[data-theme="light"] footer .text-slate-500 { color: #64748b !important; }
+[data-theme="light"] footer .text-slate-700 { color: #94a3b8 !important; }
+
+/* Newsletter input */
+[data-theme="light"] footer input.bg-slate-800 {
+  background-color: #FFFEFB !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+[data-theme="light"] footer input::placeholder { color: #94a3b8 !important; }
+
+/* Social icon buttons — pill stays light, icon visible, hover keeps brand fill */
+[data-theme="light"] footer a.bg-slate-800 { color: #475569 !important; }
+[data-theme="light"] footer a.bg-slate-800:hover { color: #ffffff !important; }
+
+/* Brand wordmark in footer (CAGos with brand accent) */
+[data-theme="light"] footer .text-brand-400 { color: #2563eb !important; }
+[data-theme="light"] footer a:hover.hover\:text-brand-400 { color: #2563eb !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SEAMLESS SECTION — section wrapper bg, light/dark variants
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.seamless-section {
+  background: linear-gradient(180deg, #0a1020 0%, #070d1a 50%, #0a1020 100%);
+}
+[data-theme="light"] .seamless-section {
+  background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 50%, #f1f5f9 100%);
+}
+
+/* phone bobs gently in place */
+@keyframes seamless-phone-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-8px) rotate(0.4deg); }
+}
+.seamless-phone {
+  animation: seamless-phone-float 5.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* CAPay Links card floats with a slightly different rhythm so it
+   parallaxes against the phone behind it */
+@keyframes seamless-card-float {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50%      { transform: translateY(-12px) rotate(-0.5deg); }
+}
+.seamless-floating-card {
+  animation: seamless-card-float 4.2s ease-in-out infinite;
+  animation-delay: 0.6s;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Subtle pulse on the share button — draws the eye without being noisy */
+@keyframes seamless-share-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0 rgba(255,255,255,0.0),
+      0 6px 14px -4px rgba(0, 0, 0, 0.45);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(255,255,255,0.08),
+      0 10px 20px -4px rgba(0, 0, 0, 0.6);
+  }
+}
+.seamless-share-btn {
+  animation: seamless-share-pulse 2.6s ease-in-out infinite;
+}
+
+/* Glow halo behind the composition — softer in light mode */
+.seamless-glow { animation: seamless-glow-pulse 5s ease-in-out infinite; }
+@keyframes seamless-glow-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%      { opacity: 0.8;  transform: scale(1.08); }
+}
+[data-theme="light"] .seamless-glow { opacity: 0.45 !important; }
+
+/* ── Phone frame stays dark (it's a device bezel); screen is white ──── */
+.seamless-phone-frame {
+  background-color: #0f172a !important;     /* slate-900 — locked */
+  border-color: #1e293b !important;          /* slate-800 — locked */
+}
+.seamless-phone-screen {
+  background-color: #ffffff !important;     /* white screen */
+}
+/* Invoice card on the white screen — light surface with a thin slate ring. */
+.seamless-phone-screen .bg-slate-900\/80 {
+  background-color: #f8fafc !important;     /* slate-50 */
+}
+.seamless-phone-screen .border-slate-800 {
+  border-color: #e2e8f0 !important;          /* slate-200 */
+}
+
+/* Unconditional text colour overrides so any utility class still inside
+   the phone-screen scope reads correctly on a white background, regardless
+   of the page-level theme. Replaces the previous dark-locked overrides. */
+.seamless-phone-screen .text-white     { color: #0f172a !important; }  /* slate-900 */
+.seamless-phone-screen .text-slate-100 { color: #1e293b !important; }  /* slate-800 */
+.seamless-phone-screen .text-slate-300 { color: #475569 !important; }  /* slate-600 */
+.seamless-phone-screen .text-slate-400 { color: #64748b !important; }  /* slate-500 */
+.seamless-phone-screen .text-slate-500 { color: #94a3b8 !important; }  /* slate-400 */
+
+/* Light-mode phone gets a subtle outer ring for definition against white bg */
+[data-theme="light"] .seamless-phone-frame {
+  box-shadow:
+    0 30px 60px -15px rgba(15, 23, 42, 0.35),
+    0 0 0 1px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   HERO — animated underline accent under the gradient word
+   ═══════════════════════════════════════════════════════════════════════ */
+.hero-accent-underline {
+  background: linear-gradient(
+    90deg,
+    rgba(0,212,170,0)    0%,
+    rgba(0,212,170,0.85) 30%,
+    rgba(37,99,235,0.85) 70%,
+    rgba(37,99,235,0)    100%
+  );
+  background-size: 200% 100%;
+  animation: hero-underline-shimmer 3.4s linear infinite;
+  opacity: 0.85;
+}
+@keyframes hero-underline-shimmer {
+  0%   { background-position-x: -100%; }
+  100% { background-position-x: 100%; }
+}
+
+/* ── Hero secondary CTA — pulsing ring around play icon ─────────────── */
+.hero-play-ring::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 9999px;
+  border: 1px solid rgba(37,99,235,0.5);
+  animation: hero-play-ring-pulse 2s ease-in-out infinite;
+}
+@keyframes hero-play-ring-pulse {
+  0%, 100% { transform: scale(1);    opacity: 0.6; }
+  50%      { transform: scale(1.25); opacity: 0;   }
+}
+.hero-secondary-cta:hover { transform: translateY(-2px); }
+
+/* ── Dashboard shimmer sweep — slow diagonal highlight every ~7s ────── */
+.hero-dash-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255,255,255,0.06) 50%,
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: hero-dash-sweep 7s ease-in-out infinite;
+}
+@keyframes hero-dash-sweep {
+  0%, 55% { left: -75%; }
+  100%    { left: 175%; }
+}
+
+/* ── Floor glow under dashboard ─────────────────────────────────────── */
+.hero-floor-glow {
+  background: radial-gradient(ellipse at center top,
+    rgba(37,99,235,0.30) 0%,
+    rgba(0,212,170,0.10) 40%,
+    transparent 70%);
+  filter: blur(28px);
+  animation: hero-floor-pulse 5s ease-in-out infinite;
+}
+@keyframes hero-floor-pulse {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1;   }
+}
+
+/* ── Floating cards with distinct rhythms ───────────────────────────── */
+@keyframes hero-card-bob-a {
+  0%, 100% { transform: translateY(0)   rotate(-1deg); }
+  50%      { transform: translateY(-12px) rotate(0.4deg); }
+}
+@keyframes hero-card-bob-b {
+  0%, 100% { transform: translateY(0)    rotate(1.2deg); }
+  50%      { transform: translateY(-9px) rotate(-0.4deg); }
+}
+@keyframes hero-card-bob-c {
+  0%, 100% { transform: translateY(0)    rotate(0.6deg); }
+  50%      { transform: translateY(-7px) rotate(-0.6deg); }
+}
+.hero-card-float-a { animation: hero-card-bob-a 5.4s ease-in-out infinite;        will-change: transform; }
+.hero-card-float-b { animation: hero-card-bob-b 4.8s ease-in-out infinite 0.4s;  will-change: transform; }
+.hero-card-float-c { animation: hero-card-bob-c 6.0s ease-in-out infinite 0.9s;  will-change: transform; }
+
+/* ── Rupee icon soft pulse on the invoice card ──────────────────────── */
+@keyframes hero-rupee-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(20,184,166,0.0); }
+  50%      { box-shadow: 0 0 0 6px rgba(20,184,166,0.0); }
+  25%      { box-shadow: 0 0 0 3px rgba(20,184,166,0.30); }
+}
+.hero-rupee-pulse { animation: hero-rupee-pulse 2.4s ease-in-out infinite; }
+
+/* ── Checkmark draw on first paint ──────────────────────────────────── */
+.hero-check-draw {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: hero-check-draw 1.4s ease-out 0.4s forwards;
+}
+@keyframes hero-check-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ── Sparkline path draws on mount, dot pulses ──────────────────────── */
+.hero-sparkline-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: hero-sparkline-draw 1.8s ease-out 0.4s forwards;
+}
+@keyframes hero-sparkline-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes hero-sparkline-dot {
+  0%, 100% { transform: scale(1);   opacity: 1;   }
+  50%      { transform: scale(1.4); opacity: 0.7; }
+}
+.hero-sparkline-dot {
+  transform-origin: 84px 2px;
+  animation: hero-sparkline-dot 1.6s ease-in-out infinite 2.2s;
+}
+
+/* ── Scroll cue — bouncing chevron ──────────────────────────────────── */
+@keyframes hero-cue-bounce {
+  0%, 100% { transform: translateY(0);  opacity: 0.5; }
+  50%      { transform: translateY(6px); opacity: 1;   }
+}
+.hero-scroll-cue { animation: hero-cue-bounce 2.2s ease-in-out infinite; }
+
+/* ── Light-mode adjustments for the hero floating cards ─────────────── */
+[data-theme="light"] .hero-card-float-a,
+[data-theme="light"] .hero-card-float-b {
+  background: rgba(255,255,255,0.95) !important;
+  border-color: rgba(15,23,42,0.08) !important;
+  box-shadow:
+    0 12px 28px -8px rgba(15,23,42,0.18),
+    0 2px 6px -2px rgba(15,23,42,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.9) !important;
+}
+[data-theme="light"] .hero-card-float-a .text-white,
+[data-theme="light"] .hero-card-float-b .text-white {
+  color: #0f172a !important;
+}
+[data-theme="light"] .hero-floor-glow { opacity: 0.55 !important; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-accent-underline,
+  .hero-play-ring::after,
+  .hero-dash-shimmer::after,
+  .hero-floor-glow,
+  .hero-card-float-a,
+  .hero-card-float-b,
+  .hero-card-float-c,
+  .hero-rupee-pulse,
+  .hero-check-draw,
+  .hero-sparkline-path,
+  .hero-sparkline-dot,
+  .hero-scroll-cue { animation: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PRO CARD — gradient + inner highlight + layered shadow + hover lift
+   ═══════════════════════════════════════════════════════════════════════ */
+.seamless-pro-card {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.045), rgba(37,99,235,0.05));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.06),
+    0 20px 50px -12px rgba(0,0,0,0.45),
+    0 4px 16px -4px rgba(37,99,235,0.10);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s ease;
+}
+.seamless-pro-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.35), rgba(13,148,136,0.15) 50%, transparent);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.seamless-pro-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.08),
+    0 32px 70px -12px rgba(0,0,0,0.55),
+    0 10px 28px -6px rgba(37,99,235,0.22);
+}
+.seamless-pro-card:hover::before { opacity: 1; }
+
+[data-theme="light"] .seamless-pro-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,248,255,0.95));
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.9),
+    0 12px 40px -8px rgba(37,99,235,0.10),
+    0 2px 8px -2px rgba(15,23,42,0.04);
+}
+[data-theme="light"] .seamless-pro-card:hover {
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,1),
+    0 22px 55px -10px rgba(37,99,235,0.16),
+    0 6px 14px -4px rgba(15,23,42,0.06);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SaaS CTA — gradient fill + magnetic hover + arrow nudge + glow
+   ═══════════════════════════════════════════════════════════════════════ */
+.seamless-cta {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.18),
+    0 10px 24px -8px rgba(37,99,235,0.55),
+    0 4px 10px -4px rgba(0,0,0,0.30);
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s ease;
+}
+.seamless-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.22),
+    0 16px 34px -8px rgba(37,99,235,0.7),
+    0 6px 14px -4px rgba(0,0,0,0.35);
+}
+.seamless-cta svg { transition: transform 0.25s ease; }
+.seamless-cta:hover svg { transform: translateX(3px); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ROW A — Dashboard stack: ghost + main + floating mini panels
+   ═══════════════════════════════════════════════════════════════════════ */
+@keyframes seamless-mini-float {
+  0%, 100% { transform: translateY(0)   rotate(-1deg); }
+  50%      { transform: translateY(-8px) rotate(0deg); }
+}
+@keyframes seamless-mini-float-2 {
+  0%, 100% { transform: translateY(0)   rotate(1.5deg); }
+  50%      { transform: translateY(-10px) rotate(0deg); }
+}
+.seamless-mini-float   { animation: seamless-mini-float   5s ease-in-out infinite; }
+.seamless-mini-float-2 { animation: seamless-mini-float-2 5.6s ease-in-out infinite 0.4s; }
+
+@keyframes seamless-main-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+.seamless-main-panel { animation: seamless-main-float 6s ease-in-out infinite; }
+
+.seamless-ghost-card {
+  transform: rotate(-1.5deg);
+  opacity: 0.55;
+}
+
+/* In light mode, panels stay on the dark-glassy side for the right contrast
+   against the now-light card background */
+[data-theme="light"] .seamless-main-panel {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  border-color: rgba(15,23,42,0.12) !important;
+}
+[data-theme="light"] .seamless-mini-panel {
+  background: #FFFEFB !important;
+  border-color: rgba(15,23,42,0.08) !important;
+  box-shadow:
+    0 12px 24px -10px rgba(15,23,42,0.20),
+    0 2px 6px -2px rgba(15,23,42,0.06) !important;
+}
+[data-theme="light"] .seamless-mini-panel .text-white { color: #0f172a !important; }
+[data-theme="light"] .seamless-mini-panel .text-slate-400 { color: #64748b !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ROW B — Central Intelligence Network
+   Connection types · orbital rings · activity cycle · hover reactivity
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Orbital rings around the core (counter-rotating, multi-speed) ──── */
+@keyframes seamless-eco-ring-spin   { to { transform: rotate(360deg); } }
+@keyframes seamless-eco-ring-spin-r { to { transform: rotate(-360deg); } }
+
+.seamless-eco-ring-1,
+.seamless-eco-ring-2,
+.seamless-eco-ring-3,
+.seamless-eco-orbit-1,
+.seamless-eco-orbit-2 {
+  transform-origin: 200px 160px; /* matches HUB position in viewBox */
+  transform-box: view-box;
+}
+.seamless-eco-orbit-1 { animation: seamless-eco-ring-spin   11s linear infinite; }
+.seamless-eco-orbit-2 { animation: seamless-eco-ring-spin-r 17s linear infinite; }
+.seamless-eco-ring-1 { animation: seamless-eco-ring-spin   24s linear infinite; }
+.seamless-eco-ring-2 { animation: seamless-eco-ring-spin-r 38s linear infinite; }
+.seamless-eco-ring-3 { animation: seamless-eco-ring-spin   54s linear infinite; }
+
+/* ── Primary connection paths — solid stroke, subtle breathing ─────── */
+@keyframes seamless-eco-pri-breathe {
+  0%, 100% { stroke-opacity: 0.55; }
+  50%      { stroke-opacity: 0.95; }
+}
+.seamless-eco-path-primary {
+  animation: seamless-eco-pri-breathe 3.4s ease-in-out infinite;
+}
+
+/* ── Secondary connection paths — dashed, slower drift ─────────────── */
+@keyframes seamless-eco-sec-drift {
+  to { stroke-dashoffset: -18; }
+}
+.seamless-eco-path-secondary {
+  stroke-opacity: 0.6;
+  animation: seamless-eco-sec-drift 2.4s linear infinite;
+}
+
+/* ── Cross-link mesh — barely-visible outer ring of nodes ──────────── */
+@keyframes seamless-eco-mesh-fade {
+  0%, 100% { stroke-opacity: 0.35; }
+  50%      { stroke-opacity: 0.7;  }
+}
+.seamless-eco-mesh {
+  animation: seamless-eco-mesh-fade 6s ease-in-out infinite;
+}
+
+/* ── Hub Pro — biggest, brightest, dual-layer pulse ─────────────────── */
+@keyframes seamless-hub-pro-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0 rgba(59,130,246,0),
+      0 12px 35px -6px rgba(37,99,235,0.65),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 0 16px rgba(59,130,246,0),
+      0 16px 45px -6px rgba(37,99,235,0.85),
+      inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+}
+.seamless-hub-pro {
+  animation: seamless-hub-pro-pulse 2.4s ease-in-out infinite;
+}
+
+/* ── Module nodes — staggered activity cycle ────────────────────────── */
+/* Bubble bobs gently AND its border occasionally lights up like an
+   "activation pulse" rolling around the network. */
+@keyframes seamless-eco-node-bob {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50%      { transform: translate(-50%, -50%) translateY(-5px); }
+}
+.seamless-eco-node {
+  animation: seamless-eco-node-bob 4.8s ease-in-out infinite;
+  will-change: transform;
+  cursor: default;
+}
+@keyframes seamless-eco-bubble-activate {
+  0%, 80%, 100% {
+    box-shadow: 0 8px 20px -6px rgba(0,0,0,0.4);
+    filter: brightness(1);
+  }
+  10%, 25% {
+    box-shadow:
+      0 8px 24px -4px rgba(94,234,212,0.45),
+      0 0 0 4px rgba(94,234,212,0.18);
+    filter: brightness(1.2);
+  }
+}
+.seamless-eco-bubble {
+  animation: seamless-eco-bubble-activate 7s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+/* ── Hover reactivity — node scales up + halo glow + boost border ──── */
+.seamless-eco-node:hover .seamless-eco-bubble {
+  transform: scale(1.18);
+  filter: brightness(1.35);
+  border-color: rgba(94,234,212,0.65);
+  box-shadow:
+    0 12px 30px -6px rgba(94,234,212,0.55),
+    0 0 0 6px rgba(94,234,212,0.12);
+}
+/* When the graph has any node hovered, dim the cross-link mesh slightly
+   so the focus stays on the active module */
+.seamless-eco-graph:has(.seamless-eco-node:hover) .seamless-eco-mesh {
+  stroke-opacity: 0.15;
+}
+
+/* ── Light-mode tuning — nodes need stronger contrast on white ──────── */
+[data-theme="light"] .seamless-eco-node .text-slate-400 { color: #475569 !important; }
+[data-theme="light"] .seamless-eco-bubble {
+  background-color: rgba(255,255,255,0.95) !important;
+  box-shadow: 0 8px 20px -4px rgba(15,23,42,0.15) !important;
+}
+[data-theme="light"] .seamless-hub-pro {
+  border-color: rgba(37,99,235,0.6) !important;
+}
+
+/* Respect motion preferences (extends the existing block above) */
+@media (prefers-reduced-motion: reduce) {
+  .seamless-eco-ring-1,
+  .seamless-eco-ring-2,
+  .seamless-eco-ring-3,
+  .seamless-eco-path-primary,
+  .seamless-eco-path-secondary,
+  .seamless-eco-mesh,
+  .seamless-hub-pro,
+  .seamless-eco-node,
+  .seamless-eco-bubble { animation: none !important; }
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .seamless-phone,
+  .seamless-floating-card,
+  .seamless-share-btn,
+  .seamless-glow,
+  .seamless-mini-float,
+  .seamless-mini-float-2,
+  .seamless-main-panel { animation: none !important; }
+  .seamless-pro-card,
+  .seamless-cta { transition: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   INTEGRATION GRID — float animation + brand-coloured hover glow
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Per-tile brand glow on hover (uses --int-glow set inline per item) */
+.integ-tile:hover {
+  box-shadow:
+    0 0 0 1px var(--int-glow, rgba(255,255,255,0.10)),
+    0 12px 28px -8px var(--int-glow, rgba(0,0,0,0.25));
+}
+
+/* Logo image inside the white holder — slight zoom on group hover handled
+   by Tailwind. In light mode keep the white logo holder bright. */
+[data-theme="light"] .integ-tile { background: rgba(255,255,255,0.7) !important; }
+[data-theme="light"] .integ-tile:hover { background: rgba(255,255,255,0.95) !important; }
+[data-theme="light"] .integ-tile .text-slate-300 { color: #334155 !important; }
+[data-theme="light"] .integ-tile .text-slate-500 { color: #64748b !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   HOW-IT-WORKS TIMELINE — flowing particle + light-mode glass flip
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@keyframes how-particle-x {
+  0%   { left: 0%; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.how-particle {
+  animation: how-particle-x 4.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 1.4s;
+}
+
+/* Card hover bloom — extra glow when an active step is hovered */
+.how-card-active::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), transparent 50%);
+  pointer-events: none;
+}
+
+/* Light-mode flip for the entire HOW section */
+[data-theme="light"] .how-section { background: #f8fafc; }
+[data-theme="light"] .how-section .text-white { color: #0f172a !important; }
+[data-theme="light"] .how-section .text-slate-100 { color: #0f172a !important; }
+[data-theme="light"] .how-section .text-slate-300 { color: #334155 !important; }
+[data-theme="light"] .how-section .text-slate-400 { color: #475569 !important; }
+[data-theme="light"] .how-section .border-white\/8 { border-color: #e2e8f0 !important; }
+[data-theme="light"] .how-section .bg-white\/\[0\.03\] { background: #FFFEFB !important; }
+
+/* Cards get white glass in light mode */
+[data-theme="light"] .how-card {
+  background: #FFFEFB !important;
+  border: 1px solid #e2e8f0 !important;
+  -webkit-backdrop-filter: none !important;
+          backdrop-filter: none !important;
+}
+
+/* Reduce orb intensity in light mode */
+[data-theme="light"] .how-section .pointer-events-none > div[style*="radial-gradient"] {
+  opacity: 0.35 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   NAVBAR DROPDOWNS — premium polish, both themes
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Smooth scale + fade entry (replaces the old slide-down animation) */
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px) scale(0.96);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+    filter: blur(0);
+  }
+}
+@keyframes dropdown-item-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-shell {
+  transform-origin: top center;
+  animation: dropdown-in 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Dark-mode shell — layered shadow for depth */
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 24px 64px -16px rgba(0, 0, 0, 0.80),
+    0 8px 24px -8px rgba(0, 0, 0, 0.50),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+}
+
+.dropdown-item {
+  animation: dropdown-item-in 0.32s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Hover state — dark mode */
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(2px);
+}
+
+/* ── LIGHT MODE PARITY ─────────────────────────────────────────────── */
+[data-theme="light"] .dropdown-shell {
+  background: rgba(255, 255, 255, 0.98) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+          backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.04),
+    0 24px 64px -12px rgba(15, 23, 42, 0.18),
+    0 12px 28px -10px rgba(15, 23, 42, 0.10),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme="light"] .dropdown-eyebrow { color: #64748b !important; }
+[data-theme="light"] .dropdown-pill {
+  background: #f0fdfa !important;
+  border-color: #99f6e4 !important;
+  color: #0f766e !important;
+}
+
+[data-theme="light"] .dropdown-title { color: #0f172a !important; }
+[data-theme="light"] .dropdown-item:hover .dropdown-title { color: #0f172a !important; }
+[data-theme="light"] .dropdown-desc  { color: #64748b !important; }
+
+[data-theme="light"] .dropdown-item:hover {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* CompactMenu icon holders — light mode */
+[data-theme="light"] .dropdown-item .bg-white\/5 {
+  background: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+[data-theme="light"] .dropdown-item:hover .bg-white\/5 {
+  background: #dbeafe !important;
+  border-color: #93c5fd !important;
+}
+[data-theme="light"] .dropdown-item .text-slate-400 { color: #64748b !important; }
+[data-theme="light"] .dropdown-item:hover .text-slate-400 { color: #2563eb !important; }
+
+/* Trailing arrow on Products items — visible on hover */
+[data-theme="light"] .dropdown-item .text-slate-600 { color: #cbd5e1 !important; }
+[data-theme="light"] .dropdown-item:hover .text-slate-600 { color: #2563eb !important; }
+
+/* Footer strip in ProductsMegaMenu */
+[data-theme="light"] .dropdown-footer {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+[data-theme="light"] .dropdown-footer .text-slate-300 { color: #0f172a !important; }
+[data-theme="light"] .dropdown-footer .text-slate-500 { color: #64748b !important; }
+[data-theme="light"] .dropdown-footer .text-teal-400 { color: #0d9488 !important; }
+[data-theme="light"] .dropdown-footer .text-teal-400:hover { color: #0f766e !important; }
+
+/* ─────────────────────────────────────────────────────────────────────
+   EcosystemVisual — premium atmosphere + motion hierarchy
+   ───────────────────────────────────────────────────────────────────── */
+
+/* Ambient bloom blobs — soft drifting colored fog */
+@keyframes seamless-eco-bloom-drift-a {
+  0%, 100% { transform: translate3d(0,0,0) scale(1);    opacity: 0.55; }
+  50%      { transform: translate3d(14px,-10px,0) scale(1.08); opacity: 0.85; }
+}
+@keyframes seamless-eco-bloom-drift-b {
+  0%, 100% { transform: translate3d(0,0,0) scale(1);    opacity: 0.45; }
+  50%      { transform: translate3d(-12px,8px,0) scale(1.12); opacity: 0.75; }
+}
+@keyframes seamless-eco-bloom-drift-c {
+  0%, 100% { transform: translate3d(0,0,0) scale(1);    opacity: 0.35; }
+  50%      { transform: translate3d(8px,12px,0) scale(0.95); opacity: 0.6; }
+}
+.seamless-eco-bloom-1 { animation: seamless-eco-bloom-drift-a 12s ease-in-out infinite; will-change: transform, opacity; }
+.seamless-eco-bloom-2 { animation: seamless-eco-bloom-drift-b 16s ease-in-out infinite; will-change: transform, opacity; }
+.seamless-eco-bloom-3 { animation: seamless-eco-bloom-drift-c 14s ease-in-out infinite; will-change: transform, opacity; }
+
+/* Floating ambient particles — tiny dots that drift independently */
+@keyframes seamless-eco-floater-drift {
+  0%, 100% { transform: translate3d(0,0,0); opacity: 0.25; }
+  20%      { transform: translate3d(-3px,-9px,0); opacity: 0.7; }
+  50%      { transform: translate3d(4px,-5px,0); opacity: 0.45; }
+  80%      { transform: translate3d(-2px,-12px,0); opacity: 0.8; }
+}
+.seamless-eco-floater {
+  animation: seamless-eco-floater-drift 9s ease-in-out infinite;
+  will-change: transform, opacity;
+  box-shadow: 0 0 6px rgba(94,234,212,0.7);
+}
+
+/* Subtle grain — removes the flat-digital feel */
+.seamless-eco-noise {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+/* Holographic rotating border behind the hub */
+@keyframes seamless-hub-holo-spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+.seamless-hub-holo {
+  background: conic-gradient(
+    from 0deg,
+    rgba(94,234,212,0)    0deg,
+    rgba(94,234,212,0.55) 60deg,
+    rgba(167,139,250,0)   140deg,
+    rgba(59,130,246,0.5)  220deg,
+    rgba(94,234,212,0)    300deg,
+    rgba(94,234,212,0)    360deg
+  );
+  filter: blur(8px);
+  animation: seamless-hub-holo-spin 7s linear infinite;
+  will-change: transform;
+}
+
+/* Connection-line pulse — bright glow traveling along each spoke */
+@keyframes seamless-eco-pulse-flow { to { stroke-dashoffset: -120; } }
+.seamless-eco-pulse {
+  stroke-dasharray: 28 92;
+  animation: seamless-eco-pulse-flow 3.6s linear infinite;
+  filter: drop-shadow(0 0 3px rgba(94,234,212,0.6));
+}
+
+/* Status dot — ring-light pulsing on each module bubble */
+@keyframes seamless-eco-status-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(94,234,212,0.6);  transform: scale(1);    }
+  50%      { box-shadow: 0 0 0 5px rgba(94,234,212,0);  transform: scale(1.15); }
+}
+.seamless-eco-status-dot {
+  animation: seamless-eco-status-pulse 1.8s ease-out infinite;
+  will-change: box-shadow, transform;
+}
+
+/* ── Hover intelligence ────────────────────────────────────────────────────
+   When any node is hovered:
+     • non-hovered nodes dim + desaturate
+     • ALL spokes dim, perimeter mesh dims further
+     • the matching spoke re-illuminates with a soft glow
+     • the hub responds with a gentle scale + brightness boost
+   All transitions are GPU-friendly (opacity / transform / filter only). */
+
+/* Dim non-hovered nodes */
+.seamless-eco-graph:has(.seamless-eco-node:hover) .seamless-eco-node:not(:hover) {
+  opacity: 0.42;
+  filter: saturate(0.7);
+}
+.seamless-eco-node,
+.seamless-eco-node:not(:hover) {
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+/* Dim all spokes + perimeter mesh on any node hover */
+.seamless-eco-graph [data-spoke],
+.seamless-eco-graph [data-spoke-cross] {
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+.seamless-eco-graph:has(.seamless-eco-node:hover) [data-spoke] {
+  opacity: 0.28;
+}
+.seamless-eco-graph:has(.seamless-eco-node:hover) [data-spoke-cross] {
+  opacity: 0.18;
+}
+
+/* Re-illuminate the matching spoke (one rule per module — :has() doesn't
+   support backreferences, so they're enumerated). */
+.seamless-eco-graph:has([data-node="crm"]:hover)  [data-spoke="crm"],
+.seamless-eco-graph:has([data-node="hrms"]:hover) [data-spoke="hrms"],
+.seamless-eco-graph:has([data-node="inv"]:hover)  [data-spoke="inv"],
+.seamless-eco-graph:has([data-node="ai"]:hover)   [data-spoke="ai"],
+.seamless-eco-graph:has([data-node="mail"]:hover) [data-spoke="mail"],
+.seamless-eco-graph:has([data-node="pay"]:hover)  [data-spoke="pay"] {
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(94, 234, 212, 0.95));
+}
+
+/* Hub responds gently to any node hover */
+.seamless-hub-pro {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), filter 0.35s ease;
+}
+.seamless-eco-graph:has(.seamless-eco-node:hover) .seamless-hub-pro {
+  transform: translate(-50%, -50%) scale(1.06);
+  filter: brightness(1.15);
+}
+
+/* Perimeter mesh — slow opacity breathing so the outer ring feels alive */
+@keyframes seamless-eco-mesh-breathe {
+  0%, 100% { stroke-opacity: 0.28; }
+  50%      { stroke-opacity: 0.55; }
+}
+.seamless-eco-mesh-link {
+  animation: seamless-eco-mesh-breathe 5.5s ease-in-out infinite;
+}
+
+/* Static glow waypoint dots on each spoke — soft pulse so the path looks
+   "alive" without animation cost of more particles. */
+@keyframes seamless-eco-waypoint-pulse {
+  0%, 100% { r: 1.8; opacity: 0.55; }
+  50%      { r: 2.8; opacity: 1;    }
+}
+.seamless-eco-waypoint {
+  animation: seamless-eco-waypoint-pulse 2.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 3px rgba(94, 234, 212, 0.85));
+}
+
+/* ── New module-card depth (replaces the small bubble) ───────────────── */
+.seamless-eco-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+.seamless-eco-node:hover .seamless-eco-card {
+  transform: translateY(-2px) scale(1.04);
+  filter: brightness(1.08);
+}
+
+/* ── LIGHT THEME — flip card backgrounds, lines, strip to light surface ── */
+[data-theme="light"] .seamless-eco-card {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 10px 24px -8px rgba(15, 23, 42, 0.18),
+              0 2px 6px  -2px rgba(15, 23, 42, 0.08) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+[data-theme="light"] .seamless-eco-card .text-white { color: #0f172a !important; }
+[data-theme="light"] .seamless-eco-card .text-slate-400 { color: #475569 !important; }
+[data-theme="light"] .seamless-eco-card .text-teal-300 { color: #0d9488 !important; }
+[data-theme="light"] .seamless-eco-card .bg-white\/\[0\.06\] { background-color: rgba(15, 23, 42, 0.04) !important; }
+[data-theme="light"] .seamless-eco-card .ring-white\/8 { box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06) !important; }
+
+/* Hub card stays branded blue in both themes — just soften shadow for light */
+[data-theme="light"] .seamless-hub-pro {
+  box-shadow: 0 14px 36px -10px rgba(37, 99, 235, 0.45),
+              0 4px 10px  -4px rgba(15, 23, 42, 0.18) !important;
+  border-color: rgba(37, 99, 235, 0.55) !important;
+}
+
+/* Bottom feature strip — light-theme surface */
+[data-theme="light"] .seamless-eco-features {
+  background-color: rgba(255, 255, 255, 0.78) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+[data-theme="light"] .seamless-eco-features .text-white { color: #0f172a !important; }
+[data-theme="light"] .seamless-eco-features .text-slate-400 { color: #475569 !important; }
+
+/* Connection lines + waypoints stay cyan/teal but become more saturated on
+   white surface for readability. */
+[data-theme="light"] .seamless-eco-mesh-link {
+  filter: saturate(1.25) brightness(0.85);
+}
+
+/* Atmospheric blooms dim significantly on light surface */
+[data-theme="light"] .seamless-eco-bloom-1,
+[data-theme="light"] .seamless-eco-bloom-2,
+[data-theme="light"] .seamless-eco-bloom-3 {
+  opacity: 0.35 !important;
+}
+[data-theme="light"] .seamless-eco-noise { display: none; }
+
+/* ═════════════════════════════════════════════════════════════════════
+   NEW CIRCULAR-FLOW DESIGN — perimeter ring + traveling comet aesthetic.
+   Replaces the radial-spokes look. Adapts to both light and dark themes.
+   ═════════════════════════════════════════════════════════════════════ */
+
+/* Hub — minimal tagline card, theme-aware background/border. Turns off
+   the legacy seamless-hub-pro-pulse animation since the new minimal card
+   doesn't suit a branded-blue shadow pulse. The radar pulse in the SVG
+   layer provides the centerpiece motion instead. */
+.seamless-hub-pro {
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 48px -10px rgba(96, 165, 250, 0.35),
+              0 4px 12px -2px rgba(15, 23, 42, 0.4);
+  animation: none;
+}
+.seamless-hub-label   { color: rgb(148, 163, 184); }
+.seamless-hub-tagline { color: rgb(241, 245, 249); }
+
+[data-theme="light"] .seamless-hub-pro {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 16px 42px -10px rgba(15, 23, 42, 0.18),
+              0 4px 12px -3px rgba(15, 23, 42, 0.08) !important;
+  backdrop-filter: blur(4px);
+}
+[data-theme="light"] .seamless-hub-label   { color: rgb(100, 116, 139); }
+[data-theme="light"] .seamless-hub-tagline { color: rgb(15, 23, 42); }
+
+/* Module icon circles + labels — theme-aware backgrounds */
+.seamless-eco-circle {
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(6px);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.28s ease;
+}
+.seamless-eco-node:hover .seamless-eco-circle {
+  transform: translateY(-2px) scale(1.06);
+  filter: brightness(1.08);
+}
+[data-theme="light"] .seamless-eco-circle {
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 6px 18px -6px rgba(15, 23, 42, 0.12),
+              0 1px 3px -1px rgba(15, 23, 42, 0.06) !important;
+}
+.seamless-eco-node-label { color: rgb(226, 232, 240); }
+.seamless-eco-node-sub   { color: rgb(148, 163, 184); }
+[data-theme="light"] .seamless-eco-node-label { color: rgb(15, 23, 42); }
+[data-theme="light"] .seamless-eco-node-sub   { color: rgb(100, 116, 139); }
+
+/* Perimeter ring — color via currentColor (set on the .seamless-eco-perimeter
+   class so light/dark can override without re-declaring SVG stroke). */
+.seamless-eco-perimeter { color: rgba(148, 163, 184, 0.45); }
+[data-theme="light"] .seamless-eco-perimeter { color: rgba(100, 116, 139, 0.55); }
+
+/* Animated comet — traveling bright segment along the perimeter. With
+   pathLength=100 and dasharray "22 78", a single 22%-of-circumference
+   visible chunk slides around as stroke-dashoffset goes 0 → -100. */
+@keyframes seamless-eco-comet {
+  to { stroke-dashoffset: -100; }
+}
+.seamless-eco-comet {
+  animation: seamless-eco-comet 8s linear infinite;
+}
+
+/* Soft dot grid across the visual — premium "engineered background" feel,
+   stronger in light mode where it reads as paper-with-grid. */
+.seamless-eco-dotgrid {
+  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+  opacity: 0.5;
+}
+[data-theme="light"] .seamless-eco-dotgrid {
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.10) 1px, transparent 1px);
+  opacity: 0.7;
+}
+
+/* Trust badge — theme-aware tint */
+[data-theme="light"] .seamless-eco-trust {
+  background-color: rgba(20, 184, 166, 0.10) !important;
+  border-color: rgba(20, 184, 166, 0.30) !important;
+}
+
+/* Hover intelligence retained: the matching node + its label brighten
+   while others fade slightly. */
+.seamless-eco-graph:has(.seamless-eco-node:hover) .seamless-eco-node:not(:hover) {
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
+}
+
+/* Feature strip — theme-aware surface for the 4 enterprise callouts */
+.seamless-eco-features {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+.seamless-eco-feat-title { color: rgb(241, 245, 249); }
+.seamless-eco-feat-sub   { color: rgb(148, 163, 184); }
+
+[data-theme="light"] .seamless-eco-features {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+[data-theme="light"] .seamless-eco-feat-title { color: rgb(15, 23, 42); }
+[data-theme="light"] .seamless-eco-feat-sub   { color: rgb(100, 116, 139); }
+
+/* Reduced-motion: silence the comet too */
+@media (prefers-reduced-motion: reduce) {
+  .seamless-eco-comet { animation: none !important; }
+}
+
+/* Reduced-motion: silence atmospheric layers too */
+@media (prefers-reduced-motion: reduce) {
+  .seamless-eco-bloom-1,
+  .seamless-eco-bloom-2,
+  .seamless-eco-bloom-3,
+  .seamless-eco-floater,
+  .seamless-hub-holo,
+  .seamless-eco-pulse,
+  .seamless-eco-status-dot,
+  .seamless-eco-orbit-1,
+  .seamless-eco-orbit-2,
+  .seamless-eco-mesh-link,
+  .seamless-eco-waypoint { animation: none !important; }
+}

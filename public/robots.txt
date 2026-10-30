@@ -1,0 +1,41 @@
+# https://cagos.io — robots policy
+#
+# IMPORTANT: Cloudflare's "Block AI Bots" toggle (Security → Bots → Bot Fight Mode
+# → "Block AI Scrapers and Crawlers") prepends a managed block to this file at the
+# edge that DISALLOWS GPTBot / ClaudeBot / Google-Extended / PerplexityBot etc.
+# That managed group is matched first per RFC 9309, overriding the Allow rules
+# below. To make the AI-crawler Allow rules below actually take effect, the
+# Cloudflare toggle must be turned OFF in the dashboard.
+#
+# Current intent: allow AI crawlers (for ChatGPT / Perplexity / AI Overview
+# citations) while blocking auth flows from indexing.
+
+User-agent: *
+Allow: /
+
+# Auth & private flows — do not index
+Disallow: /login
+Disallow: /register
+
+# AI crawlers — explicitly allowed (depends on Cloudflare AI-block being OFF)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://cagos.io/sitemap.xml
+
+# AEO / AI engines — see llms.txt for a structured index of canonical resources
+# and llms-full.txt for long-form context (per llmstxt.org).
+# LLM-Index: https://cagos.io/llms.txt
+# LLM-Full:  https://cagos.io/llms-full.txt

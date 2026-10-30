@@ -1,0 +1,1081 @@
+@font-face {
+  font-family: 'CAGos Hero Outfit';
+  src: url('/hero-media/outfit-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* clip preserves the existing page crop while allowing this hero to stick.
+   No existing header, footer, page palette or section styles are changed. */
+.fresh-home:has(> main > .cagos-reference-hero) {
+  overflow: clip;
+}
+.cagos-reference-hero {
+  --hero-stage-height: calc(100svh - 86px);
+  --hero-pin-top: 86px;
+  --hero-edge: 32px;
+  --hero-radius: 24px;
+  --hero-bottom: 24px;
+  --hero-copy-opacity: 1;
+  --hero-copy-y: 0px;
+  --hero-laptop-y: calc(
+    var(--hero-stage-height) * 0.1 +
+      min(88vw, var(--hero-stage-height) * 1.62) * 0.3026996
+  );
+  --hero-blur: 0px;
+  --hero-shade: 0;
+  position: relative;
+  height: calc(var(--hero-stage-height) * 2);
+  font-family: 'CAGos Hero Outfit', 'Geist', system-ui, sans-serif;
+  color: #fff;
+  isolation: isolate;
+}
+.cagos-reference-hero *,
+.cagos-reference-hero *::before,
+.cagos-reference-hero *::after {
+  box-sizing: border-box;
+}
+.cagos-reference-hero svg {
+  flex-shrink: 0;
+}
+.reference-hero-stage {
+  position: sticky;
+  top: var(--hero-pin-top);
+  height: var(--hero-stage-height);
+  overflow: hidden;
+}
+.reference-hero-canvas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #08040e;
+  clip-path: inset(
+    0 var(--hero-edge) var(--hero-bottom) round var(--hero-radius)
+  );
+}
+.reference-hero-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  filter: blur(var(--hero-blur));
+}
+.reference-hero-film {
+  position: absolute;
+  inset: 0;
+  transform: translateY(50%) scale(2);
+}
+.reference-hero-film video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0.75);
+  background: #090311;
+}
+.reference-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, #0002, transparent 55%, #000);
+  opacity: var(--hero-shade);
+  pointer-events: none;
+}
+.reference-hero-copy {
+  position: absolute;
+  z-index: 3;
+  top: clamp(32px, 6.5vh, 80px);
+  left: 0;
+  width: 100%;
+  padding: 0 max(40px, 4vw);
+  text-align: center;
+  transform: translate3d(0, var(--hero-copy-y), 0);
+  opacity: var(--hero-copy-opacity);
+  will-change: transform, opacity;
+}
+.reference-hero-mark {
+  display: block;
+  width: 33px;
+  height: 29px;
+  margin: 0 auto 18px;
+  color: #fff;
+  stroke-width: 2;
+}
+.cagos-reference-hero .reference-hero-eyebrow {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.fresh-home .cagos-reference-hero .reference-hero-title {
+  margin: 20px auto 17px;
+  color: #fff;
+  font-family: 'CAGos Hero Outfit', 'Geist', system-ui, sans-serif;
+  font-size: clamp(40px, 4.7vw, 74px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.cagos-reference-hero .reference-hero-description {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #f4effc;
+  font-size: clamp(14px, 1.4vw, 19px);
+  font-weight: 400;
+  line-height: 1.6;
+}
+.reference-hero-cta {
+  display: inline-flex;
+  align-items: stretch;
+  margin-top: 29px;
+  color: #fff !important;
+  text-decoration: none;
+  font:
+    400 16px/1.2 'CAGos Hero Outfit',
+    'Geist',
+    sans-serif;
+}
+.reference-hero-cta > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border-radius: 14px;
+  background: #6a00f5;
+  transition: background 0.2s;
+}
+.reference-hero-cta > span:first-child {
+  padding: 12px 26px;
+}
+.reference-hero-cta > span:last-child {
+  width: 46px;
+  margin-left: 2px;
+}
+.reference-hero-cta svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s;
+}
+.reference-hero-cta:hover > span {
+  background: #8124ff;
+}
+.reference-hero-cta:hover svg {
+  transform: translate(2px, -2px);
+}
+.reference-hero-cta:focus-visible,
+.reference-hero-controls button:focus-visible {
+  outline: 3px solid #dfcaff;
+  outline-offset: 5px;
+}
+.reference-hero-laptop-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  pointer-events: none;
+}
+.reference-hero-macbook {
+  position: relative;
+  width: min(88vw, calc(var(--hero-stage-height) * 1.62));
+  aspect-ratio: 1741 / 1054;
+  flex-shrink: 0;
+  container-type: inline-size;
+  transform: translate3d(0, var(--hero-laptop-y), 0);
+  will-change: transform;
+}
+.reference-hero-macbook > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  user-select: none;
+}
+.reference-os-bar {
+  position: absolute;
+  z-index: 2;
+  left: 11.5%;
+  top: 2.35%;
+  width: 77%;
+  height: 4.25%;
+  display: flex;
+  align-items: center;
+  gap: 1.15cqw;
+  background: #000;
+  color: #eee;
+  font:
+    400 0.64cqw/1.2 'Geist',
+    sans-serif;
+}
+.reference-os-bar > svg {
+  width: 0.9cqw;
+  height: 0.9cqw;
+}
+.reference-os-bar b {
+  margin-right: 0.5cqw;
+  font-weight: 500;
+}
+.reference-os-right {
+  display: flex;
+  align-items: center;
+  gap: 1.4cqw;
+  margin-left: auto;
+}
+.reference-os-right svg {
+  width: 0.8cqw;
+  height: 0.8cqw;
+}
+.reference-hero-controls {
+  position: absolute;
+  z-index: 5;
+  right: 51px;
+  left: 51px;
+  bottom: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  pointer-events: none;
+}
+.reference-hero-controls button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ffffff40;
+  border-radius: 50%;
+  background: #0a061c70;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+  backdrop-filter: blur(8px);
+}
+.reference-hero-controls button:hover {
+  background: #6a00f5;
+}
+.reference-hero-scroll {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eee6fc;
+  font-size: 10px;
+  opacity: var(--hero-copy-opacity);
+}
+.reference-hero-scroll svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* CAGos replaces the construction demo. cqw keeps the screen perfectly aligned
+   with its real MacBook frame at every viewport and every scroll position. */
+.reference-screen {
+  position: absolute;
+  z-index: 1;
+  left: 10.1%;
+  top: 6.55%;
+  width: 79.8%;
+  height: 82.3%;
+  overflow: hidden;
+  background: #eeedf4;
+  color: #262132;
+  font-family: 'Geist', system-ui, sans-serif;
+  font-size: 0.72cqw;
+  line-height: 1.4;
+}
+.reference-screen-inner {
+  width: 100%;
+  height: 100%;
+}
+.reference-app-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5cqw;
+  height: 4.25cqw;
+  padding: 0 1.55cqw;
+  background: #17131f;
+  color: #d5cfe2;
+  font-size: 0.65cqw;
+}
+.reference-app-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55cqw;
+  margin-right: 1cqw;
+  color: #fff;
+}
+.reference-app-brand > svg {
+  width: 1.4cqw;
+  height: 1.4cqw;
+}
+.reference-app-brand b {
+  font-size: 1.25cqw;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+.reference-app-header > span:nth-child(2) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7cqw;
+  padding: 0.45cqw 0.8cqw;
+  border: 1px solid #39313e;
+  border-radius: 99px;
+}
+.reference-app-header svg {
+  width: 1cqw;
+  height: 1cqw;
+}
+.reference-app-search {
+  display: flex;
+  align-items: center;
+  gap: 0.6cqw;
+  width: 23cqw;
+  margin-left: auto;
+  padding: 0.5cqw 1cqw;
+  border-radius: 99px;
+  background: #e0dbe8;
+  color: #6d6379;
+  font-size: 0.6cqw;
+}
+.reference-app-avatar,
+.reference-task-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.7cqw;
+  height: 1.7cqw;
+  border-radius: 50%;
+  background: #ddd1ec;
+  color: #5d427b;
+  font-size: 0.55cqw;
+}
+.reference-app-body {
+  display: flex;
+  height: calc(100% - 4.25cqw);
+}
+.reference-app-sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8cqw;
+  width: 3.5cqw;
+  flex-shrink: 0;
+  padding: 1.4cqw 0.5cqw;
+  background: #26212f;
+  color: #9c92ac;
+}
+.reference-app-sidebar > span {
+  display: grid;
+  place-items: center;
+  width: 2.4cqw;
+  height: 2.4cqw;
+  border-radius: 0.5cqw;
+}
+.reference-app-sidebar > span:last-child {
+  margin-top: auto;
+}
+.reference-app-sidebar svg {
+  width: 1.2cqw;
+  height: 1.2cqw;
+}
+.reference-app-sidebar > .reference-nav-selected {
+  background: #6a00f5;
+  color: #fff;
+}
+.reference-app-pages {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.reference-app-page {
+  position: absolute;
+  inset: 0;
+  padding: 1.4cqw 1.55cqw 0.8cqw;
+  background: #eeedf4;
+  opacity: 0;
+  animation: reference-demo-scenes 24s linear infinite both paused;
+}
+.reference-app-page-0 {
+  opacity: 1;
+}
+.reference-app-page-1 {
+  animation-delay: -16s;
+}
+.reference-app-page-2 {
+  animation-delay: -8s;
+}
+.reference-app-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.75cqw;
+  min-height: 1.3cqw;
+  color: #9b92aa;
+  font-size: 0.6cqw;
+}
+.reference-app-breadcrumb b {
+  padding: 0.35cqw 0.8cqw;
+  border-radius: 99px;
+  background: #6a00f5;
+  color: #fff;
+  font-weight: 400;
+}
+.reference-app-period {
+  display: flex;
+  align-items: center;
+  gap: 0.6cqw;
+  margin-left: auto;
+  color: #7e728d;
+}
+.reference-app-period svg {
+  width: 0.7cqw;
+  height: 0.7cqw;
+}
+.reference-app-greeting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1cqw;
+  padding: 1.55cqw 0 1.4cqw;
+}
+.reference-app-greeting small {
+  display: block;
+  color: #a095ad;
+  font-size: 0.47cqw;
+  letter-spacing: 0.12em;
+}
+.reference-app-greeting strong {
+  display: block;
+  margin: 0.5cqw 0 0.3cqw;
+  color: #2c2437;
+  font-size: 1.7cqw;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+.cagos-reference-hero .reference-app-greeting p {
+  margin: 0;
+  color: #8f839e;
+  font:
+    400 0.62cqw/1.5 'Geist',
+    sans-serif;
+}
+.reference-new-task {
+  padding: 0.65cqw 1cqw;
+  border-radius: 0.4cqw;
+  background: #6a00f5;
+  color: #fff;
+  font-size: 0.64cqw;
+}
+.reference-app-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8cqw;
+}
+.reference-app-metrics > div {
+  padding: 1cqw 1.2cqw;
+  border: 1px solid #e5e0ed;
+  border-radius: 0.6cqw;
+  background: #fff;
+}
+.reference-app-metrics > div > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4cqw;
+  color: #9789a5;
+  font-size: 0.63cqw;
+}
+.reference-app-metrics svg {
+  width: 0.8cqw;
+  height: 0.8cqw;
+  color: #a38bbb;
+}
+.reference-app-metrics strong {
+  display: block;
+  margin: 0.7cqw 0 0.4cqw;
+  color: #2d2339;
+  font-size: 2.15cqw;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.2;
+}
+.reference-app-metrics small {
+  display: block;
+  color: #a394b1;
+  font-size: 0.5cqw;
+}
+.reference-app-metrics small span {
+  color: #9055d2;
+}
+.reference-app-panels {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1cqw;
+  margin-top: 1.1cqw;
+}
+.reference-work-list,
+.reference-chart-panel {
+  min-width: 0;
+  padding: 1.25cqw;
+  border: 1px solid #e6e0ed;
+  border-radius: 0.6cqw;
+  background: #fff;
+}
+.reference-app-panels header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4cqw;
+  margin-bottom: 1cqw;
+  color: #43344f;
+  font-size: 0.72cqw;
+}
+.reference-app-panels header b {
+  font-weight: 500;
+}
+.reference-app-panels header > span {
+  color: #a190af;
+  font-size: 0.51cqw;
+}
+.reference-work-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5cqw 0 0.7cqw 1.7cqw;
+  color: #afa2bb;
+  font-size: 0.45cqw;
+  letter-spacing: 0.08em;
+}
+.reference-work-labels > span:last-child {
+  margin-right: 3cqw;
+}
+.reference-work-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6cqw;
+  min-height: 3.2cqw;
+  padding: 0.7cqw 0;
+  border-top: 1px solid #f0ebf4;
+}
+.reference-work-row > div {
+  flex: 1;
+  min-width: 0;
+}
+.reference-work-row b {
+  display: block;
+  color: #54425f;
+  font-size: 0.64cqw;
+  font-weight: 500;
+}
+.reference-work-row small {
+  display: block;
+  margin-top: 0.2cqw;
+  color: #a18fb0;
+  font-size: 0.49cqw;
+}
+.reference-task-check {
+  display: grid;
+  place-items: center;
+  width: 0.9cqw;
+  height: 0.9cqw;
+  flex-shrink: 0;
+  border: 1px solid #ded3e8;
+  border-radius: 0.2cqw;
+}
+.reference-task-check svg {
+  width: 0.7cqw;
+  height: 0.7cqw;
+}
+.reference-task-check.reference-task-done {
+  border-color: #955dd4;
+  background: #955dd4;
+  color: #fff;
+}
+.reference-task-status {
+  padding: 0.35cqw 0.55cqw;
+  border-radius: 0.3cqw;
+  font-size: 0.46cqw;
+  white-space: nowrap;
+}
+.reference-task-status-in-progress {
+  background: #fff4da;
+  color: #a27b27;
+}
+.reference-task-status-in-review {
+  background: #f0e7fb;
+  color: #8c59bd;
+}
+.reference-task-status-completed {
+  background: #e9f3ee;
+  color: #467f64;
+}
+.reference-task-avatar {
+  width: 1.4cqw;
+  height: 1.4cqw;
+  margin-left: 0.4cqw;
+  font-size: 0.45cqw;
+}
+.reference-chart-panel > strong {
+  display: block;
+  color: #43314f;
+  font-size: 1.8cqw;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+.reference-chart-panel > strong > small {
+  margin-left: 0.5cqw;
+  color: #9568be;
+  font-size: 0.48cqw;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.reference-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.45cqw;
+  height: 8.8cqw;
+  margin-top: 1cqw;
+  border-bottom: 1px solid #e4dbe9;
+  background: repeating-linear-gradient(
+    to top,
+    transparent 0 2.2cqw,
+    #f6f1fa 2.2cqw calc(2.2cqw + 1px)
+  );
+}
+.reference-bar-chart > span {
+  flex: 1;
+  transform-origin: center bottom;
+  border-radius: 0.25cqw 0.25cqw 0 0;
+  background: #dfcaf5;
+  animation: reference-chart-grow 4s ease-in-out infinite alternate paused;
+}
+.reference-bar-chart > span:nth-child(3n) {
+  background: #b58ae7;
+}
+.reference-bar-chart > span:last-child {
+  background: #6a00f5;
+}
+.reference-chart-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5cqw;
+  color: #b1a0bd;
+  font-size: 0.45cqw;
+}
+.reference-chart-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4cqw;
+  margin-top: 1.1cqw;
+  color: #a48db5;
+  font-size: 0.48cqw;
+}
+.reference-chart-key > span {
+  width: 0.4cqw;
+  height: 0.4cqw;
+  border-radius: 50%;
+  background: #af7ee2;
+}
+.reference-app-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8cqw;
+  margin-top: 1.2cqw;
+  color: #ad9bba;
+  font-size: 0.47cqw;
+}
+.reference-app-footer > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.4cqw;
+}
+.reference-app-footer > span > span {
+  width: 0.35cqw;
+  height: 0.35cqw;
+  border-radius: 50%;
+  background: #9b68cb;
+}
+.reference-demo-cursor {
+  position: absolute;
+  z-index: 4;
+  top: 64%;
+  left: 75%;
+  width: 1.2cqw;
+  color: #f9f7ff;
+  filter: drop-shadow(0 1px 2px #27133788);
+  animation: reference-cursor-tour 8s ease-in-out infinite paused;
+}
+.reference-demo-cursor svg {
+  display: block;
+  width: 100%;
+  fill: #fff;
+  stroke: #31263c;
+  stroke-width: 1;
+}
+.cagos-reference-hero[data-running='true']
+  :is(
+    .reference-app-page,
+    .reference-bar-chart > span,
+    .reference-demo-cursor
+  ) {
+  animation-play-state: running;
+}
+
+@keyframes reference-demo-scenes {
+  0%,
+  29.5% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  32%,
+  97% {
+    opacity: 0;
+    transform: translateY(0.5cqw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes reference-chart-grow {
+  from {
+    transform: scaleY(0.75);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes reference-cursor-tour {
+  0%,
+  12% {
+    transform: translate(0, 0);
+  }
+  30%,
+  42% {
+    transform: translate(-15cqw, -10cqw);
+  }
+  58%,
+  65% {
+    transform: translate(-40cqw, -21cqw);
+  }
+  82%,
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .cagos-reference-hero {
+    --hero-laptop-y: calc(
+      var(--hero-stage-height) * 0.1 +
+        min(94vw, var(--hero-stage-height) * 1.62) * 0.3026996
+    );
+    height: calc(var(--hero-stage-height) * 1.75);
+  }
+  .reference-hero-copy {
+    top: 7%;
+    padding-inline: 40px;
+  }
+  .cagos-reference-hero .reference-hero-eyebrow {
+    font-size: 15px;
+  }
+  .fresh-home .cagos-reference-hero .reference-hero-title {
+    max-width: 720px;
+    font-size: clamp(40px, 5.2vw, 56px);
+  }
+  .cagos-reference-hero .reference-hero-description {
+    max-width: 620px;
+    font-size: 14px;
+  }
+  .reference-hero-macbook {
+    width: min(94vw, calc(var(--hero-stage-height) * 1.62));
+  }
+}
+@media (max-width: 599px) {
+  .reference-hero-film video {
+    object-fit: cover;
+  }
+  .cagos-reference-hero {
+    --hero-edge: 12px;
+    --hero-laptop-y: calc(var(--hero-stage-height) * 0.1 + 110vw * 0.3026996);
+    height: calc(var(--hero-stage-height) * 1.6);
+  }
+  .reference-hero-copy {
+    top: 7%;
+    padding-inline: 27px;
+  }
+  .reference-hero-mark {
+    width: 30px;
+    height: 25px;
+    margin-bottom: 19px;
+  }
+  .cagos-reference-hero .reference-hero-eyebrow {
+    font-size: 13px;
+  }
+  .fresh-home .cagos-reference-hero .reference-hero-title {
+    max-width: 400px;
+    margin: 20px auto 17px;
+    font-size: clamp(35px, 9.7vw, 46px);
+    line-height: 1.07;
+    letter-spacing: -0.025em;
+  }
+  .cagos-reference-hero .reference-hero-description {
+    max-width: 370px;
+    padding-inline: 5px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .reference-hero-cta {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+  .reference-hero-cta > span:first-child {
+    padding-inline: 24px;
+  }
+  .reference-hero-cta > span {
+    min-height: 46px;
+  }
+  .reference-hero-macbook {
+    width: 110vw;
+  }
+  .reference-hero-controls {
+    left: 26px;
+    right: 26px;
+    bottom: 37px;
+  }
+  .reference-hero-scroll {
+    font-size: 9px;
+  }
+}
+@media (max-height: 650px) and (min-width: 600px) {
+  .reference-hero-copy {
+    top: 26px;
+  }
+  .reference-hero-mark {
+    margin-bottom: 9px;
+    height: 24px;
+  }
+  .cagos-reference-hero .reference-hero-eyebrow {
+    font-size: 14px;
+  }
+  .fresh-home .cagos-reference-hero .reference-hero-title {
+    margin-block: 12px;
+    font-size: clamp(35px, 4.3vw, 58px);
+  }
+  .cagos-reference-hero .reference-hero-description {
+    font-size: 13px;
+  }
+  .reference-hero-cta {
+    margin-top: 17px;
+    font-size: 14px;
+  }
+}
+/* The next chapter of the hero: the MacBook flows straight into this panel.
+   Its view-timeline reveal needs no JavaScript and stays visible in browsers
+   that do not support scroll-driven animations. */
+.reference-practice-intro {
+  position: relative;
+  z-index: 1;
+  margin-top: -1px;
+  padding: clamp(88px, 10vw, 160px) 32px;
+  overflow: clip;
+  background:
+    radial-gradient(50% 50% at 50% 50%, #36009766 0%, #36009700 100%), #000;
+  color: #fff;
+  font-family: 'CAGos Hero Outfit', 'Geist', system-ui, sans-serif;
+}
+.reference-practice-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
+  align-items: end;
+  gap: clamp(40px, 7vw, 112px);
+  max-width: 1376px;
+  margin-inline: auto;
+}
+.reference-practice-copy,
+.reference-practice-summary {
+  min-width: 0;
+}
+.reference-practice-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 58px;
+  padding: 10px 14px;
+  background: #f5f0ff;
+  color: #28113d;
+}
+.reference-practice-badge > svg {
+  width: 27px;
+  height: 27px;
+  color: #6a00f5;
+}
+.reference-practice-badge > span {
+  font-size: 21px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+.reference-practice-badge small {
+  display: block;
+  margin-top: 5px;
+  font-size: 7px;
+  line-height: 1.4;
+  letter-spacing: 0.85px;
+}
+.fresh-home .reference-practice-intro .reference-practice-title {
+  max-width: 18ch;
+  margin: 24px 0 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(44px, 4.8vw, 72px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.reference-practice-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+  padding-bottom: 2px;
+}
+.reference-practice-intro .reference-practice-summary > p {
+  max-width: 355px;
+  margin: 0;
+  color: #f3eefb;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.reference-practice-intro .reference-hero-cta {
+  margin-top: 0;
+}
+@keyframes reference-practice-reveal {
+  from {
+    opacity: 0.15;
+    transform: translate3d(0, 36px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reference-practice-layout {
+      animation: reference-practice-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 90%;
+    }
+    .reference-practice-layout:focus-within {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .reference-practice-intro {
+    padding: 88px 32px;
+  }
+  .reference-practice-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .fresh-home .reference-practice-intro .reference-practice-title {
+    max-width: 22ch;
+    font-size: clamp(40px, 6.5vw, 58px);
+  }
+  .reference-practice-summary {
+    gap: 28px;
+  }
+  .reference-practice-intro .reference-practice-summary > p {
+    max-width: 540px;
+  }
+}
+@media (max-width: 599px) {
+  .reference-practice-intro {
+    padding: 64px 24px 72px;
+  }
+  .reference-practice-badge {
+    min-height: 52px;
+    padding: 9px 12px;
+    gap: 9px;
+  }
+  .reference-practice-badge > span {
+    font-size: 19px;
+  }
+  .reference-practice-badge > svg {
+    width: 24px;
+    height: 24px;
+  }
+  .reference-practice-badge small {
+    font-size: 6px;
+  }
+  .fresh-home .reference-practice-intro .reference-practice-title {
+    max-width: 18ch;
+    margin-top: 23px;
+    font-size: clamp(35px, 9vw, 46px);
+    line-height: 1.12;
+  }
+  .reference-practice-layout {
+    gap: 28px;
+  }
+  .reference-practice-intro .reference-practice-summary > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cagos-reference-hero {
+    height: auto;
+  }
+  .reference-hero-stage {
+    position: relative;
+    top: 0;
+    height: auto;
+    min-height: 620px;
+  }
+  .reference-hero-canvas {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  .reference-hero-copy {
+    position: relative;
+    top: 0;
+    padding-top: 45px;
+    opacity: 1;
+    transform: none;
+  }
+  .reference-hero-laptop-layer {
+    position: relative;
+    margin-top: 35px;
+  }
+  .reference-hero-macbook {
+    width: min(90vw, 1080px);
+    transform: none;
+  }
+  .reference-hero-controls {
+    display: none;
+  }
+  .reference-hero-background {
+    filter: none;
+  }
+  .cagos-reference-hero *,
+  .cagos-reference-hero *::before,
+  .cagos-reference-hero *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reference-app-page {
+    opacity: 0;
+  }
+  .reference-app-page-0 {
+    opacity: 1;
+  }
+  .reference-demo-cursor {
+    display: none;
+  }
+}

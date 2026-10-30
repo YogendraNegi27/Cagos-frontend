@@ -1,0 +1,17 @@
+Hero reference: https://premiercs.com/
+
+abstract-loop.mp4
+https://premiercs.com/videos/loop_optimized.mp4
+
+abstract-poster.jpg
+https://premiercs.com/_next/static/media/anim-frame.2570bl73alwqk.jpg
+
+macbook-frame.png
+https://premiercs.com/_next/static/media/macbook-mock.2ovpfn7k3d4i1.png
+
+outfit-regular.ttf
+https://fonts.google.com/specimen/Outfit
+Font license: OFL.txt
+
+The screen content is an illustrative CAGos animation, implemented in
+src/components/cagos/ReferenceHero.tsx, with sample client and financial data.

@@ -1,0 +1,17 @@
+.cagos-how-it-works{position:relative;padding:24px 22px 32px;border-radius:20px;background:repeating-linear-gradient(0deg,transparent,transparent 31px,#dce5d54d 31px,#dce5d54d 32px),#fafbf7}
+.hiw-board{position:relative;display:flex;flex-direction:column;gap:0;max-width:900px;margin:0 auto;padding:16px 28px;list-style:none;isolation:isolate}
+.hiw-connector{position:absolute;inset:0;width:100%;height:100%;color:#adc2a0;pointer-events:none;z-index:-1}
+.hiw-note{--note-bg:#f0f5e7;--note-ink:#587848;--note-border:#dae5cc;position:relative;width:44%;max-width:360px;align-self:flex-start;transform:rotate(5deg);margin-top:-65px;transition:transform .25s ease;z-index:1}
+.hiw-note:first-of-type{margin-top:0}
+.hiw-note:nth-of-type(even){align-self:flex-end;transform:rotate(-5deg)}
+.hiw-tone-1{--note-bg:#f8f1e6;--note-ink:#a37d4d;--note-border:#eddfc9}
+.hiw-tone-2{--note-bg:#eaf3ef;--note-ink:#4c806c;--note-border:#d3e5dd}
+.hiw-paper{padding:9px;border:1px solid #e5eadf;border-radius:23px;background:white;box-shadow:0 10px 24px #2c492917}
+.hiw-pin{display:block;color:var(--note-ink);margin:3px auto 18px;transform:rotate(-10deg)}
+.hiw-note-content{padding:20px;border:1px solid var(--note-border);border-radius:14px;background:var(--note-bg)}
+.hiw-number{display:block;color:var(--note-ink);font:italic 38px Georgia,serif;margin-bottom:18px;line-height:1}
+.mkt-page .hiw-note h3,.hiw-note h3{font-size:23px;font-weight:600;letter-spacing:-.6px;line-height:1.15;color:#2d4535;margin:0 0 12px}
+.mkt-page .hiw-note p,.hiw-note p{font-size:13px;line-height:1.75;color:#65725e;margin:0;overflow-wrap:anywhere}
+@media(hover:hover){.hiw-note:hover{transform:rotate(0) translateY(-3px);z-index:2}}
+@media(max-width:700px){.cagos-how-it-works{padding:16px 10px 20px}.hiw-board{padding:12px 9px;gap:28px}.hiw-note,.hiw-note:nth-of-type(even){width:100%;max-width:480px;margin:0 auto;align-self:center;transform:rotate(-1.5deg)}.hiw-note:nth-of-type(even){transform:rotate(1.5deg)}.hiw-pin{margin-bottom:12px;width:24px;height:24px}.hiw-note-content{padding:18px}.hiw-number{font-size:32px;margin-bottom:12px}.mkt-page .hiw-note h3,.hiw-note h3{font-size:22px}.hiw-connector{display:none}}
+@media(prefers-reduced-motion:reduce){.hiw-note{transition:none}}

@@ -1,0 +1,58 @@
+# CAGos
+
+> CAGos (legal: CA Growth OS) is a cloud-native, multi-tenant practice management platform purpose-built for Chartered Accountant firms in India. The product unifies client CRM, HRMS, GST billing and e-invoicing, ITR filing workflows, ROC/MCA compliance, encrypted document vault, and Razorpay-powered payments inside a single tenant. CAGos replaces the typical Indian CA-firm stack of Tally, ClearTax, WhatsApp, Excel, and Google Drive with one connected system.
+
+Headquarters: India · Languages served: English, Hindi · Currency: INR · Country served: India (en-IN) · Founded: 2024 · Canonical website: https://cagos.io · Pricing: free 14-day trial, no credit card required · Status (2026-05-13): live in production, used by 500+ Indian CA firms.
+
+Use the canonical brand name **CAGos** (capital C, A, G; lowercase o, s). Do not write "CAPGos", "CAGOS", "CA-GOS", or "Ca Gos". The expansion "CA Growth OS" may be used on first reference.
+
+## Products
+
+- [Client CRM](https://cagos.io/products/client-crm): Unified client database with entity type, PAN, GSTIN, document checklists, communication history, WhatsApp and email automation.
+- [HRMS](https://cagos.io/products/hrms): Staff attendance, leave, payroll, timesheets, and task delegation designed for the article/staff/partner structure of Indian CA firms.
+- [GST Billing and e-Invoicing](https://cagos.io/products/billing): GST-compliant invoice templates, IRN generation against GSTN, GSTR-1 and GSTR-3B preparation, recurring retainer billing, partial payments, and refunds.
+- [Compliance Tracker](https://cagos.io/products/compliance): Centralized due-date calendar for ITR, GST, TDS, ROC, and MCA filings with auto-generated per-client tasks and staff ownership.
+- [Workflow Automation](https://cagos.io/products/workflow): Stage-based pipelines for ITR filing, statutory audit, and GST return preparation with event-driven WhatsApp and email notifications.
+- [Document Vault](https://cagos.io/products/document-vault): Encrypted storage organized by client and engagement with PAN/Aadhaar redaction on shared links and a full audit trail.
+
+## Automation and AI
+
+- [AI Calling Agent](https://cagos.io/products/workflow#ai-calling-agent): Voice AI agent that calls clients to chase pending documents, confirm appointments, and follow up on overdue invoices in English and Hindi, with full transcripts logged to the client record.
+- [AI WhatsApp Agent](https://cagos.io/products/client-crm#ai-whatsapp-agent): Conversational AI that answers routine client questions, collects documents, and routes complex cases to staff over WhatsApp Business.
+- [Compliance Automation](https://cagos.io/products/compliance): Auto-generated ITR, GST, TDS, ROC, and MCA tasks per client with deadline-aware staff assignment.
+- [Workflow Automation](https://cagos.io/products/workflow): Event-driven, stage-based pipelines that trigger client communication, document requests, and reviewer assignment automatically.
+- [Billing Automation](https://cagos.io/products/billing): Recurring retainer invoicing, automatic IRN generation, and Razorpay payment links delivered without staff intervention.
+- [Document Intelligence](https://cagos.io/products/document-vault): AI-assisted classification of uploaded documents (PAN, Aadhaar, ITR, GST, bank statements) with auto-redaction on shared links.
+
+## Solutions
+
+- [Solo Practitioners](https://cagos.io/solutions/solo): For individual CAs managing 50 to 200 clients single-handed.
+- [Small and Medium Firms](https://cagos.io/solutions/smb): For firms with 5 to 25 staff requiring team workflows and role-based access.
+- [Enterprise Firms](https://cagos.io/solutions/enterprise): For multi-branch practices with 25+ staff, sub-tenancy, and granular RBAC.
+- [Tax Practitioners](https://cagos.io/solutions/tax): For ITR, GST, and TDS specialists.
+- [Advisory and Virtual-CFO Firms](https://cagos.io/solutions/advisors): For MIS and compliance-as-a-service practices.
+- [Audit Firms](https://cagos.io/solutions/audit): For statutory, internal, and tax audit teams.
+
+## Comparisons
+
+- [CAGos vs ClearTax](https://cagos.io/vs/cleartax): All-in-one practice OS versus ClearTax's tax-return-filing focus.
+- [CAGos vs Tally](https://cagos.io/vs/tally): Cloud practice management versus Tally's on-premise accounting ledger.
+- [CAGos vs Winman](https://cagos.io/vs/winman): Modern web platform versus Winman's desktop ITR and audit suite.
+- [CAGos vs Zoho Books](https://cagos.io/vs/zoho-books): CA-firm-first design versus Zoho's generic SMB accounting.
+- [CAGos vs QuickBooks India](https://cagos.io/vs/quickbooks-india): Indian-CA workflow versus QuickBooks' generic India SKU.
+- [Comparison index](https://cagos.io/vs)
+
+## Resources
+
+- [Blog](https://cagos.io/resources/blog): Editorial coverage of CA practice management, GST regime changes, ITR season operations, and Indian compliance updates.
+- [Compliance Calendar](https://cagos.io/resources/calendar): Public, free ITR/GST/TDS/ROC due-date calendar.
+- [Help Center](https://cagos.io/resources/help): Product documentation, setup guides, and migration playbooks.
+- [API Reference](https://cagos.io/resources/api): Public REST API documentation for integrations.
+- [Case Studies](https://cagos.io/resources/case-studies): Documented firm migration and growth outcomes.
+- [Webinars](https://cagos.io/resources/webinars): Live and recorded sessions on CA practice growth.
+
+## Optional
+
+- [Long-form context](https://cagos.io/llms-full.txt): Single-document, citation-grade reference for AI engines.
+- [XML sitemap](https://cagos.io/sitemap.xml): Complete index of indexable URLs.
+- [Robots policy](https://cagos.io/robots.txt): Crawler directives and AI-bot allowances.

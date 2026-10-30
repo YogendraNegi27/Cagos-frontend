@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="CAGos — CA Practice Management Software for Indian Firms">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1233"/>
+      <stop offset="55%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#2b3fbd"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4aa"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.18" cy="0.32" r="0.55">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="0.82" cy="0.72" r="0.55">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glowL)"/>
+  <rect width="1200" height="630" fill="url(#glowR)"/>
+
+  <!-- Subtle top accent line -->
+  <rect x="0" y="0" width="1200" height="2" fill="url(#brand)" opacity="0.75"/>
+
+  <!-- Brand mark — teal/cyan badge with monogram "CG" -->
+  <g transform="translate(90,82)">
+    <rect width="84" height="84" rx="22" fill="url(#brand)"/>
+    <rect width="84" height="84" rx="22" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+    <text x="42" y="56" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="38" font-weight="900" fill="#0b1233" text-anchor="middle" letter-spacing="-0.02em">CG</text>
+  </g>
+
+  <!-- Brand name + locale tag -->
+  <g transform="translate(196,108)">
+    <text font-family="Inter, -apple-system, system-ui, sans-serif" font-size="40" font-weight="900" fill="#f8fafc" letter-spacing="-0.02em">CAGos</text>
+    <text y="36" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="14" font-weight="700" fill="#5eead4" letter-spacing="0.18em">CA PRACTICE MANAGEMENT · INDIA</text>
+  </g>
+
+  <!-- Eyebrow pill -->
+  <g transform="translate(90,238)">
+    <rect width="290" height="32" rx="16" fill="rgba(94,234,212,0.12)" stroke="rgba(94,234,212,0.4)" stroke-width="1"/>
+    <circle cx="20" cy="16" r="4" fill="#00d4aa"/>
+    <text x="34" y="21" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="12" font-weight="800" fill="#5eead4" letter-spacing="0.14em">#1 FOR INDIAN CA FIRMS</text>
+  </g>
+
+  <!-- Headline -->
+  <g transform="translate(90,310)">
+    <text font-family="Inter, -apple-system, system-ui, sans-serif" font-size="76" font-weight="900" fill="#ffffff" letter-spacing="-0.025em">Run your CA practice</text>
+    <text y="88" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="76" font-weight="900" letter-spacing="-0.025em">
+      <tspan fill="#ffffff">from </tspan>
+      <tspan fill="url(#brand)">one screen.</tspan>
+    </text>
+  </g>
+
+  <!-- Sub-headline / feature pills -->
+  <g transform="translate(90,512)" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="15" font-weight="700" fill="#cbd5e1">
+    <g>
+      <rect width="118" height="34" rx="17" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="59" y="22" text-anchor="middle">CRM</text>
+    </g>
+    <g transform="translate(132,0)">
+      <rect width="118" height="34" rx="17" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="59" y="22" text-anchor="middle">HRMS</text>
+    </g>
+    <g transform="translate(264,0)">
+      <rect width="166" height="34" rx="17" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="83" y="22" text-anchor="middle">GST Billing</text>
+    </g>
+    <g transform="translate(444,0)">
+      <rect width="180" height="34" rx="17" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="90" y="22" text-anchor="middle">Compliance</text>
+    </g>
+    <g transform="translate(638,0)">
+      <rect width="180" height="34" rx="17" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+      <text x="90" y="22" text-anchor="middle">Razorpay</text>
+    </g>
+  </g>
+
+  <!-- Footer-row meta: domain + trial -->
+  <g transform="translate(90,580)" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="18" font-weight="700">
+    <text fill="#94a3b8">cagos.io</text>
+    <text x="120" fill="#cbd5e1">·</text>
+    <text x="140" fill="#5eead4">Free 14-day trial — no card needed</text>
+  </g>
+</svg>

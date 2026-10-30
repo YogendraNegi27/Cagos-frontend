@@ -1,0 +1,56 @@
+# Cloudflare Workers Assets respects this _headers file (mirrored to dist/client
+# by Vite). Two header groups:
+#   1) Hashed Vite assets — long-cache + immutable.
+#   2) Everything else — security headers + a sane default cache.
+#
+# Edit order matters: most-specific path first.
+
+# ── Hashed, content-addressed Vite assets ────────────────────────────────
+# styles-D57gf2vJ.css, index-81k9wbjm.js, Navbar-MMlmkvH3.js, etc.
+# Their filenames change on every build, so a year-long immutable cache is safe.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── Brand images that don't change frequently ────────────────────────────
+/hero-cagos.webp
+  Cache-Control: public, max-age=2592000
+
+/hero-cagos.png
+  Cache-Control: public, max-age=2592000
+
+/og-image.png
+  Cache-Control: public, max-age=86400
+
+/logo.png
+  Cache-Control: public, max-age=2592000
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+# ── llms.txt / sitemap.xml / robots.txt — moderate cache, must revalidate ─
+/sitemap.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/llms.txt
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/llms-full.txt
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# ── Security headers, applied to every response ──────────────────────────
+# HSTS: 2-year max-age + preload (intent to submit to hstspreload.org).
+# X-CTO: no MIME sniffing.
+# Referrer-Policy: send origin to cross-origin links, full path same-origin.
+# Permissions-Policy: deny invasive APIs the marketing site never uses.
+# X-Frame-Options: prevent iframe embedding (clickjacking defence).
+# Content-Security-Policy is intentionally NOT enabled here yet — a careless
+# CSP breaks Razorpay/PostHog. Add via report-only mode in a separate PR.
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()
+  X-Frame-Options: SAMEORIGIN
