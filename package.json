@@ -12,11 +12,10 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "@tanstack/react-devtools": "^0.7.11",
-    "@tanstack/react-router": "1.168.22",
+    "@tanstack/react-router": "1.170.41",
     "@tanstack/react-router-devtools": "^1.166.13",
     "@tanstack/react-router-ssr-query": "^1.166.11",
-    "@tanstack/react-start": "1.167.41",
-    "@tanstack/router-plugin": "^1.167.22",
+    "@tanstack/react-start": "1.168.60",
     "lucide-react": "^0.544.0",
     "motion": "^14.7.1",
     "react": "^19.2.5",
@@ -52,10 +51,5 @@
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=22.13.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "@tanstack/start-plugin-core": "1.167.35"
-    }
   }
 }

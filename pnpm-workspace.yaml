@@ -2,5 +2,3 @@ packages:
   - '.'
 allowBuilds:
   esbuild: true
-overrides:
-  '@tanstack/start-plugin-core': 1.167.35
