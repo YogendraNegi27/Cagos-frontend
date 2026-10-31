@@ -33,7 +33,7 @@ export const Route = createFileRoute("/resources/blog/$slug")({
             author: { "@type": "Person", name: staticPost.authorName },
             publisher: {
               "@type": "Organization",
-              name: "CAGos",
+              name: "CAGOS",
               url: SITE_URL,
               logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
             },
@@ -53,8 +53,8 @@ export const Route = createFileRoute("/resources/blog/$slug")({
     }
     return seoHead({
       path: `/resources/blog/${params.slug}`,
-      title: "Blog | CAGos",
-      description: "Read the latest tax updates and practice management insights from CAGos.",
+      title: "Blog | CAGOS",
+      description: "Read the latest tax updates and practice management insights from CAGOS.",
       ogType: "article",
       schema: [
         breadcrumbSchema([
@@ -119,10 +119,10 @@ function BlogPostPage() {
     image: post.coverImageUrl ?? `${SITE_URL}/og-image.png`,
     datePublished: post.publishedAt ? new Date(post.publishedAt * 1000).toISOString() : undefined,
     dateModified: post.updatedAt ? new Date(post.updatedAt * 1000).toISOString() : undefined,
-    author: { "@type": "Person", name: post.authorName ?? "CAGos Editorial" },
+    author: { "@type": "Person", name: post.authorName ?? "CAGOS Editorial" },
     publisher: {
       "@type": "Organization",
-      name: "CAGos",
+      name: "CAGOS",
       url: SITE_URL,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
     },

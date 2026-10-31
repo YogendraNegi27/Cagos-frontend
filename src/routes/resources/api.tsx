@@ -13,24 +13,24 @@ export const Route = createFileRoute("/resources/api")({
   head: () =>
     seoHead({
       path: "/resources/api",
-      title: "CAGos REST API | Developer Documentation for CA Firm Integrations",
+      title: "CAGOS REST API | Developer Documentation for CA Firm Integrations",
       description:
-        "Build on top of the CAGos API. REST endpoints for clients, tasks, billing, and compliance data. Webhooks, SDKs for Node.js, Python, and Go. Full developer documentation.",
-      ogTitle: "CAGos Developer API — Build on Top of Your CA Firm's Data",
+        "Build on top of the CAGOS API. REST endpoints for clients, tasks, billing, and compliance data. Webhooks, SDKs for Node.js, Python, and Go. Full developer documentation.",
+      ogTitle: "CAGOS Developer API — Build on Top of Your CA Firm's Data",
       ogDescription:
-        "REST API, Webhooks, and SDKs to integrate CAGos with your internal ERP, billing system, or custom reporting tools.",
+        "REST API, Webhooks, and SDKs to integrate CAGOS with your internal ERP, billing system, or custom reporting tools.",
       schema: [
         {
           "@context": "https://schema.org",
           "@type": "TechArticle",
-          headline: "CAGos REST API Documentation",
+          headline: "CAGOS REST API Documentation",
           description:
-            "Developer documentation for the CAGos REST API — endpoints, authentication, webhooks, and SDK references.",
+            "Developer documentation for the CAGOS REST API — endpoints, authentication, webhooks, and SDK references.",
           url: `${SITE_URL}/resources/api`,
           inLanguage: "en-IN",
           publisher: {
             "@type": "Organization",
-            name: "CAGos",
+            name: "CAGOS",
             url: SITE_URL,
           },
         },
@@ -96,7 +96,7 @@ const steps = [
   {
     num: "01",
     title: "Get your API key",
-    desc: "Log into CAGos, go to Settings → Developer, and create your first API key. Choose the scopes your integration needs — read-only or full access.",
+    desc: "Log into CAGOS, go to Settings → Developer, and create your first API key. Choose the scopes your integration needs — read-only or full access.",
   },
   {
     num: "02",
@@ -117,11 +117,11 @@ const faqs = [
   },
   {
     q: "What can I build with the API?",
-    a: "Common integrations include: syncing client data from your existing CRM, auto-generating invoices from external billing triggers, pulling compliance status into internal dashboards, and posting task updates from your project management tool. Enterprise customers also integrate CAGos with Tally and SAP for ledger sync.",
+    a: "Common integrations include: syncing client data from your existing CRM, auto-generating invoices from external billing triggers, pulling compliance status into internal dashboards, and posting task updates from your project management tool. Enterprise customers also integrate CAGOS with Tally and SAP for ledger sync.",
   },
   {
     q: "Are there webhook retries if my server is down?",
-    a: "Yes. CAGos retries failed webhook deliveries with exponential backoff — 5 attempts over 24 hours. If all retries fail, the event is marked as failed and visible in your webhook delivery log so you can replay it manually.",
+    a: "Yes. CAGOS retries failed webhook deliveries with exponential backoff — 5 attempts over 24 hours. If all retries fail, the event is marked as failed and visible in your webhook delivery log so you can replay it manually.",
   },
   {
     q: "Is there a rate limit on the sandbox?",
@@ -160,10 +160,10 @@ function ApiPage() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
               Build on the{" "}
-              <span className="text-gradient-teal">CAGos API</span>
+              <span className="text-gradient-teal">CAGOS API</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              Connect your ERP, billing system, or custom dashboards to CAGos via our REST API and Webhooks. Type-safe SDKs for Node.js, Python, and Go — get your first integration live in under an hour.
+              Connect your ERP, billing system, or custom dashboards to CAGOS via our REST API and Webhooks. Type-safe SDKs for Node.js, Python, and Go — get your first integration live in under an hour.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

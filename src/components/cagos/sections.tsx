@@ -1,5 +1,5 @@
 /**
- * CAGos product sections — ported from apps/marketing/cagos/cagos-sections.jsx.
+ * CAGOS product sections — ported from apps/marketing/cagos/cagos-sections.jsx.
  * Three mid-page surfaces: Compliance · Payments · Command Center.
  */
 import { Link } from "@tanstack/react-router";
@@ -44,7 +44,7 @@ export const SectionCompliance = () => (
         <p className="eyebrow eyebrow-center">Built for CAs</p>
         <h2 className="h-section h-section-center">
           Not just <span className="grad-ink">compliance</span>.<br />
-          CAGos makes your practice <span className="grad-ink">seamless</span>.
+          CAGOS makes your practice <span className="grad-ink">seamless</span>.
         </h2>
       </Reveal>
       <div className="comp-grid">
@@ -185,7 +185,7 @@ export const SectionPayments = () => (
                 <strong>CAPay Links</strong>
               </div>
               <div className="capay-url">
-                <span>CAGos.com/pay/INV-4521XX</span>
+                <span>CAGOS.com/pay/INV-4521XX</span>
                 <span className="capay-url-copy">⧉</span>
               </div>
               <button className="capay-share" type="button">Share payment link</button>
@@ -217,7 +217,7 @@ export const SectionPayments = () => (
                 </div>
                 <div className="phone-amt-label">Amount due</div>
                 <div className="phone-amt">₹24,500</div>
-                <div className="phone-verified"><VerifiedDot /> Verified by CAGos</div>
+                <div className="phone-verified"><VerifiedDot /> Verified by CAGOS</div>
                 <div className="phone-pay">Pay ₹24,500</div>
                 <div className="phone-foot">Razorpay · UPI · Card · Netbanking</div>
               </div>
@@ -265,7 +265,7 @@ export const SectionCommand = () => (
                 <div style={{ display: "flex", gap: 6 }}>
                   <i className="tl tl-r" /><i className="tl tl-y" /><i className="tl tl-g" />
                 </div>
-                <span className="cmd-title">CAGos Workspace</span>
+                <span className="cmd-title">CAGOS Workspace</span>
                 <span className="cmd-ver">v2.4</span>
               </div>
               <div className="cmd-stat">
@@ -335,7 +335,7 @@ export const SectionCommand = () => (
   </section>
 );
 
-export const CagosSections = () => (
+export const CAGOSSections = () => (
   <>
     <SectionCompliance />
     <SectionPayments />

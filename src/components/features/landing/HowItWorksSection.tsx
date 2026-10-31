@@ -29,7 +29,7 @@ const steps = [
     icon: UserPlus,
     eyebrow: "Step 01 · Onboard",
     title: "We Map Your Entire Practice",
-    desc: "Import clients via CSV, attach GST/PAN data, and pick up where Excel left off. CAGos is yours in 10 minutes — zero IT lift.",
+    desc: "Import clients via CSV, attach GST/PAN data, and pick up where Excel left off. CAGOS is yours in 10 minutes — zero IT lift.",
     highlights: ["CSV client import", "Tenant sub-domain", "Branded client portal"],
     accent: "#3b82f6",
     grad: "from-blue-500 to-brand-600",
@@ -360,7 +360,7 @@ export function HowItWorksSection() {
               transition: "transform 0.18s ease-out, box-shadow 0.3s",
             }}
           >
-            Start your CAGos journey
+            Start your CAGOS journey
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

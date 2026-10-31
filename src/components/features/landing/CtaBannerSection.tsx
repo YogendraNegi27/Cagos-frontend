@@ -40,7 +40,7 @@ export function CtaBannerSection() {
               <span className="text-gradient-teal">your CA firm?</span>
             </h2>
             <p className="text-xl text-white/70 max-w-lg leading-relaxed">
-              Join 2,500+ chartered accountants who use CAGos to automate compliance, boost revenue, and deliver a premium client experience.
+              Join 2,500+ chartered accountants who use CAGOS to automate compliance, boost revenue, and deliver a premium client experience.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">

@@ -9,8 +9,8 @@ export const Route = createFileRoute("/login")({
   head: () =>
     seoHead({
       path: "/login",
-      title: "Sign in to CAGos | CA Firm Practice Management",
-      description: "Sign in to your CAGos workspace.",
+      title: "Sign in to CAGOS | CA Firm Practice Management",
+      description: "Sign in to your CAGOS workspace.",
       noindex: true,
     }),
   component: GlobalLoginPage,

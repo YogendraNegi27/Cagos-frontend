@@ -90,7 +90,7 @@ export function softwareApplicationSchema(opts: {
     url: SITE_URL + opts.path,
     publisher: {
       "@type": "Organization",
-      name: "CAGos",
+      name: "CAGOS",
       url: SITE_URL,
     },
     offers: {
@@ -136,10 +136,10 @@ export function comparisonSchema(opts: {
     datePublished: opts.datePublished,
     dateModified: opts.dateModified,
     inLanguage: "en-IN",
-    author: { "@type": "Organization", name: "CAGos", url: SITE_URL },
+    author: { "@type": "Organization", name: "CAGOS", url: SITE_URL },
     publisher: {
       "@type": "Organization",
-      name: "CAGos",
+      name: "CAGOS",
       url: SITE_URL,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
     },
@@ -170,7 +170,7 @@ export function speakableSchema(opts: {
 /**
  * QAPage schema — strongest signal for AI Overviews / Perplexity / ChatGPT to
  * lift a single Q&A. Use one QAPage per page where a single dominant question
- * is being answered (e.g., "what is CAGos").
+ * is being answered (e.g., "what is CAGOS").
  */
 export function qaPageSchema(opts: {
   question: string;
@@ -237,7 +237,7 @@ export function serviceSchema(opts: {
     url: SITE_URL + opts.path,
     provider: {
       "@type": "Organization",
-      name: "CAGos",
+      name: "CAGOS",
       url: SITE_URL,
     },
     areaServed: {

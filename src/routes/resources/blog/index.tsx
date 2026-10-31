@@ -10,22 +10,22 @@ export const Route = createFileRoute("/resources/blog/")({
   head: () =>
     seoHead({
       path: "/resources/blog",
-      title: "CAGos Blog | Practice Management & Tax Insights for Indian CAs",
+      title: "CAGOS Blog | Practice Management & Tax Insights for Indian CAs",
       description:
         "Tax updates, practice management strategies, and technology trends for Indian CA firms. Written by practitioners, for practitioners.",
-      ogTitle: "CAGos Blog — Insights for Indian CA Firms",
+      ogTitle: "CAGOS Blog — Insights for Indian CA Firms",
       ogDescription:
         "Tax updates, practice management strategies, and tech trends for modern Indian CA firms.",
       schema: [
         {
           "@context": "https://schema.org",
           "@type": "Blog",
-          name: "CAGos Blog",
+          name: "CAGOS Blog",
           description:
             "Tax updates, practice management strategies, and technology trends for Indian CA firms.",
           url: `${SITE_URL}/resources/blog`,
           inLanguage: "en-IN",
-          publisher: { "@type": "Organization", name: "CAGos", url: SITE_URL },
+          publisher: { "@type": "Organization", name: "CAGOS", url: SITE_URL },
         },
         breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -97,7 +97,7 @@ function BlogIndexPage() {
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-500/15 border border-brand-500/30 rounded-full text-xs font-bold text-brand-300 mb-5">
             <Rss className="w-3.5 h-3.5" />
-            CAGos Blog
+            CAGOS Blog
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
             Practice management & tax insights for Indian CAs

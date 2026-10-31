@@ -1,5 +1,5 @@
 /**
- * CAGos design-system primitives — ported from apps/marketing/cagos/components.jsx.
+ * CAGOS design-system primitives — ported from apps/marketing/cagos/components.jsx.
  * Pixel-for-pixel match with the reference. Class names match styles/cagos.css.
  */
 import {
@@ -189,7 +189,7 @@ export const PreviewCard = ({ variant }: { variant: Variant }) => {
           <div style={{ width: 130, height: 160, borderRadius: 8, background: "linear-gradient(135deg,#e8c89f,#a87a52)", flex: "0 0 auto" }} />
           <div style={{ color: "#fff" }}>
             <div style={{ fontSize: 14, fontWeight: 700, lineHeight: 1.25, letterSpacing: "-0.01em" }}>
-              &quot;CAGos cut our compliance prep from 3 days to 3 hours. It just works.&quot;
+              &quot;CAGOS cut our compliance prep from 3 days to 3 hours. It just works.&quot;
             </div>
             <div style={{ marginTop: 14, fontWeight: 700, fontSize: 11 }}>CA Partner</div>
             <div style={{ fontSize: 10, opacity: 0.85 }}>Top-50 Firm, Mumbai</div>
@@ -234,7 +234,7 @@ export const PreviewCard = ({ variant }: { variant: Variant }) => {
             <div style={{ flex: "0 0 38%" }}>
               <div style={{ color: "#5b50ff", fontSize: 10, fontWeight: 600, marginBottom: 6 }}>Features</div>
               <h4 style={{ fontSize: 20, fontWeight: 800, margin: 0, letterSpacing: "-0.02em", lineHeight: 1.05 }}>Boost your firm&apos;s productivity</h4>
-              <p style={{ fontSize: 10, color: "#8a8a95", lineHeight: 1.4, marginTop: 10 }}>CAGos streamlines workflow and enhances collaboration for CA firms across India.</p>
+              <p style={{ fontSize: 10, color: "#8a8a95", lineHeight: 1.4, marginTop: 10 }}>CAGOS streamlines workflow and enhances collaboration for CA firms across India.</p>
               <div style={{ height: 18, width: 100, background: "linear-gradient(180deg,#ff6b35,#ff5a1f)", borderRadius: 5, marginTop: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 600 }}>
                 {FREE_TRIAL_CTA}
               </div>
@@ -244,7 +244,7 @@ export const PreviewCard = ({ variant }: { variant: Variant }) => {
                 <div key={i} style={{ background: "#0a0a0e", borderRadius: 6, padding: 8, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.06)" }}>
                   <div style={{ width: 14, height: 14, background: "rgba(91,80,255,0.2)", borderRadius: 4, marginBottom: 5 }} />
                   <div style={{ fontSize: 9, fontWeight: 700 }}>{t}</div>
-                  <div style={{ fontSize: 8, color: "#8a8a95", lineHeight: 1.35, marginTop: 3 }}>CAGos enhances collaboration with intuitive messaging.</div>
+                  <div style={{ fontSize: 8, color: "#8a8a95", lineHeight: 1.35, marginTop: 3 }}>CAGOS enhances collaboration with intuitive messaging.</div>
                 </div>
               ))}
             </div>
@@ -265,7 +265,7 @@ export const PreviewCard = ({ variant }: { variant: Variant }) => {
             </div>
           </div>
           <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
-            {["Is CAGos easy to set up?", "How is CAGos different from ClearTax?", "Does it support GST e-invoicing?", "Is there a free trial?", "Is CAGos ICAI compliant?"].map((q, i) => (
+            {["Is CAGOS easy to set up?", "How is CAGOS different from ClearTax?", "Does it support GST e-invoicing?", "Is there a free trial?", "Is CAGOS ICAI compliant?"].map((q, i) => (
               <div key={i} style={{ background: "#0a0a0e", borderRadius: 6, padding: "8px 10px", display: "flex", justifyContent: "space-between", alignItems: "center", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.06)" }}>
                 <span style={{ fontSize: 9 }}>{q}</span>
                 <span style={{ fontSize: 10, color: "#8a8a95" }}>▾</span>
@@ -284,7 +284,7 @@ export const PreviewCard = ({ variant }: { variant: Variant }) => {
             Built for<br />Indian CAs
           </h4>
           <p style={{ fontSize: 11, color: "#8a8a95", margin: 0, textAlign: "center", maxWidth: 280 }}>
-            CAGos streamlines your firm with adaptable, all-in-one practice management.
+            CAGOS streamlines your firm with adaptable, all-in-one practice management.
           </p>
           <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
             <div style={{ padding: "6px 12px", background: "linear-gradient(180deg,#ff6b35,#ff5a1f)", borderRadius: 6, fontSize: 10, fontWeight: 600 }}>

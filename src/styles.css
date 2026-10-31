@@ -306,7 +306,7 @@ html[data-theme="light"] body {
 [data-theme="light"] footer a.bg-slate-800 { color: #475569 !important; }
 [data-theme="light"] footer a.bg-slate-800:hover { color: #ffffff !important; }
 
-/* Brand wordmark in footer (CAGos with brand accent) */
+/* Brand wordmark in footer (CAGOS with brand accent) */
 [data-theme="light"] footer .text-brand-400 { color: #2563eb !important; }
 [data-theme="light"] footer a:hover.hover\:text-brand-400 { color: #2563eb !important; }
 

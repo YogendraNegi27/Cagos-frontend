@@ -14,15 +14,15 @@ export const Route = createFileRoute("/products/hrms")({
   head: () =>
     seoHead({
       path: "/products/hrms",
-      title: "HRMS for CA Firms | Staff Attendance, Payroll & Leave Management | CAGos",
+      title: "HRMS for CA Firms | Staff Attendance, Payroll & Leave Management | CAGOS",
       description:
-        "CAGos HRMS helps CA firms manage article clerks, associates, and staff — attendance tracking, leave management, automated payroll, digital payslips, and performance reviews in one system.",
-      ogTitle: "HRMS for CA Firms | CAGos",
+        "CAGOS HRMS helps CA firms manage article clerks, associates, and staff — attendance tracking, leave management, automated payroll, digital payslips, and performance reviews in one system.",
+      ogTitle: "HRMS for CA Firms | CAGOS",
       ogDescription:
-        "Manage your CA firm's staff without an HR department. CAGos handles attendance, leaves, payroll, and performance reviews automatically.",
+        "Manage your CA firm's staff without an HR department. CAGOS handles attendance, leaves, payroll, and performance reviews automatically.",
       schema: [
         softwareApplicationSchema({
-          name: "CAGos HRMS",
+          name: "CAGOS HRMS",
           description:
             "Staff management for CA firms — biometric attendance, leave management, automated payroll, digital payslips, and performance reviews.",
           path: "/products/hrms",
@@ -55,7 +55,7 @@ const features = [
     icon: BadgeIndianRupee,
     color: "emerald",
     title: "Automated Payroll",
-    desc: "Monthly payroll runs in under 2 minutes. CAGos calculates CTC components, PF deductions, professional tax, TDS, and variable pay — then generates the salary register.",
+    desc: "Monthly payroll runs in under 2 minutes. CAGOS calculates CTC components, PF deductions, professional tax, TDS, and variable pay — then generates the salary register.",
   },
   {
     icon: FileText,
@@ -91,22 +91,22 @@ const steps = [
   {
     num: "03",
     title: "Run payroll in 2 minutes",
-    desc: "On the payroll date, review the auto-calculated salary register, approve it, and CAGos generates all payslips, updates accounts, and emails staff — done.",
+    desc: "On the payroll date, review the auto-calculated salary register, approve it, and CAGOS generates all payslips, updates accounts, and emails staff — done.",
   },
 ];
 
 const faqs = [
   {
-    q: "Is CAGos HRMS suitable for article clerks under ICAI training?",
-    a: "Yes. You can track article clerk attendance separately, manage their stipend payments, generate experience certificates, and log their training hours — all within CAGos.",
+    q: "Is CAGOS HRMS suitable for article clerks under ICAI training?",
+    a: "Yes. You can track article clerk attendance separately, manage their stipend payments, generate experience certificates, and log their training hours — all within CAGOS.",
   },
   {
     q: "Does the payroll handle PF and professional tax automatically?",
-    a: "Yes. CAGos calculates PF (employee + employer), professional tax (state-wise), and TDS on salary. It generates the PF challan and Form 24Q data for you to upload to the portal.",
+    a: "Yes. CAGOS calculates PF (employee + employer), professional tax (state-wise), and TDS on salary. It generates the PF challan and Form 24Q data for you to upload to the portal.",
   },
   {
     q: "Can staff apply for leave from their mobile phone?",
-    a: "Yes. The CAGos employee mobile app (iOS and Android) lets staff apply for leaves, view their balance, check payslips, and mark attendance from anywhere.",
+    a: "Yes. The CAGOS employee mobile app (iOS and Android) lets staff apply for leaves, view their balance, check payslips, and mark attendance from anywhere.",
   },
   {
     q: "Can we configure custom leave types?",

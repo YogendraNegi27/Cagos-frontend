@@ -725,7 +725,7 @@ section { position: relative; }
   .stack-card { position: relative; top: auto !important; }
 }
 
-/* ====== CAGos sections ====== */
+/* ====== CAGOS sections ====== */
 .cagos-sec {
   position: relative;
   padding: 140px 0;
@@ -1168,7 +1168,7 @@ section { position: relative; }
   flex: 0 0 auto;
 }
 
-/* ====== CAGos editor mockup (Make it your own) ====== */
+/* ====== CAGOS editor mockup (Make it your own) ====== */
 .mkt-editor-shot {
   width: 100%;
   min-width: 320px;
@@ -2582,7 +2582,7 @@ button:focus-visible, a:focus-visible, .btn:focus-visible {
 .price-card .price-amount { transition: transform .35s cubic-bezier(.16,1,.3,1); }
 .price-card:hover .price-amount { transform: translateY(-2px); }
 
-/* CAGos sections: gentle indigo glow that pulses behind the headline */
+/* CAGOS sections: gentle indigo glow that pulses behind the headline */
 .cagos-sec > .hero-glow { animation: glowBreath 8s ease-in-out infinite alternate; }
 
 /* FAQ chevron — small rotation hover even when closed */
@@ -3297,7 +3297,7 @@ button:focus-visible, a:focus-visible, .btn:focus-visible {
   .stack-card p  { font-size: 15px; }
   .stack-icon { width: 38px; height: 38px; margin-bottom: 22px; border-radius: 10px; }
 
-  /* CAGos sections — tighten paddings, fix off-canvas floating chips */
+  /* CAGOS sections — tighten paddings, fix off-canvas floating chips */
   .cagos-sec { padding: 56px 0; }
   .cagos-sec + .cagos-sec { padding-top: 24px; }
   .comp-grid { margin-top: 40px; gap: 18px; }

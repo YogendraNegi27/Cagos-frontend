@@ -23,7 +23,7 @@ const tabs = [
     icon: MessageSquare,
     tagline: "Your entire client book, intelligently organized.",
     headline: "Manage every client relationship from one powerful hub",
-    desc: "From the first inquiry to year-end filings, CAGos keeps every interaction, document, and deadline organized in one place. No more spreadsheets, no more missed follow-ups.",
+    desc: "From the first inquiry to year-end filings, CAGOS keeps every interaction, document, and deadline organized in one place. No more spreadsheets, no more missed follow-ups.",
     features: [
       "360° client profile with engagement history",
       "Automated follow-up reminders & smart nudges",
@@ -49,7 +49,7 @@ const tabs = [
     icon: ShieldCheck,
     tagline: "Zero missed deadlines. Ever.",
     headline: "Compliance deadline tracking for GST, ITR, ROC & TDS",
-    desc: "CAGos keeps every compliance obligation across your client base on one calendar — sending proactive reminders to your team before deadlines, not after.",
+    desc: "CAGOS keeps every compliance obligation across your client base on one calendar — sending proactive reminders to your team before deadlines, not after.",
     features: [
       "Auto-populated GST deadline calendar for all clients",
       "ITR deadline reminders with workflow stage tracking",
@@ -76,7 +76,7 @@ const tabs = [
     icon: Briefcase,
     tagline: "Get paid faster. Every time.",
     headline: "Automated invoicing, collections, and payment reconciliation",
-    desc: "Create professional invoices, automate recurring billing, and collect payments via Razorpay — UPI, cards, net banking, and NACH — directly within CAGos.",
+    desc: "Create professional invoices, automate recurring billing, and collect payments via Razorpay — UPI, cards, net banking, and NACH — directly within CAGOS.",
     features: [
       "Recurring invoice automation with smart scheduling",
       "Razorpay payment links shareable over email or WhatsApp",
@@ -102,7 +102,7 @@ const tabs = [
     icon: Zap,
     tagline: "The task manager built for accountants.",
     headline: "Assign, track, and complete work across your entire team",
-    desc: "Kanban boards, Gantt charts, recurring task templates, and smart workload balancing — CAGos keeps your team moving without the chaos.",
+    desc: "Kanban boards, Gantt charts, recurring task templates, and smart workload balancing — CAGOS keeps your team moving without the chaos.",
     features: [
       "Drag-and-drop Kanban boards per engagement",
       "Recurring task templates (monthly, quarterly, annual)",
@@ -128,7 +128,7 @@ const tabs = [
     icon: Users,
     tagline: "Your staff deserves more than Excel.",
     headline: "End-to-end HR management built for CA firms",
-    desc: "Onboard staff, manage leaves, run payroll, and track performance — all within CAGos. No more siloed HR tools.",
+    desc: "Onboard staff, manage leaves, run payroll, and track performance — all within CAGOS. No more siloed HR tools.",
     features: [
       "Employee onboarding with digital document collection",
       "Leave management with approval workflows",
@@ -156,7 +156,7 @@ const tabs = [
     icon: BarChart3,
     tagline: "Data that actually drives decisions.",
     headline: "Revenue intelligence & practice performance insights",
-    desc: "From client profitability to staff utilization, CAGos surfaces the metrics that matter — so you can grow your firm with confidence, not guesswork.",
+    desc: "From client profitability to staff utilization, CAGOS surfaces the metrics that matter — so you can grow your firm with confidence, not guesswork.",
     features: [
       "Revenue by client, partner, and service line",
       "Staff utilization & billing efficiency reports",

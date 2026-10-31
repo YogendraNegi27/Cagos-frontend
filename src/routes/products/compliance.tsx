@@ -14,15 +14,15 @@ export const Route = createFileRoute("/products/compliance")({
   head: () =>
     seoHead({
       path: "/products/compliance",
-      title: "Compliance Hub for CA Firms | GST ITR ROC Deadline Tracker | CAGos",
+      title: "Compliance Hub for CA Firms | GST ITR ROC Deadline Tracker | CAGOS",
       description:
-        "CAGos Compliance Hub auto-generates due dates for GST, ITR, TDS, ROC and 15+ other filings across all your clients. Get smart alerts, track filing status, and eliminate penalties.",
-      ogTitle: "Compliance Hub for CA Firms | CAGos",
+        "CAGOS Compliance Hub auto-generates due dates for GST, ITR, TDS, ROC and 15+ other filings across all your clients. Get smart alerts, track filing status, and eliminate penalties.",
+      ogTitle: "Compliance Hub for CA Firms | CAGOS",
       ogDescription:
-        "Never miss a GST, ITR, or ROC deadline. CAGos tracks compliance across all clients automatically.",
+        "Never miss a GST, ITR, or ROC deadline. CAGOS tracks compliance across all clients automatically.",
       schema: [
         softwareApplicationSchema({
-          name: "CAGos Compliance Hub",
+          name: "CAGOS Compliance Hub",
           description:
             "Auto-generated due dates for GST, ITR, TDS, ROC, PF and 15+ other filings across all your CA firm's clients with smart alerts and filing-status tracking.",
           path: "/products/compliance",
@@ -81,7 +81,7 @@ const steps = [
   {
     num: "01",
     title: "Link your client roster",
-    desc: "Import clients or sync from your CRM profile. CAGos reads entity type, GST registrations, and directorships to auto-build the compliance calendar.",
+    desc: "Import clients or sync from your CRM profile. CAGOS reads entity type, GST registrations, and directorships to auto-build the compliance calendar.",
   },
   {
     num: "02",
@@ -103,12 +103,12 @@ const complianceTypes = [
 
 const faqs = [
   {
-    q: "Which compliance types does CAGos support?",
+    q: "Which compliance types does CAGOS support?",
     a: "GST (GSTR-1, 3B, 9, 9C), Income Tax (ITR, advance tax), TDS (24Q, 26Q, 27Q), ROC (MGT-7, AOC-4, DPT-3), PF, ESI, FEMA (15CA/15CB), and more. New types are added on request.",
   },
   {
     q: "How are due dates calculated for quarterly filers?",
-    a: "CAGos reads the GST filing frequency (monthly/quarterly/QRMP) from the client profile and sets dues accordingly. Individual due dates can be overridden manually.",
+    a: "CAGOS reads the GST filing frequency (monthly/quarterly/QRMP) from the client profile and sets dues accordingly. Individual due dates can be overridden manually.",
   },
   {
     q: "Can I send compliance reminders directly to my clients?",
@@ -119,7 +119,7 @@ const faqs = [
     a: "The CA marks the task complete, enters the acknowledgement number, and the status flips to Filed. The client portal is updated and a confirmation email goes out.",
   },
   {
-    q: "Does CAGos integrate with the GSTN or MCA portal?",
+    q: "Does CAGOS integrate with the GSTN or MCA portal?",
     a: "We have a read-only GSTN integration to pull return status. Full portal integration is on the roadmap for Q3 2026. Acknowledgement numbers are entered manually after filing.",
   },
 ];
@@ -143,7 +143,7 @@ function CompliancePage() {
               Again
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              GST, ITR, TDS, ROC, PF — CAGos tracks every statutory deadline for every client automatically. Your team gets smart reminders. Your clients get filed on time. Every time.
+              GST, ITR, TDS, ROC, PF — CAGOS tracks every statutory deadline for every client automatically. Your team gets smart reminders. Your clients get filed on time. Every time.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">
@@ -210,7 +210,7 @@ function CompliancePage() {
           {[
             { val: "15+", label: "Compliance types covered" },
             { val: "47", label: "Avg reminders sent / month" },
-            { val: "₹0", label: "Avg penalties on CAGos firms" },
+            { val: "₹0", label: "Avg penalties on CAGOS firms" },
             { val: "98%", label: "On-time filing rate" },
           ].map((s) => (
             <div key={s.label} className="text-center">

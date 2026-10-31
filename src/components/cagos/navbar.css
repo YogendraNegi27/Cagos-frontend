@@ -1,0 +1,398 @@
+/* Flat navigation shares the hero's cream, sage and forest palette.
+   Sticky positioning retains document flow and the hero's measured pin offset. */
+.fresh-nav.cagos-header {
+  --nav-surface: #f7f7ef;
+  --nav-ink: #233f32;
+  --nav-muted: #6a796d;
+  --nav-line: #dce4d8;
+  --nav-panel: #fdfef9;
+  --nav-hover: #edf3e8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 clamp(16px, 2vw, 28px);
+  background: linear-gradient(110deg, #f0f4ec, #eaf0e7);
+  color: var(--nav-ink);
+  border: 0;
+  backdrop-filter: none;
+  font-family: "Geist", sans-serif;
+}
+.cagos-header *,
+.cagos-header *::before,
+.cagos-header *::after {
+  box-sizing: border-box;
+}
+.cagos-header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1440px;
+  min-height: 74px;
+  margin: auto;
+}
+.cagos-nav-brand {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  text-decoration: none;
+  color: var(--nav-ink);
+}
+.cagos-nav-brand > span {
+  margin: -3px 0 0 42px;
+  font-size: 7px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.105em;
+  white-space: nowrap;
+}
+.cagos-nav-links,
+.cagos-nav-main,
+.cagos-nav-actions {
+  display: flex;
+  align-items: center;
+}
+.cagos-nav-links {
+  flex: 1;
+  justify-content: flex-end;
+  gap: clamp(12px, 1.8vw, 24px);
+}
+.cagos-nav-main {
+  gap: clamp(10px, 1.4vw, 23px);
+}
+.cagos-nav-trigger,
+.cagos-nav-link,
+.cagos-nav-login {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 46px;
+  padding: 10px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--nav-ink);
+  font:
+    400 13px/1.4 "Geist",
+    sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.cagos-nav-trigger::after,
+.cagos-nav-link::after,
+.cagos-nav-login::after {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  content: "";
+  height: 2px;
+  background: #a69062;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+.cagos-nav-trigger:hover::after,
+.cagos-nav-trigger[aria-expanded="true"]::after,
+.cagos-nav-link:hover::after,
+.cagos-nav-login:hover::after {
+  transform: scaleX(1);
+}
+.cagos-nav-trigger > svg {
+  transition: transform 0.22s ease;
+}
+.cagos-nav-trigger[aria-expanded="true"] > svg {
+  transform: rotate(180deg);
+}
+.cagos-nav-actions {
+  flex-shrink: 0;
+  gap: 12px;
+}
+.cagos-nav-theme,
+.cagos-menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--nav-ink);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.cagos-nav-theme:hover,
+.cagos-menu-toggle:hover {
+  background: var(--nav-hover);
+  border-color: var(--nav-line);
+}
+.cagos-nav-trial {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 44px;
+  padding: 12px 17px;
+  border-radius: 9px;
+  background: #285e45;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+.cagos-nav-trial:hover {
+  background: #1f4b37;
+}
+.cagos-menu-toggle {
+  display: none;
+}
+.cagos-nav-panel {
+  position: absolute;
+  z-index: 101;
+  top: calc(100% - 2px);
+  right: 0;
+  width: min(660px, 100%);
+  padding-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-7px);
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s;
+}
+.cagos-nav-panel::before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 32px;
+}
+.cagos-nav-panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.cagos-nav-panel-body {
+  position: relative;
+  padding: 16px;
+  border: 1px solid var(--nav-line);
+  border-radius: 16px;
+  background: var(--nav-panel);
+  box-shadow: 0 20px 48px #203f2e16;
+}
+.cagos-nav-panel-intro {
+  margin-bottom: 10px;
+  padding: 0 8px 12px;
+  border-bottom: 1px solid var(--nav-line);
+}
+.cagos-nav-panel-intro > span {
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  color: var(--nav-muted);
+}
+.cagos-nav-panel-intro p {
+  margin: 8px 0 0;
+  color: var(--nav-ink);
+  font-size: 19px;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+.cagos-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 12px;
+}
+.cagos-nav-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 62px;
+  padding: 12px;
+  border-radius: 9px;
+  color: var(--nav-ink);
+  text-decoration: none;
+  transition: background 0.18s ease;
+}
+.cagos-nav-grid a:hover,
+.cagos-nav-grid a:focus-visible {
+  background: var(--nav-hover);
+}
+.cagos-nav-grid strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.cagos-nav-grid small {
+  display: block;
+  margin-top: 4px;
+  color: var(--nav-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.cagos-header :is(a, button):focus-visible {
+  outline: 2px solid #6b9479;
+  outline-offset: 4px;
+}
+@media (max-width: 1100px) {
+  .fresh-nav.cagos-header {
+    padding-inline: 20px;
+  }
+  .cagos-header-inner {
+    min-height: 68px;
+    gap: 16px;
+  }
+  .cagos-nav-brand img {
+    width: 145px !important;
+  }
+  .cagos-nav-brand > span {
+    margin-left: 35px;
+    font-size: 6px;
+  }
+  .cagos-menu-toggle {
+    display: grid;
+    margin-left: auto;
+  }
+  .cagos-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    align-items: stretch;
+    padding: 18px;
+    max-height: calc(100dvh - 94px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--nav-line);
+    border-radius: 14px;
+    background: var(--nav-panel);
+    box-shadow: 0 16px 36px #203f2e16;
+  }
+  .cagos-nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cagos-nav-main {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .cagos-nav-trigger,
+  .cagos-nav-link {
+    width: 100%;
+    justify-content: space-between;
+    padding: 11px 8px;
+    font-size: 14px;
+  }
+  .cagos-nav-trigger::after,
+  .cagos-nav-link::after {
+    display: none;
+  }
+  .cagos-nav-trigger[aria-expanded="true"] {
+    color: #36724d;
+  }
+  .cagos-nav-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    position: static;
+    width: 100%;
+    padding: 0;
+    transform: none;
+    transition:
+      grid-template-rows 0.22s ease,
+      opacity 0.22s ease,
+      visibility 0.22s;
+  }
+  .cagos-nav-panel.is-active {
+    grid-template-rows: 1fr;
+  }
+  .cagos-nav-panel::before {
+    display: none;
+  }
+  .cagos-nav-panel-body {
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: var(--nav-hover);
+    box-shadow: none;
+  }
+  .cagos-nav-panel-intro {
+    display: none;
+  }
+  .cagos-nav-grid {
+    padding: 6px;
+    gap: 0;
+  }
+  .cagos-nav-grid a {
+    min-height: 56px;
+  }
+  .cagos-nav-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 16px;
+    border-top: 1px solid var(--nav-line);
+    gap: 16px;
+  }
+  .cagos-nav-theme {
+    margin-right: auto;
+  }
+}
+@media (max-width: 540px) {
+  .fresh-nav.cagos-header {
+    padding-inline: 16px;
+  }
+  .cagos-header-inner {
+    min-height: 64px;
+  }
+  .cagos-nav-brand img {
+    width: 136px !important;
+  }
+  .cagos-nav-brand > span {
+    margin-left: 33px;
+  }
+  .cagos-nav-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cagos-nav-grid a {
+    min-height: 52px;
+  }
+}
+[data-theme="dark"] .fresh-nav.cagos-header {
+  --nav-surface: #18251f;
+  --nav-ink: #e5ece4;
+  --nav-muted: #a3b6a8;
+  --nav-line: #344b3c;
+  --nav-panel: #1b2b22;
+  --nav-hover: #293e30;
+  background: linear-gradient(110deg, #202b23, #17291f);
+}
+[data-theme="dark"] .cagos-nav-brand img {
+  filter: grayscale(1) invert(1);
+  mix-blend-mode: screen !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cagos-header *,
+  .cagos-header *::before,
+  .cagos-header *::after {
+    transition: none !important;
+  }
+}

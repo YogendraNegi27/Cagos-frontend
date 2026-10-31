@@ -155,7 +155,7 @@ export function HeroSection() {
                   ))}
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-bold text-white">2,500+ firms trust CAGos</p>
+                  <p className="text-sm font-bold text-white">2,500+ firms trust CAGOS</p>
                   <div className="flex items-center gap-1 mt-0.5">
                     {[1,2,3,4,5].map((i) => (
                       <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
@@ -201,7 +201,7 @@ export function HeroSection() {
                 <source srcSet="/hero-cagos.webp" type="image/webp" />
                 <img
                   src="/hero-cagos.png"
-                  alt="CAGos platform — unified CA practice dashboard"
+                  alt="CAGOS platform — unified CA practice dashboard"
                   width={1536}
                   height={1024}
                   loading="eager"

@@ -49,7 +49,7 @@ export function SeamlessSection() {
         <h2 className="text-3xl font-extrabold leading-tight text-white md:text-5xl md:max-w-3xl">
           Not just <span className="text-gradient-teal">compliance.</span>
           <br />
-          CAGos makes your practice{" "}
+          CAGOS makes your practice{" "}
           <span className="text-gradient-teal">seamless.</span>
         </h2>
 
@@ -96,7 +96,7 @@ export function SeamlessSection() {
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-400">
             Export client lists, invoice ledgers and compliance summaries in one
-            click. Every document stored in the CAGos vault, encrypted at rest.
+            click. Every document stored in the CAGOS vault, encrypted at rest.
           </p>
         </ThreeDCard>
 
@@ -364,7 +364,7 @@ function PaymentLinkMockup() {
               Payment request
             </div>
             <div className="mt-1 text-[11px] font-bold text-slate-900">
-              CAGos · INV-4521XX
+              CAGOS · INV-4521XX
             </div>
           </div>
 
@@ -404,7 +404,7 @@ function PaymentLinkMockup() {
             <div className="flex items-center gap-1.5 rounded-full border border-teal-500/40 bg-teal-50 px-2.5 py-1 w-fit">
               <CheckCircle2 className="h-2.5 w-2.5 text-teal-600" />
               <span className="text-[8px] font-semibold text-teal-700">
-                Verified by CAGos
+                Verified by CAGOS
               </span>
             </div>
           </div>
@@ -437,7 +437,7 @@ function PaymentLinkMockup() {
           {/* URL pill — solid white for contrast */}
           <div className="mb-3 flex items-center justify-between gap-2 rounded-lg bg-white px-2.5 py-2">
             <span className="truncate text-[10px] font-medium text-slate-700">
-              CAGos.com/pay/INV-4521XX
+              CAGOS.com/pay/INV-4521XX
             </span>
             <Copy className="h-3 w-3 flex-shrink-0 text-slate-500" />
           </div>
@@ -482,7 +482,7 @@ function DashboardStackVisual() {
             <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
           </div>
           <span className="text-[9px] font-semibold text-slate-400">
-            CAGos Workspace
+            CAGOS Workspace
           </span>
           <span className="text-[9px] text-slate-500">v2.4</span>
         </div>
@@ -792,7 +792,7 @@ function EcosystemVisual() {
             <RefreshCw className="h-3 w-3 text-white" strokeWidth={2.5} />
           </span>
           <span className="seamless-hub-label text-[10px] font-black uppercase tracking-[0.22em]">
-            CAGos
+            CAGOS
           </span>
         </div>
         <div className="seamless-hub-tagline text-[13px] font-bold leading-snug">

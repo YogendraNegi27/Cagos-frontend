@@ -1,0 +1,239 @@
+.editorial-home .practice-tools-section {
+  padding-block: 34px 42px;
+  border-top: 0;
+  scroll-margin-top: 90px;
+}
+.practice-tools-section .ed-split-heading {
+  margin-bottom: 22px;
+  align-items: center;
+  gap: 28px;
+}
+.practice-tools-section .ed-eyebrow {
+  margin-bottom: 10px;
+}
+.editorial-home .practice-tools-section h2 {
+  font-size: clamp(30px, 3.6vw, 48px);
+}
+.practice-tools-section .ed-split-heading > p {
+  max-width: 370px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.practice-tools-card {
+  padding: 20px 26px;
+  border-radius: 24px;
+  background: linear-gradient(125deg, #1e4933, #35634b 65%, #28573d);
+  overflow: hidden;
+}
+.cagos-ferris {
+  --foreground: #edf4e6;
+  --muted-foreground: #c2d4b7;
+  --card: #315a42;
+  --background: #244c35;
+  --muted: #3d674c;
+  --primary: #d9e9b8;
+  --primary-foreground: #234c33;
+  --border: #71936b;
+  --ring: #d9e9b8;
+  --chart-2: #c7de9e;
+  --accent: #3d674c;
+  max-width: 1080px;
+  margin: auto;
+}
+.cagos-ferris .ferris-layout {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 30px;
+}
+.cagos-ferris [data-wheel-stage] {
+  max-width: 420px;
+  padding-bottom: 8px;
+  border-radius: 0;
+}
+.cagos-ferris [data-wheel] {
+  border: 1px solid #acc69a55;
+}
+.cagos-ferris [data-wheel-stage] + p {
+  margin-top: 0;
+  font-size: 10px;
+}
+.cagos-ferris [data-gondola] {
+  --foreground: #294e35;
+  --muted-foreground: #476342;
+  --muted: #dbe7cd;
+  padding: 5px 6px;
+  border: 0;
+  border-radius: 12px;
+  background: #dce7ce;
+  box-shadow: 0 7px 15px #102c2526;
+}
+.cagos-ferris [data-gondola][aria-current="true"] {
+  background: #eff5d8;
+  box-shadow:
+    0 0 0 2px #cde8a8,
+    0 8px 18px #102c2538;
+}
+.cagos-ferris [data-gondola] > span:first-child {
+  aspect-ratio: 1.8;
+  border-radius: 7px;
+}
+.ferris-tool-name {
+  display: block;
+  padding: 4px 0 2px;
+  font-size: 10px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ferris-empty-media {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #356044;
+}
+.ferris-empty-media > svg {
+  width: 48px;
+  height: 48px;
+}
+.ferris-empty-media.is-thumbnail > svg {
+  width: 26px;
+  height: 26px;
+}
+.cagos-ferris [data-detail-panel] {
+  --foreground: #284d35;
+  --muted-foreground: #546c4d;
+  --card: #e5edd8;
+  --background: #e5edd8;
+  --muted: #d3e2c2;
+  --primary: #2b6142;
+  --primary-foreground: #fff;
+  --border: #adc19a;
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  justify-self: end;
+  padding: 24px;
+  border: 0;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #edf3dc, #d8e6cc);
+}
+.cagos-ferris[data-has-media="false"] [data-detail-panel] > div:first-child {
+  height: 88px;
+  aspect-ratio: auto;
+  margin-bottom: 16px;
+  background: linear-gradient(110deg, #c7dbae, #dce9ca);
+}
+.cagos-ferris[data-has-media="true"] [data-detail-panel] > div:first-child {
+  aspect-ratio: 1.6;
+  margin-bottom: 18px;
+}
+.cagos-ferris [data-current-photo] img,
+.cagos-ferris [data-previous-photo] img {
+  object-fit: contain;
+}
+.cagos-ferris [data-detail-panel] > div:first-child > span:last-child {
+  display: none;
+}
+.cagos-ferris [data-caption] h3 {
+  color: var(--foreground);
+  font:
+    400 clamp(24px, 2.5vw, 34px)/1.15 "CAGOS Hero Outfit",
+    Geist,
+    sans-serif;
+}
+.cagos-ferris [data-caption] > p:first-child {
+  border: 0;
+  padding: 0;
+  margin-bottom: 7px;
+}
+.ferris-description {
+  margin: 14px 0 6px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.ferris-feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 44px;
+}
+.ferris-feature-link svg {
+  transition: transform 0.2s ease;
+}
+.ferris-feature-link:hover svg {
+  transform: translateX(4px);
+}
+.cagos-ferris [data-detail-panel] > div:last-child > div:last-child {
+  margin-top: 12px;
+}
+.cagos-ferris [data-next],
+.cagos-ferris [data-previous],
+.cagos-ferris [data-autoplay-control] {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--foreground);
+  background: #c5d9b4;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+.cagos-ferris [data-next] {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.cagos-ferris [data-next]:hover,
+.cagos-ferris [data-previous]:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 760px) {
+  .editorial-home .practice-tools-section {
+    padding-block: 24px 30px;
+  }
+  .practice-tools-section .ed-split-heading {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .practice-tools-section .ed-split-heading > p {
+    max-width: 520px;
+  }
+  .practice-tools-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+}
+@container ferris (max-width:599px) {
+  .cagos-ferris .ferris-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .cagos-ferris [data-wheel-stage] {
+    max-width: 340px;
+  }
+  .cagos-ferris [data-detail-panel] {
+    max-width: none;
+    padding: 20px;
+  }
+  .cagos-ferris[data-has-media="false"] [data-detail-panel] > div:first-child {
+    height: 62px;
+    margin-bottom: 13px;
+  }
+  .ferris-empty-media > svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cagos-ferris *,
+  .cagos-ferris *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

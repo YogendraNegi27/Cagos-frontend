@@ -13,7 +13,7 @@ export const Testimonial = () => (
           </div>
           <div>
             <div className="test-quote">
-              &quot;CAGos cut our GST 3B filing time from 3 days to 3 hours. Recurring billing, client reminders, and audit logs all just work.&quot;
+              &quot;CAGOS cut our GST 3B filing time from 3 days to 3 hours. Recurring billing, client reminders, and audit logs all just work.&quot;
             </div>
             <div className="test-name">CA Partner</div>
             <div className="test-role">Top-50 Firm, Mumbai</div>

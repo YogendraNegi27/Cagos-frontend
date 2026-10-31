@@ -14,15 +14,15 @@ export const Route = createFileRoute("/products/billing")({
   head: () =>
     seoHead({
       path: "/products/billing",
-      title: "GST Billing & Invoicing Software for CA Firms | Automated Payments | CAGos",
+      title: "GST Billing & Invoicing Software for CA Firms | Automated Payments | CAGOS",
       description:
-        "Create GST-compliant invoices, set up recurring retainers, and collect payments with UPI and payment gateways. CAGos automates your CA firm's entire billing and collections cycle.",
-      ogTitle: "Billing & Invoicing for CA Firms | CAGos",
+        "Create GST-compliant invoices, set up recurring retainers, and collect payments with UPI and payment gateways. CAGOS automates your CA firm's entire billing and collections cycle.",
+      ogTitle: "Billing & Invoicing for CA Firms | CAGOS",
       ogDescription:
-        "Stop chasing payments manually. CAGos automates GST invoices, recurring retainers, and payment reminders for CA firms.",
+        "Stop chasing payments manually. CAGOS automates GST invoices, recurring retainers, and payment reminders for CA firms.",
       schema: [
         softwareApplicationSchema({
-          name: "CAGos Billing & Invoicing",
+          name: "CAGOS Billing & Invoicing",
           description:
             "GST-compliant invoicing, recurring retainer billing, UPI and payment-gateway collections built for Indian CA firms.",
           path: "/products/billing",
@@ -86,7 +86,7 @@ const steps = [
   {
     num: "02",
     title: "Link clients and set retainer schedules",
-    desc: "Assign services to each client and set their billing cycle. CAGos auto-generates invoices on the first of every month — or on a custom date you choose.",
+    desc: "Assign services to each client and set their billing cycle. CAGOS auto-generates invoices on the first of every month — or on a custom date you choose.",
   },
   {
     num: "03",
@@ -98,7 +98,7 @@ const steps = [
 const faqs = [
   {
     q: "Are the invoices valid for GST input credit?",
-    a: "Yes. CAGos invoices include all mandatory fields — your GSTIN, HSN/SAC codes, tax breakup (CGST/SGST/IGST), and a digitally generated invoice number series. They are fully GST-compliant.",
+    a: "Yes. CAGOS invoices include all mandatory fields — your GSTIN, HSN/SAC codes, tax breakup (CGST/SGST/IGST), and a digitally generated invoice number series. They are fully GST-compliant.",
   },
   {
     q: "Can I add custom line items to an invoice?",
@@ -106,7 +106,7 @@ const faqs = [
   },
   {
     q: "Which payment gateways are supported?",
-    a: "CAGos integrates with Razorpay (UPI, cards, net banking) by default. You can also generate a direct UPI QR code or collect via bank transfer and mark invoices paid manually.",
+    a: "CAGOS integrates with Razorpay (UPI, cards, net banking) by default. You can also generate a direct UPI QR code or collect via bank transfer and mark invoices paid manually.",
   },
   {
     q: "Can clients download invoices from the client portal?",
@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     q: "How does invoice numbering work?",
-    a: "You set a prefix (e.g., INV-2026/) and CAGos auto-sequences from there. The series resets annually or you can use continuous numbering — your choice.",
+    a: "You set a prefix (e.g., INV-2026/) and CAGOS auto-sequences from there. The series resets annually or you can use continuous numbering — your choice.",
   },
 ];
 

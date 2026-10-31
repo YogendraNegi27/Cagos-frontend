@@ -10,9 +10,9 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
-  name: "CAGos",
+  name: "CAGOS",
   legalName: "CA Growth OS",
-  alternateName: ["CA Growth OS", "CAGos India"],
+  alternateName: ["CA Growth OS", "CAGOS India"],
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
@@ -81,7 +81,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
-  name: "CAGos",
+  name: "CAGOS",
   alternateName: "CA Growth OS",
   url: SITE_URL,
   inLanguage: "en-IN",
@@ -195,14 +195,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CAGos — CA Practice Management Software with AI Calling Agent" },
+      { title: "CAGOS — CA Practice Management Software with AI Calling Agent" },
       {
         name: "description",
         content:
-          "CAGos is the all-in-one CA practice management software for Indian Chartered Accountant firms — CRM, HRMS, GST billing, e-invoicing, ITR workflow, ROC compliance, document vault, Razorpay payments, plus an AI calling agent and WhatsApp automation. Trusted by 500+ firms across India.",
+          "CAGOS is the all-in-one CA practice management software for Indian Chartered Accountant firms — CRM, HRMS, GST billing, e-invoicing, ITR workflow, ROC compliance, document vault, Razorpay payments, plus an AI calling agent and WhatsApp automation. Trusted by 500+ firms across India.",
       },
-      { name: "author", content: "CAGos" },
-      { name: "publisher", content: "CAGos (CA Growth OS)" },
+      { name: "author", content: "CAGOS" },
+      { name: "publisher", content: "CAGOS (CA Growth OS)" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "googlebot", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { name: "bingbot", content: "index, follow" },
@@ -250,13 +250,13 @@ export const Route = createRootRoute({
       },
 
       /* Site-wide Open Graph defaults — per-route og:url / og:title / og:description / og:image override these */
-      { property: "og:site_name", content: "CAGos" },
+      { property: "og:site_name", content: "CAGOS" },
       { property: "og:locale",    content: "en_IN" },
       { property: "og:image",     content: DEFAULT_OG_IMAGE },
 
       /* Twitter / X card defaults */
       { name: "twitter:card",  content: "summary_large_image" },
-      { name: "twitter:site",  content: "@CAGos" },
+      { name: "twitter:site",  content: "@CAGOS" },
       { name: "twitter:image", content: DEFAULT_OG_IMAGE },
     ],
     links: [
@@ -268,7 +268,7 @@ export const Route = createRootRoute({
       },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
 
-      /* Favicons & app icons — production set generated from CAGos mark.
+      /* Favicons & app icons — production set generated from CAGOS mark.
          Google Search picks the largest icon ≥ 48×48 — so the 192/512 PNGs
          must be explicitly linked here (the manifest alone isn't enough). */
       { rel: "icon",             href: "/favicon.ico", sizes: "any" },

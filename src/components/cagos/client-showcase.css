@@ -1,0 +1,230 @@
+.client-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #101b23;
+  padding: 34px 0 22px;
+  color: #fff;
+}
+.client-showcase-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 57%;
+  filter: grayscale(1);
+  opacity: 0.55;
+  z-index: -2;
+  pointer-events: none;
+}
+.client-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #07121de6, #101c2b96 50%, #07121de6);
+  z-index: -1;
+  pointer-events: none;
+}
+.client-showcase-inner {
+  max-width: 1320px;
+  margin: auto;
+  padding-inline: 20px;
+}
+.client-showcase-heading {
+  text-align: center;
+}
+.editorial-home .client-showcase-heading h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #fff;
+  font:
+    600 clamp(22px, 2.1vw, 28px)/1.25 Geist,
+    system-ui,
+    sans-serif;
+  letter-spacing: 0;
+  margin: 0;
+}
+.client-showcase-heading h2 > span {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 5px;
+  color: #091821;
+  background: #62cde2;
+}
+.client-showcase-heading p {
+  color: #d1dce0;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 13px 0 0;
+}
+.client-showcase-window {
+  overflow: hidden;
+  margin: 26px 0 0;
+  padding-block: 5px;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 3%,
+    #000 97%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 3%,
+    #000 97%,
+    transparent
+  );
+}
+.client-showcase-window:focus-visible {
+  outline: 2px solid #62cde2;
+  outline-offset: 5px;
+  border-radius: 6px;
+}
+.client-showcase-track {
+  display: flex;
+  width: max-content;
+  animation: client-showcase-slide 32s linear infinite;
+  animation-play-state: paused;
+}
+.client-showcase[data-running="true"] .client-showcase-track {
+  animation-play-state: running;
+}
+.client-showcase-window:is(:hover, :focus-within) .client-showcase-track {
+  animation-play-state: paused;
+}
+.client-showcase-group {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  flex-shrink: 0;
+  list-style: none;
+  padding: 0 40px 0 0;
+  margin: 0;
+}
+.client-showcase-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 12px;
+  width: 200px;
+  min-height: 92px;
+  padding: 16px;
+  background: #f7f9f8;
+  border-radius: 5px;
+  color: #2a5144;
+  box-shadow: 0 4px 12px #0002;
+}
+.client-showcase-card > svg {
+  flex-shrink: 0;
+  color: #477364;
+}
+.client-showcase-card strong {
+  display: block;
+  font:
+    500 17px/1.25 "CAGOS Hero Outfit",
+    Geist,
+    sans-serif;
+  letter-spacing: -0.02em;
+}
+.client-showcase-card small {
+  display: block;
+  margin-top: 5px;
+  color: #798c82;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+.client-showcase-card img {
+  display: block;
+  max-width: 100%;
+  height: 60px;
+  object-fit: contain;
+}
+.client-showcase-card img.is-monochrome {
+  filter: brightness(0);
+  opacity: 0.85;
+}
+.client-showcase-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px 0 0 auto;
+  min-height: 34px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 6px;
+  color: #d1dce0;
+  background: #13212c99;
+  font:
+    400 10px/1.5 Geist,
+    sans-serif;
+  cursor: pointer;
+}
+.client-showcase-toggle:hover {
+  color: #fff;
+  background: #223746;
+}
+@keyframes client-showcase-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 600px) {
+  .client-showcase-toggle {
+    min-height: 44px;
+    min-width: 64px;
+  }
+  .client-showcase {
+    padding-block: 28px 16px;
+  }
+  .client-showcase-inner {
+    padding-inline: 16px;
+  }
+  .client-showcase-window {
+    margin-top: 20px;
+  }
+  .client-showcase-group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+  .client-showcase-card {
+    width: 170px;
+    min-height: 84px;
+    padding: 14px;
+    gap: 9px;
+  }
+  .client-showcase-card strong {
+    font-size: 15px;
+  }
+  .client-showcase-card > svg {
+    width: 27px;
+    height: 27px;
+  }
+  .client-showcase-heading p {
+    font-size: 11px;
+  }
+  .client-showcase-track {
+    animation-duration: 28s;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .client-showcase-track {
+    animation: none;
+  }
+  .client-showcase-group[aria-hidden="true"] {
+    display: none;
+  }
+  .client-showcase-window {
+    overflow-x: auto;
+  }
+  .client-showcase-toggle {
+    display: none;
+  }
+}

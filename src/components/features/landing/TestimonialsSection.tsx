@@ -5,7 +5,7 @@ import { useInView } from "../../../hooks/useInView";
 
 const testimonials = [
   {
-    quote: "CAGos completely transformed how we manage our 300+ client base. Compliance deadlines are never missed and billing is fully automated. It paid for itself in the first month.",
+    quote: "CAGOS completely transformed how we manage our 300+ client base. Compliance deadlines are never missed and billing is fully automated. It paid for itself in the first month.",
     name: "CA Ramesh Mehta",
     firm: "Mehta & Associates, Mumbai",
     initials: "RM",
@@ -85,7 +85,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "We scaled from 80 to 220 clients without hiring a single new associate. CAGos is the operations leverage we didn't know was possible for a mid-tier firm.",
+    quote: "We scaled from 80 to 220 clients without hiring a single new associate. CAGOS is the operations leverage we didn't know was possible for a mid-tier firm.",
     name: "CA Karan Malhotra",
     firm: "Malhotra Capital, Gurgaon",
     initials: "KM",

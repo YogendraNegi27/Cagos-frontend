@@ -15,10 +15,10 @@ const pricingProductSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "@id": `${SITE_URL}/pricing#product`,
-  name: "CAGos — CA Practice Management Software",
+  name: "CAGOS — CA Practice Management Software",
   description:
     "Cloud-native practice management for Indian CA firms. Plans by firm size: Starter (solo), Growth (small + mid-size), Enterprise (large multi-branch), Custom.",
-  brand: { "@type": "Brand", name: "CAGos" },
+  brand: { "@type": "Brand", name: "CAGOS" },
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "INR",
@@ -39,12 +39,12 @@ export const Route = createFileRoute("/pricing")({
   head: () =>
     seoHead({
       path: "/pricing",
-      title: "Pricing — CAGos | Starter, Growth, Enterprise Plans (2026)",
+      title: "Pricing — CAGOS | Starter, Growth, Enterprise Plans (2026)",
       description:
-        "CAGos pricing for Indian CA firms — Starter from ₹2,499/mo, Growth from ₹6,999/mo, Enterprise + Custom plans. 14-day free trial, no card required.",
-      ogTitle: "CAGos Pricing — Plans for Solo, SMB, and Enterprise CA Firms",
+        "CAGOS pricing for Indian CA firms — Starter from ₹2,499/mo, Growth from ₹6,999/mo, Enterprise + Custom plans. 14-day free trial, no card required.",
+      ogTitle: "CAGOS Pricing — Plans for Solo, SMB, and Enterprise CA Firms",
       ogDescription:
-        "Transparent INR pricing for CAGos practice-management software. Free 14-day trial across every plan. Compare Starter, Growth, Enterprise, and Custom.",
+        "Transparent INR pricing for CAGOS practice-management software. Free 14-day trial across every plan. Compare Starter, Growth, Enterprise, and Custom.",
       schema: [
         pricingProductSchema,
         pricingFaqSchema,
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/pricing")({
           "@type": "WebPage",
           "@id": `${SITE_URL}/pricing`,
           url: `${SITE_URL}/pricing`,
-          name: "Pricing — CAGos",
+          name: "Pricing — CAGOS",
           isPartOf: { "@id": SITE_URL },
           inLanguage: "en-IN",
         },

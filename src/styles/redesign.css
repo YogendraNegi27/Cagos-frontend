@@ -1,4 +1,4 @@
-/* CAGos — calm, connected practice */
+/* CAGOS — calm, connected practice */
 .practice-section .section-heading { align-items:end; gap:24px; }
 .practice-section .practice-intro { max-width:520px; color:#6d7e6d; font-size:14px; line-height:1.75; margin:12px 0 0; }
 .practice-section .practice-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; border:0; border-radius:0; overflow:visible; }
@@ -323,7 +323,7 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}body{background:#fbfcf9;col
   .hero-visual .workspace-preview { transform: none; }
 }
 
-/* Workspace feature cards: a lightweight, CAGos-themed adaptation of the
+/* Workspace feature cards: a lightweight, CAGOS-themed adaptation of the
    supplied sticky-scroll pattern. Cards remain readable and stack normally
    on touch devices where sticky scrolling is less predictable. */
 .fresh-home { overflow: clip; }
@@ -840,3 +840,14 @@ html, body, .fresh-home, .mkt-page, .auth-page { transition:background-color .3s
 [data-theme="dark"] .cagos-wordmark-footer .kwf-bar { border-color:#465465!important; background:#131920!important; }
 [data-theme="dark"] .cagos-wordmark-footer .kwf-addr img { filter:grayscale(1) invert(1); mix-blend-mode:screen!important; }
 
+
+/* Shared brand treatment: preserve the white image background for blending. */
+img[src="/cagos-brand.png"], img[src="/logo.png"] {
+  filter: url('/brand-tint.svg#forest') !important;
+  mix-blend-mode: multiply !important;
+}
+[data-theme="dark"] img[src="/cagos-brand.png"],
+[data-theme="dark"] img[src="/logo.png"] {
+  filter: url('/brand-tint.svg#sage') !important;
+  mix-blend-mode: screen !important;
+}

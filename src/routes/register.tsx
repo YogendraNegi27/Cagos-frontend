@@ -6,7 +6,7 @@ import { AuthPageShell } from '../components/cagos/marketing/AuthPageShell'
 import { FREE_TRIAL_SHORT } from '../lib/marketing-copy'
 
 export const Route = createFileRoute('/register')({
-  head: () => seoHead({ path: '/register', title: 'Create your CAGos workspace | Free 14-day trial', description: 'Start your free 14-day trial of CAGos — no credit card required.', noindex: true }),
+  head: () => seoHead({ path: '/register', title: 'Create your CAGOS workspace | Free 14-day trial', description: 'Start your free 14-day trial of CAGOS — no credit card required.', noindex: true }),
   component: GlobalRegister,
 })
 
@@ -36,7 +36,7 @@ function GlobalRegister() {
       <aside className="registration-intro">
         <span className="registration-symbol"><Building2 size={24} aria-hidden="true" /></span>
         <p className="registration-eyebrow">A CLEARER WAY TO PRACTISE</p>
-        <h1 id="register-title">Create your<br className="registration-desktop-break" /> CAGos workspace</h1>
+        <h1 id="register-title">Create your<br className="registration-desktop-break" /> CAGOS workspace</h1>
         <p className="registration-description">Your clients, team and everyday work. Beautifully connected.</p>
         <div className="registration-trial"><Gift size={20} aria-hidden="true" /><div><strong>{FREE_TRIAL_SHORT}</strong><span>All features. No credit card required.</span></div></div>
         <ul className="registration-benefits">{['Built for Indian CA firms', 'One connected workspace', 'Your own client portal'].map(text => <li key={text}><Check size={16} aria-hidden="true" />{text}</li>)}</ul>

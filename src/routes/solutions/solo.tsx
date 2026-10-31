@@ -14,15 +14,15 @@ export const Route = createFileRoute("/solutions/solo")({
   head: () =>
     seoHead({
       path: "/solutions/solo",
-      title: "CAGos for Solo CA Practitioners | Run Your Practice Single-handedly",
+      title: "CAGOS for Solo CA Practitioners | Run Your Practice Single-handedly",
       description:
-        "CAGos helps solo CAs manage 100+ clients without support staff — automated compliance tracking, smart billing, client portal, and document vault in one app.",
-      ogTitle: "CAGos for Solo CA Practitioners",
+        "CAGOS helps solo CAs manage 100+ clients without support staff — automated compliance tracking, smart billing, client portal, and document vault in one app.",
+      ogTitle: "CAGOS for Solo CA Practitioners",
       ogDescription:
-        "Run your solo CA practice like a 10-person firm. CAGos automates compliance, billing, and client communication.",
+        "Run your solo CA practice like a 10-person firm. CAGOS automates compliance, billing, and client communication.",
       schema: [
         serviceSchema({
-          name: "CAGos for Solo CA Practitioners",
+          name: "CAGOS for Solo CA Practitioners",
           description:
             "Practice management built for solo Chartered Accountants — automated compliance tracking, smart billing, client portal, and document vault.",
           path: "/solutions/solo",
@@ -44,7 +44,7 @@ const features = [
     icon: CalendarClock,
     color: "brand",
     title: "Auto-Generated Compliance Calendar",
-    desc: "Import your clients once — CAGos builds every GST, ITR, TDS, and ROC deadline automatically. You never have to manually track a due date again.",
+    desc: "Import your clients once — CAGOS builds every GST, ITR, TDS, and ROC deadline automatically. You never have to manually track a due date again.",
   },
   {
     icon: BellRing,
@@ -82,23 +82,23 @@ const steps = [
   {
     num: "01",
     title: "Import your client list",
-    desc: "Upload a CSV or enter clients one by one. CAGos builds the compliance calendar, creates client profiles, and sets up billing schedules automatically.",
+    desc: "Upload a CSV or enter clients one by one. CAGOS builds the compliance calendar, creates client profiles, and sets up billing schedules automatically.",
   },
   {
     num: "02",
-    title: "Let CAGos run the admin",
-    desc: "Compliance reminders, payment follow-ups, and document requests go out automatically. You focus on advisory and filing — CAGos handles the rest.",
+    title: "Let CAGOS run the admin",
+    desc: "Compliance reminders, payment follow-ups, and document requests go out automatically. You focus on advisory and filing — CAGOS handles the rest.",
   },
   {
     num: "03",
     title: "Grow your client base confidently",
-    desc: "With admin overhead eliminated, you can take on 30–40% more clients without hiring anyone. CAGos scales with you from 50 to 500 clients.",
+    desc: "With admin overhead eliminated, you can take on 30–40% more clients without hiring anyone. CAGOS scales with you from 50 to 500 clients.",
   },
 ];
 
 const faqs = [
   {
-    q: "Is CAGos suitable if I only have 30–50 clients?",
+    q: "Is CAGOS suitable if I only have 30–50 clients?",
     a: "Absolutely. The Starter plan is designed for solo practitioners with up to 100 clients. You get the full compliance calendar, billing, and document vault — at a price that makes sense for a solo practice.",
   },
   {
@@ -106,8 +106,8 @@ const faqs = [
     a: "No. Clients receive reminders by WhatsApp and email without any app. If you want them to view invoices and upload documents, they get a simple browser-based portal — no download needed.",
   },
   {
-    q: "Can I use CAGos on my phone?",
-    a: "Yes. CAGos is fully responsive and has a Progressive Web App (PWA) you can add to your phone's home screen. It works as well on mobile as on desktop.",
+    q: "Can I use CAGOS on my phone?",
+    a: "Yes. CAGOS is fully responsive and has a Progressive Web App (PWA) you can add to your phone's home screen. It works as well on mobile as on desktop.",
   },
   {
     q: "What if I add an article clerk later?",
@@ -137,7 +137,7 @@ function SoloPage() {
               <span className="text-gradient-teal">Like a 10-Person Firm</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              When you&apos;re a one-person firm, every hour spent on admin is an hour not spent on clients. CAGos automates your compliance calendar, billing, client reminders, and document management — so you focus on the work that earns.
+              When you&apos;re a one-person firm, every hour spent on admin is an hour not spent on clients. CAGOS automates your compliance calendar, billing, client reminders, and document management — so you focus on the work that earns.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

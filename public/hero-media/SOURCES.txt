@@ -13,5 +13,5 @@ outfit-regular.ttf
 https://fonts.google.com/specimen/Outfit
 Font license: OFL.txt
 
-The screen content is an illustrative CAGos animation, implemented in
+The screen content is an illustrative CAGOS animation, implemented in
 src/components/cagos/ReferenceHero.tsx, with sample client and financial data.

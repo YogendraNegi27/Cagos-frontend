@@ -16,7 +16,7 @@ export function MegaFooter() {
             <div className="flex items-center gap-2.5">
               <img
                 src="/logo.png"
-                alt="CAGos"
+                alt="CAGOS"
                 className="w-10 h-10 object-contain dark:invert"
               />
               <Link to="/" className="text-2xl font-extrabold tracking-tight">
@@ -109,10 +109,10 @@ export function MegaFooter() {
             <h5 className="font-bold text-white mb-6 uppercase tracking-wider text-xs">Compare</h5>
             <ul className="space-y-3.5 text-sm text-slate-400">
               <li><Link to="/vs"                 className="hover:text-brand-400 transition-colors">All comparisons</Link></li>
-              <li><Link to="/vs/cleartax"        className="hover:text-brand-400 transition-colors">CAGos vs ClearTax</Link></li>
-              <li><Link to="/vs/tally"           className="hover:text-brand-400 transition-colors">CAGos vs Tally</Link></li>
-              <li><Link to="/vs/winman"          className="hover:text-brand-400 transition-colors">CAGos vs Winman</Link></li>
-              <li><Link to="/vs/zoho-books"      className="hover:text-brand-400 transition-colors">CAGos vs Zoho Books</Link></li>
+              <li><Link to="/vs/cleartax"        className="hover:text-brand-400 transition-colors">CAGOS vs ClearTax</Link></li>
+              <li><Link to="/vs/tally"           className="hover:text-brand-400 transition-colors">CAGOS vs Tally</Link></li>
+              <li><Link to="/vs/winman"          className="hover:text-brand-400 transition-colors">CAGOS vs Winman</Link></li>
+              <li><Link to="/vs/zoho-books"      className="hover:text-brand-400 transition-colors">CAGOS vs Zoho Books</Link></li>
               <li><Link to="/vs/quickbooks-india" className="hover:text-brand-400 transition-colors">vs QuickBooks India</Link></li>
             </ul>
           </div>
@@ -163,7 +163,7 @@ export function MegaFooter() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">
-            <span>© 2026 CAGos Technologies Pvt. Ltd.</span>
+            <span>© 2026 CAGOS Technologies Pvt. Ltd.</span>
             <span className="hidden md:inline text-slate-700">·</span>
             <span className="flex items-center gap-1">Made with <span className="text-red-500">❤️</span> in India</span>
           </div>

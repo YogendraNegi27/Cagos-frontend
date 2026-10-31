@@ -14,15 +14,15 @@ export const Route = createFileRoute("/products/workflow")({
   head: () =>
     seoHead({
       path: "/products/workflow",
-      title: "Task & Workflow Management for CA Firms | Kanban, Checklists & SLA Tracking | CAGos",
+      title: "Task & Workflow Management for CA Firms | Kanban, Checklists & SLA Tracking | CAGOS",
       description:
-        "CAGos Workflow Engine gives CA firms visual Kanban boards, sub-task checklists, SLA tracking, and automated escalation alerts. Stop losing track of client work.",
-      ogTitle: "Workflow Engine for CA Firms | CAGos",
+        "CAGOS Workflow Engine gives CA firms visual Kanban boards, sub-task checklists, SLA tracking, and automated escalation alerts. Stop losing track of client work.",
+      ogTitle: "Workflow Engine for CA Firms | CAGOS",
       ogDescription:
-        "Assign, track, and deliver client work on time. CAGos Workflow gives your CA firm visual Kanban boards, checklists, and SLA alerts.",
+        "Assign, track, and deliver client work on time. CAGOS Workflow gives your CA firm visual Kanban boards, checklists, and SLA alerts.",
       schema: [
         softwareApplicationSchema({
-          name: "CAGos Workflow Engine",
+          name: "CAGOS Workflow Engine",
           description:
             "Visual Kanban boards, sub-task checklists, SLA tracking, and automated escalation alerts for client work in Indian CA firms.",
           path: "/products/workflow",
@@ -55,7 +55,7 @@ const features = [
     icon: Clock,
     color: "violet",
     title: "SLA & Deadline Tracking",
-    desc: "Set SLA targets for each service type. CAGos highlights tasks approaching SLA breach in amber and past SLA in red — automatically, no manual monitoring needed.",
+    desc: "Set SLA targets for each service type. CAGOS highlights tasks approaching SLA breach in amber and past SLA in red — automatically, no manual monitoring needed.",
   },
   {
     icon: Users,
@@ -109,7 +109,7 @@ const faqs = [
     a: "There's no limit. You can have 2-step tasks or 20-step tasks with nested checklists. Templates can have pre-built checklists that auto-populate when the task is created.",
   },
   {
-    q: "Does CAGos have time tracking built in?",
+    q: "Does CAGOS have time tracking built in?",
     a: "Basic time logging (start/stop timer per task) is available on Growth and above plans. We don't have billing-by-the-hour invoicing tied to time entries — that's on the roadmap.",
   },
   {
@@ -136,7 +136,7 @@ function WorkflowPage() {
               <span className="text-gradient-teal">Organized and On Time</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              Stop managing client tasks in WhatsApp groups and mental notes. CAGos gives your CA firm a visual workflow system — with Kanban boards, sub-task checklists, SLA tracking, and automatic escalations.
+              Stop managing client tasks in WhatsApp groups and mental notes. CAGOS gives your CA firm a visual workflow system — with Kanban boards, sub-task checklists, SLA tracking, and automatic escalations.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

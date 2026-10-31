@@ -14,15 +14,15 @@ export const Route = createFileRoute("/solutions/enterprise")({
   head: () =>
     seoHead({
       path: "/solutions/enterprise",
-      title: "CAGos Enterprise for Large CA Firms | Multi-Branch Practice Management",
+      title: "CAGOS Enterprise for Large CA Firms | Multi-Branch Practice Management",
       description:
-        "CAGos Enterprise gives large CA firms multi-branch management, custom RBAC, API integrations, branch-level P&L reporting, and a dedicated Customer Success Manager.",
-      ogTitle: "CAGos Enterprise for Large CA Firms",
+        "CAGOS Enterprise gives large CA firms multi-branch management, custom RBAC, API integrations, branch-level P&L reporting, and a dedicated Customer Success Manager.",
+      ogTitle: "CAGOS Enterprise for Large CA Firms",
       ogDescription:
         "Govern a multi-branch CA firm with one platform. Enterprise-grade security, RBAC, and analytics built for large Indian CA practices.",
       schema: [
         serviceSchema({
-          name: "CAGos Enterprise",
+          name: "CAGOS Enterprise",
           description:
             "Multi-branch practice management for large CA firms with custom RBAC, API integrations, branch-level P&L reporting, and a dedicated Customer Success Manager.",
           path: "/solutions/enterprise",
@@ -56,7 +56,7 @@ const features = [
     icon: Network,
     color: "violet",
     title: "API & ERP Integration",
-    desc: "Connect CAGos to your internal ERP, payroll system, or proprietary tools via REST APIs. Real-time billing and CRM data sync — no manual exports.",
+    desc: "Connect CAGOS to your internal ERP, payroll system, or proprietary tools via REST APIs. Real-time billing and CRM data sync — no manual exports.",
   },
   {
     icon: BarChart3,
@@ -98,7 +98,7 @@ const steps = [
 
 const faqs = [
   {
-    q: "What qualifies as an 'enterprise' firm for CAGos?",
+    q: "What qualifies as an 'enterprise' firm for CAGOS?",
     a: "Typically firms with 20+ staff, 2+ office locations, or 500+ clients. We also extend enterprise terms to firms with complex billing needs, RBAC requirements, or ERP integration requirements.",
   },
   {
@@ -107,7 +107,7 @@ const faqs = [
   },
   {
     q: "How does the API integration work?",
-    a: "CAGos exposes a documented REST API covering clients, tasks, billing, and compliance data. We provide Postman collections and have integration experience with Tally, SAP, and custom ERPs.",
+    a: "CAGOS exposes a documented REST API covering clients, tasks, billing, and compliance data. We provide Postman collections and have integration experience with Tally, SAP, and custom ERPs.",
   },
   {
     q: "Is data from each branch kept separate?",

@@ -14,15 +14,15 @@ export const Route = createFileRoute("/solutions/smb")({
   head: () =>
     seoHead({
       path: "/solutions/smb",
-      title: "CAGos for Small & Mid-size CA Firms | Scale Without Chaos",
+      title: "CAGOS for Small & Mid-size CA Firms | Scale Without Chaos",
       description:
-        "CAGos helps small and mid-size CA firms (2–20 staff) manage growing client rosters, standardize workflows, and maintain quality as the team expands. Built for Indian CA practices.",
-      ogTitle: "CAGos for Small & Mid-size CA Firms",
+        "CAGOS helps small and mid-size CA firms (2–20 staff) manage growing client rosters, standardize workflows, and maintain quality as the team expands. Built for Indian CA practices.",
+      ogTitle: "CAGOS for Small & Mid-size CA Firms",
       ogDescription:
-        "Scale your CA firm without adding admin overhead. CAGos gives your team the structure to deliver quality at scale.",
+        "Scale your CA firm without adding admin overhead. CAGOS gives your team the structure to deliver quality at scale.",
       schema: [
         serviceSchema({
-          name: "CAGos for Small & Mid-size CA Firms",
+          name: "CAGOS for Small & Mid-size CA Firms",
           description:
             "Practice management for CA firms with 2–20 staff — workflows, client management, billing, and compliance built to scale.",
           path: "/solutions/smb",
@@ -82,7 +82,7 @@ const steps = [
   {
     num: "01",
     title: "Onboard your team and clients",
-    desc: "Add team members with roles and permissions. Import your client roster. CAGos builds the compliance calendar and assigns tasks based on existing CA-client relationships.",
+    desc: "Add team members with roles and permissions. Import your client roster. CAGOS builds the compliance calendar and assigns tasks based on existing CA-client relationships.",
   },
   {
     num: "02",
@@ -98,8 +98,8 @@ const steps = [
 
 const faqs = [
   {
-    q: "How does CAGos handle different roles in the firm?",
-    a: "CAGos has configurable roles: Partner (full access), Senior CA (their clients + team), CA Associate (assigned clients only), and Article Clerk (assigned tasks only). You can customise permissions at any level.",
+    q: "How does CAGOS handle different roles in the firm?",
+    a: "CAGOS has configurable roles: Partner (full access), Senior CA (their clients + team), CA Associate (assigned clients only), and Article Clerk (assigned tasks only). You can customise permissions at any level.",
   },
   {
     q: "Can I track billable hours per team member?",
@@ -110,7 +110,7 @@ const faqs = [
     a: "When a task is moved to 'Ready for Review', it queues in the senior CA's or partner's review list. They can approve, reject with comments, or request revisions. The client receives the output only after approval.",
   },
   {
-    q: "Can we use CAGos across multiple office locations?",
+    q: "Can we use CAGOS across multiple office locations?",
     a: "Yes. You can create departments or office branches and assign staff and clients to each. Partners see a cross-office view while associates only see their branch.",
   },
   {
@@ -137,7 +137,7 @@ function SmbPage() {
               <span className="text-gradient-teal">Adding Admin Overhead</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              As your client base grows and you bring on associates, manual processes break down. CAGos gives your firm the structure to manage a growing team, standardize workflows, and maintain quality client service at scale.
+              As your client base grows and you bring on associates, manual processes break down. CAGOS gives your firm the structure to manage a growing team, standardize workflows, and maintain quality client service at scale.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

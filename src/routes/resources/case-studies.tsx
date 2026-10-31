@@ -12,12 +12,12 @@ export const Route = createFileRoute("/resources/case-studies")({
   head: () =>
     seoHead({
       path: "/resources/case-studies",
-      title: "CAGos Customer Stories | How Indian CA Firms Scale with CAGos",
+      title: "CAGOS Customer Stories | How Indian CA Firms Scale with CAGOS",
       description:
-        "See how solo practitioners, mid-size CA firms, and enterprise practices use CAGos to save time, grow revenue, and deliver a better client experience.",
-      ogTitle: "CAGos Customer Stories — Real Results from Indian CA Firms",
+        "See how solo practitioners, mid-size CA firms, and enterprise practices use CAGOS to save time, grow revenue, and deliver a better client experience.",
+      ogTitle: "CAGOS Customer Stories — Real Results from Indian CA Firms",
       ogDescription:
-        "From solo practitioners to multi-branch firms — see how CA firms use CAGos to save time and grow revenue.",
+        "From solo practitioners to multi-branch firms — see how CA firms use CAGOS to save time and grow revenue.",
       schema: [
         breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -38,7 +38,7 @@ const studies = [
     headline: "Scaled from 90 to 310 clients without hiring a single associate",
     result1: { val: "3.4×", label: "Client growth in 18 months" },
     result2: { val: "4 hrs", label: "Admin time saved per day" },
-    quote: "I was drowning in Excel sheets and WhatsApp messages. CAGos automated my compliance reminders, document collection, and invoicing. I now run 310 clients alone — and I actually take weekends off.",
+    quote: "I was drowning in Excel sheets and WhatsApp messages. CAGOS automated my compliance reminders, document collection, and invoicing. I now run 310 clients alone — and I actually take weekends off.",
     author: "CA Sunil Kapoor",
     color: "brand",
     features: ["Compliance calendar", "Automated reminders", "Recurring invoicing"],
@@ -51,7 +51,7 @@ const studies = [
     headline: "Reduced GST filing time by 40% and eliminated filing season panic",
     result1: { val: "40%", label: "Reduction in filing time" },
     result2: { val: "₹0", label: "Penalties from missed deadlines" },
-    quote: "Filing season used to mean 80-hour weeks for everyone. With CAGos, clients upload their own documents, we move through a structured pipeline, and nothing slips. Last July was the first year no one stayed past 8 PM.",
+    quote: "Filing season used to mean 80-hour weeks for everyone. With CAGOS, clients upload their own documents, we move through a structured pipeline, and nothing slips. Last July was the first year no one stayed past 8 PM.",
     author: "CA Riddhi Desai, Managing Partner",
     color: "teal",
     features: ["Filing pipeline tracker", "Bulk document collection", "Notice management"],
@@ -64,7 +64,7 @@ const studies = [
     headline: "Unified 4 branch offices onto one platform with real-time P&L visibility",
     result1: { val: "4", label: "Branches on one platform" },
     result2: { val: "₹9.3 Cr", label: "Revenue tracked in real time" },
-    quote: "We had fragmented Excel sheets across Mumbai, Delhi, Hyderabad, and Pune. Partners couldn't see cross-branch performance. CAGos Enterprise gave us one view of the entire firm — billing, headcount, and client health — for the first time.",
+    quote: "We had fragmented Excel sheets across Mumbai, Delhi, Hyderabad, and Pune. Partners couldn't see cross-branch performance. CAGOS Enterprise gave us one view of the entire firm — billing, headcount, and client health — for the first time.",
     author: "CA Venkat Reddy, Senior Partner",
     color: "violet",
     features: ["Multi-branch management", "Branch P&L analytics", "Custom RBAC"],
@@ -77,7 +77,7 @@ const studies = [
     headline: "Passed ICAI peer review on first attempt with zero documentation gaps",
     result1: { val: "100%", label: "Peer review pass rate" },
     result2: { val: "3×", label: "Faster audit setup" },
-    quote: "Our ICAI peer reviewer was impressed by the structured workpaper trail in CAGos. Every audit phase had sign-offs, version history, and client confirmation records. What used to take a week to prepare for review now takes a day.",
+    quote: "Our ICAI peer reviewer was impressed by the structured workpaper trail in CAGOS. Every audit phase had sign-offs, version history, and client confirmation records. What used to take a week to prepare for review now takes a day.",
     author: "CA Neel Shah, Partner",
     color: "emerald",
     features: ["Audit workpaper management", "Peer review readiness", "Engagement tracking"],
@@ -90,7 +90,7 @@ const studies = [
     headline: "Launched a white-labeled client portal that HNI clients love",
     result1: { val: "99%", label: "HNI client retention" },
     result2: { val: "₹128 Cr", label: "AUM tracked on platform" },
-    quote: "My HNI clients compare me to private bank RMs. CAGos gives me a portal under my own brand where clients see their portfolios, invoices, and documents. One client told me it feels better than HDFC Private. That's the benchmark I needed.",
+    quote: "My HNI clients compare me to private bank RMs. CAGOS gives me a portal under my own brand where clients see their portfolios, invoices, and documents. One client told me it feels better than HDFC Private. That's the benchmark I needed.",
     author: "CA Rohit Mehta, Principal Advisor",
     color: "amber",
     features: ["White-labeled client portal", "AUM tracking", "Retainer billing"],
@@ -103,7 +103,7 @@ const studies = [
     headline: "Grew revenue 3× without adding admin overhead by standardizing workflows",
     result1: { val: "3×", label: "Revenue in year 1" },
     result2: { val: "60%", label: "Less admin time per CA" },
-    quote: "Adding a third CA felt impossible with our WhatsApp-based coordination. CAGos gave us task assignment, maker-checker approvals, and SLA tracking. Now I can onboard new staff in a day — the system tells them exactly what to do.",
+    quote: "Adding a third CA felt impossible with our WhatsApp-based coordination. CAGOS gave us task assignment, maker-checker approvals, and SLA tracking. Now I can onboard new staff in a day — the system tells them exactly what to do.",
     author: "CA Rajan Sharma, Partner",
     color: "blue",
     features: ["Team task assignment", "Maker-checker approvals", "SLA tracking"],
@@ -131,7 +131,7 @@ const resultColorMap: Record<string, string> = {
 const faqs = [
   {
     q: "Are these real customer stories?",
-    a: "Yes. All case studies are based on real CAGos customers. Some firm names and identifying details have been changed at their request, but the results and quotes are verified by the firms themselves.",
+    a: "Yes. All case studies are based on real CAGOS customers. Some firm names and identifying details have been changed at their request, but the results and quotes are verified by the firms themselves.",
   },
   {
     q: "Can I speak to a customer who matches my firm profile?",
@@ -168,7 +168,7 @@ function CaseStudiesPage() {
               <span className="text-gradient-teal">Real CA Firms</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              From solo practitioners to 80-person enterprises — see how Indian CA firms use CAGos to save time, grow revenue, and deliver a client experience their clients can&apos;t stop talking about.
+              From solo practitioners to 80-person enterprises — see how Indian CA firms use CAGOS to save time, grow revenue, and deliver a client experience their clients can&apos;t stop talking about.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">
@@ -194,7 +194,7 @@ function CaseStudiesPage() {
               <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-4">Across all customer segments</p>
               <div className="grid grid-cols-2 gap-3 mb-5">
                 {[
-                  { val: "2,500+", label: "Firms on CAGos", col: "text-brand-400" },
+                  { val: "2,500+", label: "Firms on CAGOS", col: "text-brand-400" },
                   { val: "4 hrs", label: "Saved per CA/day", col: "text-teal-400" },
                   { val: "3×", label: "Avg revenue growth", col: "text-emerald-400" },
                   { val: "99%", label: "Client retention rate", col: "text-amber-400" },
@@ -236,7 +236,7 @@ function CaseStudiesPage() {
       <section className="py-14 px-6 border-y border-white/5 bg-white/2">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { val: "2,500+", label: "Firms on CAGos" },
+            { val: "2,500+", label: "Firms on CAGOS" },
             { val: "4 hrs", label: "Admin saved per CA/day" },
             { val: "3×", label: "Avg revenue growth, year 1" },
             { val: "99%", label: "Customer satisfaction" },

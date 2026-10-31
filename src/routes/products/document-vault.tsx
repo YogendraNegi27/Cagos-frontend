@@ -14,15 +14,15 @@ export const Route = createFileRoute("/products/document-vault")({
   head: () =>
     seoHead({
       path: "/products/document-vault",
-      title: "Document Management & E-Signature for CA Firms | CAGos Document Vault",
+      title: "Document Management & E-Signature for CA Firms | CAGOS Document Vault",
       description:
-        "Store, organize and share client documents with AES-256 encryption. Send engagement letters for legally valid e-signatures. CAGos Document Vault — never lose a file again.",
-      ogTitle: "Document Vault for CA Firms | CAGos",
+        "Store, organize and share client documents with AES-256 encryption. Send engagement letters for legally valid e-signatures. CAGOS Document Vault — never lose a file again.",
+      ogTitle: "Document Vault for CA Firms | CAGOS",
       ogDescription:
         "AES-256 encrypted document storage with legally valid e-signatures — built for CA firms and their clients.",
       schema: [
         softwareApplicationSchema({
-          name: "CAGos Document Vault",
+          name: "CAGOS Document Vault",
           description:
             "Encrypted document storage, sharing, and legally valid e-signatures built for Indian CA firms and their clients.",
           path: "/products/document-vault",
@@ -67,7 +67,7 @@ const features = [
     icon: FolderOpen,
     color: "emerald",
     title: "Bulk Document Upload",
-    desc: "Upload 100 files at once with drag-and-drop. CAGos auto-tags by client, year, and document type using AI — saving hours of manual filing across your team.",
+    desc: "Upload 100 files at once with drag-and-drop. CAGOS auto-tags by client, year, and document type using AI — saving hours of manual filing across your team.",
   },
   {
     icon: Search,
@@ -81,7 +81,7 @@ const steps = [
   {
     num: "01",
     title: "Upload and organize",
-    desc: "Upload documents in bulk or individually. CAGos auto-tags by client and document type. Organize into folder structures that mirror your firm's workflow.",
+    desc: "Upload documents in bulk or individually. CAGOS auto-tags by client and document type. Organize into folder structures that mirror your firm's workflow.",
   },
   {
     num: "02",
@@ -105,7 +105,7 @@ const docTypes = [
 const faqs = [
   {
     q: "Are e-signatures legally valid in India?",
-    a: "Yes. CAGos e-signatures comply with the Information Technology Act 2000 (Section 3A). Each signature comes with a signed audit trail containing the signer's IP, timestamp, device, and OTP verification — legally equivalent to a wet signature for most documents.",
+    a: "Yes. CAGOS e-signatures comply with the Information Technology Act 2000 (Section 3A). Each signature comes with a signed audit trail containing the signer's IP, timestamp, device, and OTP verification — legally equivalent to a wet signature for most documents.",
   },
   {
     q: "Where is my data stored?",
@@ -143,7 +143,7 @@ function DocumentVaultPage() {
               <span className="text-gradient-teal">Every Signature Captured.</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              Stop storing client files in shared drives and WhatsApp chats. CAGos Document Vault gives you AES-256 encrypted storage, legally valid e-signatures, and instant retrieval — all linked to client profiles.
+              Stop storing client files in shared drives and WhatsApp chats. CAGOS Document Vault gives you AES-256 encrypted storage, legally valid e-signatures, and instant retrieval — all linked to client profiles.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

@@ -12,10 +12,10 @@ export const Route = createFileRoute("/resources/calendar")({
   head: () =>
     seoHead({
       path: "/resources/calendar",
-      title: "Indian Tax Compliance Calendar FY 2026-27 | GST, ITR, TDS, ROC Deadlines | CAGos",
+      title: "Indian Tax Compliance Calendar FY 2026-27 | GST, ITR, TDS, ROC Deadlines | CAGOS",
       description:
         "Complete compliance calendar for Indian CA firms — GST, Income Tax, TDS, ROC/MCA, PF, and ESIC due dates for FY 2026-27. Download the PDF or sync to Google Calendar.",
-      ogTitle: "Indian Tax Compliance Calendar FY 2026-27 | CAGos",
+      ogTitle: "Indian Tax Compliance Calendar FY 2026-27 | CAGOS",
       ogDescription:
         "Every GST, Income Tax, TDS, and ROC deadline for FY 2026-27 in one place. Free PDF download for CA firms.",
       schema: [
@@ -85,8 +85,8 @@ const faqs = [
     a: "Yes. Click 'Add to Google Calendar' to import an ICS file with all 70+ deadlines pre-loaded with 3-day advance reminders. The same ICS file works with Outlook and Apple Calendar.",
   },
   {
-    q: "How does CAGos automatically track compliance deadlines for my clients?",
-    a: "Once you onboard your clients and configure their applicable compliance types, CAGos generates a master deadline calendar, sends automated alerts 7 days and 1 day before each due date, and tracks filing status in real time.",
+    q: "How does CAGOS automatically track compliance deadlines for my clients?",
+    a: "Once you onboard your clients and configure their applicable compliance types, CAGOS generates a master deadline calendar, sends automated alerts 7 days and 1 day before each due date, and tracks filing status in real time.",
   },
   {
     q: "Are extension notifications included?",
@@ -244,13 +244,13 @@ function TaxCalendarPage() {
         </div>
       </section>
 
-      {/* ── CAGos INTEGRATION CTA ─────────────────────────────────────── */}
+      {/* ── CAGOS INTEGRATION CTA ─────────────────────────────────────── */}
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto glass rounded-2xl p-8 text-center">
           <Bell className="w-10 h-10 text-teal-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-extrabold text-white mb-3">Never miss a deadline with CAGos</h2>
+          <h2 className="text-2xl font-extrabold text-white mb-3">Never miss a deadline with CAGOS</h2>
           <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-            CAGos tracks every due date for every client automatically. Get alerts 7 days and 1 day before — filtered by client, compliance type, and assignee.
+            CAGOS tracks every due date for every client automatically. Get alerts 7 days and 1 day before — filtered by client, compliance type, and assignee.
           </p>
           <Link to="/register" className="glow-button inline-flex items-center gap-2 px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold transition-all">
             Start free for 14 days <ArrowRight className="w-4 h-4" />

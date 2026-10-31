@@ -12,12 +12,12 @@ export const Route = createFileRoute("/resources/webinars")({
   head: () =>
     seoHead({
       path: "/resources/webinars",
-      title: "CAGos Webinars | Live Sessions & On-Demand Learning for CA Firms",
+      title: "CAGOS Webinars | Live Sessions & On-Demand Learning for CA Firms",
       description:
-        "Free webinars for Indian CA firms — live masterclasses on tax updates, practice management, and CAGos product deep-dives. Includes on-demand library of 30+ recordings.",
-      ogTitle: "CAGos Webinars — Free Learning for Indian CA Firms",
+        "Free webinars for Indian CA firms — live masterclasses on tax updates, practice management, and CAGOS product deep-dives. Includes on-demand library of 30+ recordings.",
+      ogTitle: "CAGOS Webinars — Free Learning for Indian CA Firms",
       ogDescription:
-        "Live masterclasses and 30+ on-demand recordings on tax updates, practice management, and CAGos product features.",
+        "Live masterclasses and 30+ on-demand recordings on tax updates, practice management, and CAGOS product features.",
       schema: [
         breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -87,7 +87,7 @@ const recordings = [
   {
     cat: "Product Training",
     catCol: "bg-brand-500/15 text-brand-400",
-    title: "Migrating from desktop software to CAGos in 3 days",
+    title: "Migrating from desktop software to CAGOS in 3 days",
     duration: "46 min",
     views: "830",
   },
@@ -115,7 +115,7 @@ const recordings = [
   {
     cat: "Practice Management",
     catCol: "bg-teal-500/15 text-teal-400",
-    title: "Managing multi-partner firm KPIs with CAGos analytics",
+    title: "Managing multi-partner firm KPIs with CAGOS analytics",
     duration: "37 min",
     views: "560",
   },
@@ -131,7 +131,7 @@ const recordings = [
 const faqs = [
   {
     q: "Are the live webinars free to attend?",
-    a: "Yes — all live webinars are free for anyone with a CAGos account. Non-users can also register and attend live sessions. Recordings are available free to all registered users.",
+    a: "Yes — all live webinars are free for anyone with a CAGOS account. Non-users can also register and attend live sessions. Recordings are available free to all registered users.",
   },
   {
     q: "Can I get CPE/CPD credits for attending?",
@@ -139,7 +139,7 @@ const faqs = [
   },
   {
     q: "Will there be a recording if I can't attend live?",
-    a: "Yes. Every live session is recorded and added to the on-demand library within 48 hours. Registered attendees are emailed a direct link. You can also access recordings from your CAGos dashboard under Learning.",
+    a: "Yes. Every live session is recorded and added to the on-demand library within 48 hours. Registered attendees are emailed a direct link. You can also access recordings from your CAGOS dashboard under Learning.",
   },
   {
     q: "Can I suggest a topic or speaker for a webinar?",
@@ -168,7 +168,7 @@ function WebinarsPage() {
               <span className="text-gradient-teal">CA Practitioners</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              Live masterclasses on tax legislation updates, practice management, and CAGos product deep-dives. Free for all users. 30+ recordings available on demand.
+              Live masterclasses on tax legislation updates, practice management, and CAGOS product deep-dives. Free for all users. 30+ recordings available on demand.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

@@ -20,7 +20,7 @@ const reasons = [
   {
     icon: TrendingUp,
     title: "Proven Revenue Growth",
-    desc: "Firms using CAGos grow 38% faster on average by taking on more clients without adding headcount. ROI kicks in within 60 days.",
+    desc: "Firms using CAGOS grow 38% faster on average by taking on more clients without adding headcount. ROI kicks in within 60 days.",
     accent: "teal",
   },
   {
@@ -67,14 +67,14 @@ export function WhyChooseSection() {
       {/* Section header */}
       <div className={`text-center mb-14 ${inView ? "animate-fade-in-up" : "opacity-0"}`}>
         <span className="inline-block mb-4 rounded-full border border-teal-500/20 bg-teal-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-teal-400">
-          Why CAGos
+          Why CAGOS
         </span>
         <h2 className="mt-2 text-3xl font-extrabold leading-tight text-white md:text-5xl">
           The CA firm&apos;s unfair{" "}
           <span className="text-gradient-teal">advantage</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-400">
-          Not just another practice management tool. CAGos is the operating
+          Not just another practice management tool. CAGOS is the operating
           system your entire firm runs on.
         </p>
       </div>

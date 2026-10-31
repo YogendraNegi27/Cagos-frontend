@@ -181,6 +181,15 @@ export const GLYPHS: Record<string, [number, GlyphFn]> = {
   " ": [46, () => []],
 }
 
+// Uppercase brand glyphs retain the existing weight and pointer animations.
+Object.assign(GLYPHS, {
+  C: GLYPHS.c,
+  O: GLYPHS.o,
+  S: GLYPHS.s,
+  A: [112, (V: number, h: number) => [diag(0, XH, 43, 0, V * .78), diag(43, 0, 86, XH, V * .78), rect(23, 62, 90, 62 + h)]],
+  G: [112, (V: number, h: number) => [...keep(ring(0, 0, 112, XH, V, h), [0, 80, 1]), rect(58, 49, 112, 49 + h), rect(112 - V, 49, 112, XH)]],
+})
+
 /** Stroke weights for a weight factor k: k = 1 is the reference, verticals move more than horizontals. */
 export const strokes = (k: number): { V: number; h: number } => {
   const w = clamp(Number.isFinite(k) ? k : 1, 0.4, 1.6)
@@ -410,7 +419,8 @@ export default function KilnWordmarkFooter({
   onBackToTop,
   className = "",
 }: KilnWordmarkFooterProps) {
-  const word = (wordmark ?? brand).toLowerCase()
+  const requestedWord = wordmark ?? brand
+  const word = requestedWord === requestedWord.toUpperCase() ? requestedWord : requestedWord.toLowerCase()
   const drawn = supported(word)
   const lay = React.useMemo(() => layoutWord(drawn ? word : ""), [word, drawn])
   const centres = React.useMemo(() => lay.letters.map((l) => l.x + l.w / 2), [lay])

@@ -23,7 +23,7 @@ const solutions = [
   },
   {
     title: "Client Portal",
-    desc: "Give clients a dedicated login on your CAGos sub-domain to upload documents, pay invoices and chat with your team.",
+    desc: "Give clients a dedicated login on your CAGOS sub-domain to upload documents, pay invoices and chat with your team.",
     icon: ShieldCheck,
   },
 ];

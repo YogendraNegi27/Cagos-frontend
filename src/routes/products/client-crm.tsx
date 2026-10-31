@@ -14,15 +14,15 @@ export const Route = createFileRoute("/products/client-crm")({
   head: () =>
     seoHead({
       path: "/products/client-crm",
-      title: "Client CRM for CA Firms | Manage 500+ Clients in One Place | CAGos",
+      title: "Client CRM for CA Firms | Manage 500+ Clients in One Place | CAGOS",
       description:
-        "CAGos Client CRM gives CA firms a unified master profile for every client — with documents, interaction history, compliance status, and a self-service client portal built in.",
-      ogTitle: "Client CRM for CA Firms | CAGos",
+        "CAGOS Client CRM gives CA firms a unified master profile for every client — with documents, interaction history, compliance status, and a self-service client portal built in.",
+      ogTitle: "Client CRM for CA Firms | CAGOS",
       ogDescription:
-        "Stop losing clients in WhatsApp and email. CAGos CRM centralizes every client relationship for your CA firm.",
+        "Stop losing clients in WhatsApp and email. CAGOS CRM centralizes every client relationship for your CA firm.",
       schema: [
         softwareApplicationSchema({
-          name: "CAGos Client CRM",
+          name: "CAGOS Client CRM",
           description:
             "Client relationship management built for Indian CA firms — master client profiles, interaction timeline, document linking, and a self-service client portal.",
           path: "/products/client-crm",
@@ -81,7 +81,7 @@ const steps = [
   {
     num: "01",
     title: "Import your client list",
-    desc: "Upload a CSV or sync from Tally — CAGos maps PAN, GST, and entity details automatically. Done in under 5 minutes for 500 clients.",
+    desc: "Upload a CSV or sync from Tally — CAGOS maps PAN, GST, and entity details automatically. Done in under 5 minutes for 500 clients.",
   },
   {
     num: "02",
@@ -98,11 +98,11 @@ const steps = [
 const faqs = [
   {
     q: "Can I migrate from my existing spreadsheet or software?",
-    a: "Yes. CAGos accepts CSV imports and has a guided mapping wizard. Typical migration for 500 clients takes under 30 minutes with our onboarding team's help.",
+    a: "Yes. CAGOS accepts CSV imports and has a guided mapping wizard. Typical migration for 500 clients takes under 30 minutes with our onboarding team's help.",
   },
   {
     q: "How is the client portal branded?",
-    a: "The client portal uses your firm's name and logo. Clients see your brand, not CAGos. You can also map it to your own domain (e.g., clients.yourfirm.in).",
+    a: "The client portal uses your firm's name and logo. Clients see your brand, not CAGOS. You can also map it to your own domain (e.g., clients.yourfirm.in).",
   },
   {
     q: "Can different CAs in my firm see only their own clients?",
@@ -136,7 +136,7 @@ function ClientCrmPage() {
               <span className="text-gradient-teal">Chartered Accountants</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              Stop managing clients across WhatsApp, email, and scattered spreadsheets. CAGos gives every client a unified master profile — with compliance status, billing history, documents, and interactions in one place.
+              Stop managing clients across WhatsApp, email, and scattered spreadsheets. CAGOS gives every client a unified master profile — with compliance status, billing history, documents, and interactions in one place.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

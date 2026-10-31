@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="forest" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.8431" intercept="0.1569"/>
+        <feFuncG type="linear" slope="0.6314" intercept="0.3686"/>
+        <feFuncB type="linear" slope="0.7294" intercept="0.2706"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="sage" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="-0.7569" intercept="0.7569"/>
+        <feFuncG type="linear" slope="-0.8549" intercept="0.8549"/>
+        <feFuncB type="linear" slope="-0.7020" intercept="0.7020"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>

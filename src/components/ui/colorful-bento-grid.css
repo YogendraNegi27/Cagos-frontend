@@ -1,0 +1,259 @@
+.colorful-bento-section {
+  padding-block: clamp(24px, 3vw, 40px);
+  scroll-margin-top: 88px;
+}
+.colorful-bento-panel {
+  padding: clamp(16px, 2vw, 28px);
+  background: var(--ed-panel, #fff);
+  border: 1px solid var(--ed-line, #d9dfd5);
+  border-radius: 20px;
+}
+.colorful-bento-heading {
+  margin-bottom: 22px;
+}
+.editorial-home .colorful-bento-heading h2 {
+  max-width: 650px;
+  font-size: clamp(28px, 3.1vw, 42px);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.colorful-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.colorful-bento-card {
+  --bento-ink: #274b38;
+  --bento-muted: #526958;
+  --bento-border: #b8cdbd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  min-width: 0;
+  padding: clamp(20px, 2.1vw, 30px);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: #deede3;
+  color: var(--bento-ink);
+}
+.editorial-home .colorful-bento-card[data-reveal] {
+  transition:
+    opacity 0.45s ease var(--bento-delay, 0ms),
+    transform 0.45s ease var(--bento-delay, 0ms),
+    border-color 0.2s ease;
+}
+.colorful-bento-featured {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 24px;
+  background: #dce9dc;
+}
+.colorful-bento-clients {
+  --bento-ink: #403f59;
+  --bento-muted: #66637a;
+  --bento-border: #b7b2cf;
+  background: #e9e7f2;
+}
+.colorful-bento-billing {
+  --bento-ink: #554a2d;
+  --bento-muted: #72664a;
+  --bento-border: #c6b98a;
+  background: #f6efd6;
+}
+.colorful-bento-team {
+  background: #e2eee9;
+}
+.colorful-bento-documents {
+  --bento-ink: #65463e;
+  --bento-muted: #7d655d;
+  --bento-border: #cbb0a5;
+  background: #f1e5df;
+}
+.colorful-bento-category {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.colorful-bento-category svg {
+  flex-shrink: 0;
+}
+.colorful-bento-copy h3 {
+  margin: 0;
+  font:
+    400 clamp(23px, 2.05vw, 29px)/1.15 "CAGOS Hero Outfit",
+    Geist,
+    sans-serif;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.colorful-bento-copy h3 a {
+  color: inherit;
+}
+.colorful-bento-copy h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.colorful-bento-copy > p {
+  max-width: 30ch;
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--bento-muted);
+}
+.colorful-bento-featured h3 {
+  max-width: 11ch;
+  font-size: clamp(30px, 3vw, 42px);
+}
+.colorful-bento-features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.colorful-bento-features a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--bento-border);
+  border-radius: 7px;
+  background: #ffffff38;
+  color: var(--bento-ink);
+  font-size: 12px;
+  line-height: 1.4;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.colorful-bento-featured .colorful-bento-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.colorful-bento-featured .colorful-bento-features a {
+  flex-direction: column;
+  padding: 15px 8px;
+  gap: 10px;
+  min-height: 92px;
+  font-size: 13px;
+}
+.colorful-bento-card:focus-within {
+  border-color: var(--bento-ink);
+}
+@media (hover: hover) {
+  .colorful-bento-card:hover {
+    border-color: var(--bento-border);
+  }
+  .colorful-bento-features a:hover {
+    background: #ffffff80;
+    border-color: var(--bento-ink);
+  }
+}
+@media (max-width: 1000px) {
+  .colorful-bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .colorful-bento-featured {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .colorful-bento-featured h3 {
+    max-width: none;
+    font-size: 30px;
+  }
+  .colorful-bento-featured .colorful-bento-features {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .colorful-bento-featured .colorful-bento-features a {
+    padding-inline: 4px;
+    min-height: 80px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .colorful-bento-heading {
+    margin-bottom: 18px;
+  }
+  .colorful-bento-grid {
+    gap: 12px;
+  }
+  .colorful-bento-card {
+    padding: 20px;
+    gap: 18px;
+  }
+  .colorful-bento-category {
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 520px) {
+  .colorful-bento-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .colorful-bento-featured {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+  .colorful-bento-featured .colorful-bento-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .colorful-bento-card {
+    padding: 20px 18px;
+  }
+  .colorful-bento-featured h3 {
+    max-width: 11ch;
+  }
+}
+[data-theme="dark"] .colorful-bento-card {
+  --bento-ink: #e0ecde;
+  --bento-muted: #b5c7b4;
+  --bento-border: #4b6550;
+  background: #2a4030;
+}
+[data-theme="dark"] .colorful-bento-clients {
+  --bento-ink: #e6e2f4;
+  --bento-muted: #c5bddb;
+  --bento-border: #605776;
+  background: #373346;
+}
+[data-theme="dark"] .colorful-bento-billing {
+  --bento-ink: #f1e7c9;
+  --bento-muted: #d0c3a1;
+  --bento-border: #6b6042;
+  background: #423c29;
+}
+[data-theme="dark"] .colorful-bento-team {
+  background: #2c443b;
+}
+[data-theme="dark"] .colorful-bento-documents {
+  --bento-ink: #f1e0d9;
+  --bento-muted: #d1b8ad;
+  --bento-border: #75594d;
+  background: #48372f;
+}
+[data-theme="dark"] .colorful-bento-features a {
+  background: #ffffff08;
+}
+[data-theme="dark"] .colorful-bento-features a:hover {
+  background: #ffffff16;
+}
+@media (prefers-reduced-motion: reduce) {
+  .editorial-home .colorful-bento-card[data-reveal],
+  .colorful-bento-features a {
+    transition: none;
+  }
+}

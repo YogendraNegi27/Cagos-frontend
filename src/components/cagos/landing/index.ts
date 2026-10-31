@@ -1,10 +1,10 @@
 /**
- * Barrel for the CAGos landing-page sections. Each section lives in its
+ * Barrel for the CAGOS landing-page sections. Each section lives in its
  * own file so it can be edited in isolation; consumers import the section
  * names from here.
  *
  * Page order on the home route:
- *   Hero · LaunchFast · MakeItYourOwn · Features · CagosSections (from
+ *   Hero · LaunchFast · MakeItYourOwn · Features · CAGOSSections (from
  *   ../sections) · TwoCards · Testimonial · Pricing · FAQ · FinalCTA ·
  *   Footer · MadeWidget.
  */

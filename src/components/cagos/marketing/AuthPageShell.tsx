@@ -4,7 +4,7 @@ import { Link } from "@tanstack/react-router";
 import { Brand } from "../primitives";
 
 /**
- * Theme-aware shell for /login and /register — matches the CAGos marketing brand.
+ * Theme-aware shell for /login and /register — matches the CAGOS marketing brand.
  */
 export function AuthPageShell({ children, registration = false }: { children: ReactNode; registration?: boolean }) {
   return (

@@ -66,7 +66,7 @@ export function StickyFeatureSection({ features }: StickyFeatureSectionProps) {
   }, [])
 
   return (
-    <div ref={stackRef} className="sticky-features" aria-label="CAGos workspace modules">
+    <div ref={stackRef} className="sticky-features" aria-label="CAGOS workspace modules">
       {features.map((feature, index) => {
         const photo = images[index % images.length]
         return (

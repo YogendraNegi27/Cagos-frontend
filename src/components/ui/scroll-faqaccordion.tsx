@@ -6,7 +6,7 @@ export interface FAQItem { id?: string | number; question: string; answer: strin
 interface ScrollFAQAccordionProps { data: FAQItem[]; title?: string; description?: string; id?: string; className?: string; questionClassName?: string; answerClassName?: string; scrollDriven?: boolean }
 
 /** Single-open FAQ with an optional scroll-driven homepage experience. */
-export default function ScrollFAQAccordion({ data, title = 'A few questions. Clear answers.', description = 'Everything you need to know about running your CA practice with CAGos.', id = 'faq', className = '', questionClassName = '', answerClassName = '', scrollDriven = false }: ScrollFAQAccordionProps) {
+export default function ScrollFAQAccordion({ data, title = 'A few questions. Clear answers.', description = 'Everything you need to know about running your CA practice with CAGOS.', id = 'faq', className = '', questionClassName = '', answerClassName = '', scrollDriven = false }: ScrollFAQAccordionProps) {
   const instance = useId()
   const [open, setOpen] = useState<string | null>(null)
   const buttons = useRef<Array<HTMLButtonElement | null>>([])
@@ -61,7 +61,7 @@ export default function ScrollFAQAccordion({ data, title = 'A few questions. Cle
           const next = event.key === 'ArrowDown' ? (index + 1) % data.length : event.key === 'ArrowUp' ? (index - 1 + data.length) % data.length : event.key === 'Home' ? 0 : event.key === 'End' ? data.length - 1 : null
           if (next !== null) { event.preventDefault(); buttons.current[next]?.focus() }
         }}><span className="cagos-faq-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span className="cagos-faq-bubble">{item.icon && <span aria-hidden="true">{item.icon} </span>}{item.question}</span><span className="cagos-faq-toggle">{expanded ? <Minus size={18} aria-hidden="true" /> : <Plus size={18} aria-hidden="true" />}</span></button></h3>
-        <div id={panelId} role="region" aria-labelledby={triggerId} hidden={!expanded} className="cagos-faq-answer-wrap"><div className={`cagos-faq-answer ${answerClassName}`}><span className="cagos-faq-answer-label">CAGos</span><p>{item.answer}</p></div></div>
+        <div id={panelId} role="region" aria-labelledby={triggerId} hidden={!expanded} className="cagos-faq-answer-wrap"><div className={`cagos-faq-answer ${answerClassName}`}><span className="cagos-faq-answer-label">CAGOS</span><p>{item.answer}</p></div></div>
       </div>
     })}</div>
     <p className="cagos-faq-contact">Still have a question? <Link to="/contact">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></Link></p>

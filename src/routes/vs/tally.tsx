@@ -18,14 +18,14 @@ const data: VsPageData = {
   },
   hero: {
     eyebrow: "Tally alternative for CA firms",
-    headline: "CAGos vs Tally: an honest comparison for Indian CA firms",
+    headline: "CAGOS vs Tally: an honest comparison for Indian CA firms",
     subheadline:
       "Tally is the most installed accounting software in India for a reason — it's deep, fast, and rock-solid for SMB books. But it was built for the business, not for the CA firm managing 200 businesses. If you're treating Tally as your practice management system, you're using a hammer as a screwdriver. Here's what changes.",
   },
   verdict: {
     summary:
-      "Tally is exceptional client accounting software. CAGos is firm management software. Most CA firms need both — Tally (or successor) for client books, CAGos for the firm running on top. They solve different problems.",
-    chooseCagosIf: [
+      "Tally is exceptional client accounting software. CAGOS is firm management software. Most CA firms need both — Tally (or successor) for client books, CAGOS for the firm running on top. They solve different problems.",
+    chooseCAGOSIf: [
       "You need a CRM, workflow tracker, billing system, and compliance hub for your firm",
       "You want cloud-first access from anywhere (laptop, phone, branch office)",
       "You manage staff attendance, leave, and payroll for article clerks and associates",
@@ -163,7 +163,7 @@ const data: VsPageData = {
           cagos: {
             value: "Not the focus",
             state: "no",
-            note: "CAGos consumes client books; doesn't replace Tally's ledger",
+            note: "CAGOS consumes client books; doesn't replace Tally's ledger",
           },
           competitor: {
             value: "Industry-standard depth",
@@ -220,7 +220,7 @@ const data: VsPageData = {
       cagos: "₹999/mo (~₹12k/yr)",
       competitor: "TallyPrime Silver ~₹18,000 one-time + ~₹4,500/yr TSS",
       notes:
-        "Tally is cheaper after 3-4 years if you only need accounting. CAGos includes CRM/HRMS/billing — Tally needs separate tools for those.",
+        "Tally is cheaper after 3-4 years if you only need accounting. CAGOS includes CRM/HRMS/billing — Tally needs separate tools for those.",
     },
     {
       plan: "Small firm (5 users)",
@@ -247,69 +247,69 @@ const data: VsPageData = {
     {
       title: "You manage 100+ clients and a team of 8",
       description:
-        "CAGos is purpose-built for this. Tally has no CRM, no SLA tracking, no firm-side HRMS, no client portal, and no multi-client compliance dashboard. Most firms at this size end up running Tally + 4 other tools — CAGos consolidates that.",
+        "CAGOS is purpose-built for this. Tally has no CRM, no SLA tracking, no firm-side HRMS, no client portal, and no multi-client compliance dashboard. Most firms at this size end up running Tally + 4 other tools — CAGOS consolidates that.",
       winner: "cagos",
     },
     {
       title: "You want clients to upload documents and pay invoices online",
       description:
-        "CAGos client portals are white-labeled to your firm. Tally has no equivalent — clients send WhatsApp messages, you chase them on email, and pay via NEFT after manual invoice generation.",
+        "CAGOS client portals are white-labeled to your firm. Tally has no equivalent — clients send WhatsApp messages, you chase them on email, and pay via NEFT after manual invoice generation.",
       winner: "cagos",
     },
     {
       title: "Your articleship intake doubled and you're losing track of staff",
       description:
-        "CAGos has biometric attendance, leave management, payroll, and ICAI articleship reports built in. Tally's payroll is for the SMB client's payroll, not your firm's article clerks.",
+        "CAGOS has biometric attendance, leave management, payroll, and ICAI articleship reports built in. Tally's payroll is for the SMB client's payroll, not your firm's article clerks.",
       winner: "cagos",
     },
     {
       title: "Your clients run on Tally and want to stay there",
       description:
-        "That's fine. CAGos integrates with Tally exports — you keep client books in Tally, run firm operations in CAGos. Most firms run both in parallel.",
+        "That's fine. CAGOS integrates with Tally exports — you keep client books in Tally, run firm operations in CAGOS. Most firms run both in parallel.",
       winner: "tie",
     },
     {
       title: "You're a solo practitioner managing 30 retainer clients",
       description:
-        "Tally alone leaves you tracking deadlines in Excel, sending invoices manually, and chasing documents over WhatsApp. CAGos's ₹999/mo Solo plan replaces those four tools.",
+        "Tally alone leaves you tracking deadlines in Excel, sending invoices manually, and chasing documents over WhatsApp. CAGOS's ₹999/mo Solo plan replaces those four tools.",
       winner: "cagos",
     },
   ],
   faqs: [
     {
-      question: "Does CAGos replace Tally entirely?",
+      question: "Does CAGOS replace Tally entirely?",
       answer:
-        "For most CA firms, no — CAGos and Tally solve different problems. Tally maintains client books-of-account (the actual ledger); CAGos manages your firm's operations on top of those books. Many firms run both: Tally for client accounting work, CAGos for the firm itself.",
+        "For most CA firms, no — CAGOS and Tally solve different problems. Tally maintains client books-of-account (the actual ledger); CAGOS manages your firm's operations on top of those books. Many firms run both: Tally for client accounting work, CAGOS for the firm itself.",
     },
     {
-      question: "Can CAGos import data from TallyPrime?",
+      question: "Can CAGOS import data from TallyPrime?",
       answer:
-        "Yes. CAGos imports client master data, GST registration details, and invoice histories from Tally exports (XML, JSON, CSV). The compliance tracker can also auto-generate deadlines based on imported client data without manual setup.",
+        "Yes. CAGOS imports client master data, GST registration details, and invoice histories from Tally exports (XML, JSON, CSV). The compliance tracker can also auto-generate deadlines based on imported client data without manual setup.",
     },
     {
-      question: "Why is Tally one-time price but CAGos subscription?",
+      question: "Why is Tally one-time price but CAGOS subscription?",
       answer:
-        "Tally licenses a desktop app with annual TSS (Tally Software Services) for updates. CAGos is cloud-native with continuous updates, infrastructure, security, and support included. After 3-4 years the total cost of ownership is comparable; CAGos starts cheaper for the first 2-3 years and offers practice management features Tally doesn't have.",
+        "Tally licenses a desktop app with annual TSS (Tally Software Services) for updates. CAGOS is cloud-native with continuous updates, infrastructure, security, and support included. After 3-4 years the total cost of ownership is comparable; CAGOS starts cheaper for the first 2-3 years and offers practice management features Tally doesn't have.",
     },
     {
       question: "Is Tally being replaced by cloud accounting tools?",
       answer:
-        "Slowly, but Tally still has the dominant install base in Indian SMB accounting. The shift is gradual — Zoho Books, QuickBooks (until April 2023), and others have grown, but Tally's offline-first, deep-feature accounting still wins for many SMBs. CAGos doesn't try to replace Tally as the accounting engine; it sits on top as the firm management layer.",
+        "Slowly, but Tally still has the dominant install base in Indian SMB accounting. The shift is gradual — Zoho Books, QuickBooks (until April 2023), and others have grown, but Tally's offline-first, deep-feature accounting still wins for many SMBs. CAGOS doesn't try to replace Tally as the accounting engine; it sits on top as the firm management layer.",
     },
     {
-      question: "Can CAGos handle inventory or manufacturing accounting?",
+      question: "Can CAGOS handle inventory or manufacturing accounting?",
       answer:
-        "No — those are Tally strengths and outside CAGos's scope. CAGos focuses on the CA firm running practice operations. If you need inventory/manufacturing accounting for a client, that client should be on Tally (or similar) and CAGos manages the engagement around it.",
+        "No — those are Tally strengths and outside CAGOS's scope. CAGOS focuses on the CA firm running practice operations. If you need inventory/manufacturing accounting for a client, that client should be on Tally (or similar) and CAGOS manages the engagement around it.",
     },
     {
       question: "What about TallyPrime's new cloud features?",
       answer:
-        "Tally has been adding cloud features (Tally Cloud, TallyPrime Edit Log) — these add remote access on top of a desktop-first product. CAGos is cloud-native from day one, which generally means faster setup, multi-device access, real-time collaboration, and zero install burden across a multi-branch firm.",
+        "Tally has been adding cloud features (Tally Cloud, TallyPrime Edit Log) — these add remote access on top of a desktop-first product. CAGOS is cloud-native from day one, which generally means faster setup, multi-device access, real-time collaboration, and zero install burden across a multi-branch firm.",
     },
     {
-      question: "Can my team use both Tally and CAGos without double data entry?",
+      question: "Can my team use both Tally and CAGOS without double data entry?",
       answer:
-        "Yes — CAGos's API and Tally import flows are designed to avoid duplicate entry. Client master data, filing status, and invoice events sync. You don't re-key information that's already in Tally.",
+        "Yes — CAGOS's API and Tally import flows are designed to avoid duplicate entry. Client master data, filing status, and invoice events sync. You don't re-key information that's already in Tally.",
     },
   ],
   lastVerified: "2026-05-11",
@@ -319,19 +319,19 @@ export const Route = createFileRoute("/vs/tally")({
   head: () =>
     seoHead({
       path: "/vs/tally",
-      title: "CAGos vs Tally for CA Firms: Honest Comparison (2026)",
+      title: "CAGOS vs Tally for CA Firms: Honest Comparison (2026)",
       description:
-        "Tally is great for SMB accounting; CAGos is built for CA firm management. Detailed comparison of features, pricing, and use cases for Indian CA practices.",
-      ogTitle: "CAGos vs Tally — A CA Firm's Honest Comparison",
+        "Tally is great for SMB accounting; CAGOS is built for CA firm management. Detailed comparison of features, pricing, and use cases for Indian CA practices.",
+      ogTitle: "CAGOS vs Tally — A CA Firm's Honest Comparison",
       ogDescription:
-        "Tally vs CAGos for Indian CA firms: feature matrix, pricing, and the scenarios where each one wins.",
+        "Tally vs CAGOS for Indian CA firms: feature matrix, pricing, and the scenarios where each one wins.",
       schema: [
         comparisonSchema({
           path: "/vs/tally",
-          headline: "CAGos vs Tally for CA Firms",
+          headline: "CAGOS vs Tally for CA Firms",
           description:
-            "Comparison of Tally and CAGos across firm management capabilities for Indian Chartered Accountants.",
-          about: ["CAGos", "Tally", "TallyPrime", "CA Practice Management Software"],
+            "Comparison of Tally and CAGOS across firm management capabilities for Indian Chartered Accountants.",
+          about: ["CAGOS", "Tally", "TallyPrime", "CA Practice Management Software"],
           datePublished: "2026-05-11",
           dateModified: "2026-05-11",
         }),

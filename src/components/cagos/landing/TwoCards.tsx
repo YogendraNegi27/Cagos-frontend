@@ -1,7 +1,7 @@
 import { Reveal } from "../primitives";
 
 /* Two info cards — ported from the Validate reference. Copy adapted for
-   CAGos so it doesn't compete with the Features section above — those
+   CAGOS so it doesn't compete with the Features section above — those
    cards talk about flexibility; these two stake out positioning vs
    competitors. */
 export const TwoCards = () => (

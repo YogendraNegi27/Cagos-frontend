@@ -14,15 +14,15 @@ export const Route = createFileRoute("/solutions/tax")({
   head: () =>
     seoHead({
       path: "/solutions/tax",
-      title: "CAGos for Tax Consultants | High-Volume ITR & GST Filing Management",
+      title: "CAGOS for Tax Consultants | High-Volume ITR & GST Filing Management",
       description:
-        "CAGos helps tax consultants manage high-volume ITR and GST filing seasons — bulk data collection, client filing status pipelines, notice management, and automated document reminders.",
-      ogTitle: "CAGos for Tax Consultants",
+        "CAGOS helps tax consultants manage high-volume ITR and GST filing seasons — bulk data collection, client filing status pipelines, notice management, and automated document reminders.",
+      ogTitle: "CAGOS for Tax Consultants",
       ogDescription:
-        "Handle 500+ clients in tax season without chaos. CAGos automates data collection, filing tracking, and client communication.",
+        "Handle 500+ clients in tax season without chaos. CAGOS automates data collection, filing tracking, and client communication.",
       schema: [
         serviceSchema({
-          name: "CAGos for Tax Consultants",
+          name: "CAGOS for Tax Consultants",
           description:
             "High-volume tax filing management — bulk data collection, client filing pipelines, notice management, and automated document reminders for ITR & GST seasons.",
           path: "/solutions/tax",
@@ -92,14 +92,14 @@ const steps = [
   {
     num: "03",
     title: "Handle notices without panic",
-    desc: "Any notice received gets logged immediately with deadline and handler assigned. CAGos tracks it until a successful response is filed. Partners see all open notices at a glance.",
+    desc: "Any notice received gets logged immediately with deadline and handler assigned. CAGOS tracks it until a successful response is filed. Partners see all open notices at a glance.",
   },
 ];
 
 const faqs = [
   {
     q: "How does bulk document collection work?",
-    a: "Select clients (or all clients), choose document types (Form 16, 26AS, bank statements), and click send. CAGos generates individual secure upload links and sends them by email and WhatsApp. You see submission status in real time.",
+    a: "Select clients (or all clients), choose document types (Form 16, 26AS, bank statements), and click send. CAGOS generates individual secure upload links and sends them by email and WhatsApp. You see submission status in real time.",
   },
   {
     q: "Can I track different types of ITR (1, 2, 3, 4, 6)?",
@@ -137,7 +137,7 @@ function TaxPage() {
               <span className="text-gradient-teal">Without Losing Your Mind</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              Stop tracking ITR statuses in Excel and chasing clients for Form 16 over WhatsApp. CAGos centralizes document collection, automates reminders, and gives you a real-time filing pipeline across your entire client base.
+              Stop tracking ITR statuses in Excel and chasing clients for Form 16 over WhatsApp. CAGOS centralizes document collection, automates reminders, and gives you a real-time filing pipeline across your entire client base.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

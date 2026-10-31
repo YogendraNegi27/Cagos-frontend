@@ -40,7 +40,7 @@ export const STATIC_BLOG_POSTS: StaticBlogPost[] = [
     coverImageUrl:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&auto=format&fit=crop",
     category: { slug: "tax-updates", name: "Tax Updates" },
-    authorName: "CAGos Editorial",
+    authorName: "CAGOS Editorial",
     publishedAt: D("2026-05-08T08:00:00Z"),
     updatedAt: D("2026-05-10T08:00:00Z"),
     metaTitle: "GSTR-1 vs GSTR-3B Guide 2026 | Due Dates, Penalties, QRMP",
@@ -91,7 +91,7 @@ export const STATIC_BLOG_POSTS: StaticBlogPost[] = [
     coverImageUrl:
       "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&q=80&auto=format&fit=crop",
     category: { slug: "compliance", name: "Compliance" },
-    authorName: "CAGos Editorial",
+    authorName: "CAGOS Editorial",
     publishedAt: D("2026-05-05T08:00:00Z"),
     updatedAt: D("2026-05-09T08:00:00Z"),
     metaTitle: "CA Compliance Calendar 2026-27 | GST, ITR, TDS, ROC Due Dates",
@@ -167,7 +167,7 @@ export const STATIC_BLOG_POSTS: StaticBlogPost[] = [
     coverImageUrl:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80&auto=format&fit=crop",
     category: { slug: "practice-management", name: "Practice Management" },
-    authorName: "CAGos Editorial",
+    authorName: "CAGOS Editorial",
     publishedAt: D("2026-04-28T08:00:00Z"),
     updatedAt: D("2026-05-02T08:00:00Z"),
     metaTitle: "Tally to Practice Management Software | CA Firm Migration Guide",
@@ -219,7 +219,7 @@ export const STATIC_BLOG_POSTS: StaticBlogPost[] = [
 </ul>
 
 <h2>The case for moving now</h2>
-<p>2026 is the year when the next generation of CAs you hire will simply not tolerate manual workflow. They've used Notion in college, Slack in their internships, and they expect the same in their first articleship. Firms still running on Tally-only retain articles at noticeably lower rates than firms that have modernized internal workflow. <a href="/solutions/smb">CAGos was built for this transition.</a></p>
+<p>2026 is the year when the next generation of CAs you hire will simply not tolerate manual workflow. They've used Notion in college, Slack in their internships, and they expect the same in their first articleship. Firms still running on Tally-only retain articles at noticeably lower rates than firms that have modernized internal workflow. <a href="/solutions/smb">CAGOS was built for this transition.</a></p>
     `.trim(),
   },
 
@@ -231,7 +231,7 @@ export const STATIC_BLOG_POSTS: StaticBlogPost[] = [
     coverImageUrl:
       "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&q=80&auto=format&fit=crop",
     category: { slug: "practice-management", name: "Practice Management" },
-    authorName: "CAGos Editorial",
+    authorName: "CAGOS Editorial",
     publishedAt: D("2026-04-20T08:00:00Z"),
     updatedAt: D("2026-04-25T08:00:00Z"),
     metaTitle: "7 Workflow Automations for CA Firms | Save 10+ Hours Weekly",
@@ -291,7 +291,7 @@ export const STATIC_BLOG_POSTS: StaticBlogPost[] = [
     coverImageUrl:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80&auto=format&fit=crop",
     category: { slug: "tax-updates", name: "Tax Updates" },
-    authorName: "CAGos Editorial",
+    authorName: "CAGOS Editorial",
     publishedAt: D("2026-04-12T08:00:00Z"),
     updatedAt: D("2026-04-15T08:00:00Z"),
     metaTitle: "ITR Audit Checklist FY 2025-26 | CA Tax Audit Documentation",

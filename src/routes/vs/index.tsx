@@ -26,7 +26,7 @@ const comparisons: VsCard[] = [
     to: "/vs/cleartax",
     tagline: "B2C tax filing giant — deep GST/ITR utility",
     positioning:
-      "ClearTax built its business serving end-taxpayers. CAGos is built for CA firms managing multi-client engagements.",
+      "ClearTax built its business serving end-taxpayers. CAGOS is built for CA firms managing multi-client engagements.",
     recommendedIf: "You're a CA firm and not an individual filing your own returns",
   },
   {
@@ -35,7 +35,7 @@ const comparisons: VsCard[] = [
     to: "/vs/tally",
     tagline: "SMB accounting standard since 1986",
     positioning:
-      "Tally is exceptional client accounting software. CAGos is firm management software. They solve different problems.",
+      "Tally is exceptional client accounting software. CAGOS is firm management software. They solve different problems.",
     recommendedIf: "You need a firm OS on top of Tally's client books",
   },
   {
@@ -44,7 +44,7 @@ const comparisons: VsCard[] = [
     to: "/vs/winman",
     tagline: "Desktop CA-ERP with deep ITR/audit modules",
     positioning:
-      "Winman is mature desktop filing software. CAGos is a cloud-native firm OS — CRM, HRMS, billing, portal included.",
+      "Winman is mature desktop filing software. CAGOS is a cloud-native firm OS — CRM, HRMS, billing, portal included.",
     recommendedIf: "You want cloud-native, mobile-first, multi-branch CA software",
   },
   {
@@ -53,7 +53,7 @@ const comparisons: VsCard[] = [
     to: "/vs/zoho-books",
     tagline: "Cloud accounting for SMBs",
     positioning:
-      "Zoho Books is built for the business; CAGos is built for the CA firm. Most firms use both — clients on Zoho Books, firm on CAGos.",
+      "Zoho Books is built for the business; CAGOS is built for the CA firm. Most firms use both — clients on Zoho Books, firm on CAGOS.",
     recommendedIf: "You manage 25+ clients and need a true practice management product",
   },
   {
@@ -62,7 +62,7 @@ const comparisons: VsCard[] = [
     to: "/vs/quickbooks-india",
     tagline: "Discontinued by Intuit in April 2023",
     positioning:
-      "QuickBooks Online India is no longer available. CAGos rebuilds your CA firm's practice management; clients move books to Zoho Books or Tally.",
+      "QuickBooks Online India is no longer available. CAGOS rebuilds your CA firm's practice management; clients move books to Zoho Books or Tally.",
     recommendedIf: "You're rebuilding your firm's stack post-QuickBooks shutdown",
   },
 ];
@@ -71,27 +71,27 @@ const hubFaqs = [
   {
     question: "What's the right CA firm software for an Indian practice in 2026?",
     answer:
-      "The honest answer: it depends on what problem you're trying to solve. For CA firm management (CRM, workflow, billing, HRMS, compliance) — CAGos. For SMB books-of-account work — Tally or Zoho Books for clients. For deep desktop ITR/audit filing — Winman. Most modern firms run CAGos for the firm and let clients pick their books tool.",
+      "The honest answer: it depends on what problem you're trying to solve. For CA firm management (CRM, workflow, billing, HRMS, compliance) — CAGOS. For SMB books-of-account work — Tally or Zoho Books for clients. For deep desktop ITR/audit filing — Winman. Most modern firms run CAGOS for the firm and let clients pick their books tool.",
   },
   {
     question: "Which is the cheapest CA practice management software in India?",
     answer:
-      "For pure cost per user: Tally (one-time license at ₹18-54k) is cheapest if you only need accounting. For total cost including CRM/HRMS/billing/portal: CAGos starts at ₹999/mo for solo practitioners — typically the cheapest 'firm OS' option once you account for the tools that other products require you to buy separately.",
+      "For pure cost per user: Tally (one-time license at ₹18-54k) is cheapest if you only need accounting. For total cost including CRM/HRMS/billing/portal: CAGOS starts at ₹999/mo for solo practitioners — typically the cheapest 'firm OS' option once you account for the tools that other products require you to buy separately.",
   },
   {
-    question: "How do I choose between CAGos, ClearTax, Tally, Winman and Zoho Books?",
+    question: "How do I choose between CAGOS, ClearTax, Tally, Winman and Zoho Books?",
     answer:
-      "Map your top 3 problems first. If they're CRM + workflow + firm-level billing → CAGos. If they're GST/ITR filing depth alone → ClearTax or Winman. If they're SMB books-of-account → Tally or Zoho Books. Most firms ultimately need a CA-firm OS (CAGos) plus a books-of-account tool for clients (Tally / Zoho Books) — the two don't overlap.",
+      "Map your top 3 problems first. If they're CRM + workflow + firm-level billing → CAGOS. If they're GST/ITR filing depth alone → ClearTax or Winman. If they're SMB books-of-account → Tally or Zoho Books. Most firms ultimately need a CA-firm OS (CAGOS) plus a books-of-account tool for clients (Tally / Zoho Books) — the two don't overlap.",
   },
   {
     question: "Are all these products available across India?",
     answer:
-      "Yes — all five are available pan-India for any Indian CA firm. CAGos, ClearTax, Tally, Winman, and Zoho Books all support GST, ITR, and Indian compliance requirements. The exception: QuickBooks India was discontinued by Intuit in April 2023 and is no longer available.",
+      "Yes — all five are available pan-India for any Indian CA firm. CAGOS, ClearTax, Tally, Winman, and Zoho Books all support GST, ITR, and Indian compliance requirements. The exception: QuickBooks India was discontinued by Intuit in April 2023 and is no longer available.",
   },
   {
-    question: "Can I try CAGos before committing?",
+    question: "Can I try CAGOS before committing?",
     answer:
-      "Yes. CAGos offers a 14-day free trial with full feature access, no credit card required. Most CA firms use the trial to import their client list, run one compliance cycle in parallel with their existing tool, and make the call based on real data.",
+      "Yes. CAGOS offers a 14-day free trial with full feature access, no credit card required. Most CA firms use the trial to import their client list, run one compliance cycle in parallel with their existing tool, and make the call based on real data.",
   },
 ];
 
@@ -99,27 +99,27 @@ export const Route = createFileRoute("/vs/")({
   head: () =>
     seoHead({
       path: "/vs",
-      title: "CAGos vs ClearTax, Tally, Winman, Zoho Books — Compare CA Firm Software",
+      title: "CAGOS vs ClearTax, Tally, Winman, Zoho Books — Compare CA Firm Software",
       description:
-        "Honest comparisons of CAGos against ClearTax, Tally, Winman, Zoho Books, and QuickBooks India. Feature matrices, pricing, and which one wins for your CA firm.",
-      ogTitle: "Compare CA Firm Software — CAGos vs the Alternatives",
+        "Honest comparisons of CAGOS against ClearTax, Tally, Winman, Zoho Books, and QuickBooks India. Feature matrices, pricing, and which one wins for your CA firm.",
+      ogTitle: "Compare CA Firm Software — CAGOS vs the Alternatives",
       ogDescription:
-        "Side-by-side comparisons of CAGos against the leading CA software in India. Make an informed choice.",
+        "Side-by-side comparisons of CAGOS against the leading CA software in India. Make an informed choice.",
       schema: [
         {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           "@id": `${SITE_URL}/vs`,
           url: `${SITE_URL}/vs`,
-          name: "CAGos Comparison Hub",
+          name: "CAGOS Comparison Hub",
           description:
-            "Detailed comparisons of CAGos against ClearTax, Tally, Winman, Zoho Books, and QuickBooks India.",
+            "Detailed comparisons of CAGOS against ClearTax, Tally, Winman, Zoho Books, and QuickBooks India.",
           inLanguage: "en-IN",
           isPartOf: { "@id": SITE_URL },
           hasPart: comparisons.map((c) => ({
             "@type": "Article",
             url: `${SITE_URL}/vs/${c.slug}`,
-            name: `CAGos vs ${c.competitor}`,
+            name: `CAGOS vs ${c.competitor}`,
           })),
         },
         faqSchema(hubFaqs),
@@ -149,11 +149,11 @@ function VsHubPage() {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 max-w-4xl">
-            How does CAGos compare to the alternatives?
+            How does CAGOS compare to the alternatives?
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl">
-            We&apos;ve written honest, in-depth comparisons of CAGos against the most-used
+            We&apos;ve written honest, in-depth comparisons of CAGOS against the most-used
             CA firm software in India. No fluff, no inflated claims — feature matrices,
             real pricing, and the scenarios where each tool actually wins.
           </p>
@@ -175,7 +175,7 @@ function VsHubPage() {
                     <span className="text-brand-300 font-extrabold text-sm">vs</span>
                   </div>
                   <h2 className="text-xl font-extrabold text-white">
-                    CAGos vs {c.competitor}
+                    CAGOS vs {c.competitor}
                   </h2>
                 </div>
                 <ArrowRight className="w-5 h-5 text-slate-500 group-hover:text-brand-400 group-hover:translate-x-1 transition-all" />
@@ -186,7 +186,7 @@ function VsHubPage() {
               </p>
               <div className="pt-4 border-t border-white/5">
                 <p className="text-xs text-slate-500 uppercase tracking-wider font-bold mb-1.5">
-                  Pick CAGos if
+                  Pick CAGOS if
                 </p>
                 <p className="text-sm text-slate-300">{c.recommendedIf}</p>
               </div>

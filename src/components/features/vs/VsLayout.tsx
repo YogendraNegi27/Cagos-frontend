@@ -33,7 +33,7 @@ export interface VsPageData {
   };
   verdict: {
     summary: string;
-    chooseCagosIf: string[];
+    chooseCAGOSIf: string[];
     chooseCompetitorIf: string[];
   };
   featureGroups: {
@@ -146,10 +146,10 @@ export function VsLayout({ data }: { data: VsPageData }) {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5">
                 <p className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
-                  Choose CAGos if
+                  Choose CAGOS if
                 </p>
                 <ul className="space-y-2">
-                  {data.verdict.chooseCagosIf.map((b, i) => (
+                  {data.verdict.chooseCAGOSIf.map((b, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-slate-200">
                       <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                       {b}
@@ -179,11 +179,11 @@ export function VsLayout({ data }: { data: VsPageData }) {
       <section id="feature-matrix" className="px-6 pb-20 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-            CAGos vs {competitorName} — feature-by-feature
+            CAGOS vs {competitorName} — feature-by-feature
           </h2>
           <p className="text-slate-400 mb-8 max-w-3xl">
             {competitorName} {data.competitor.tagline.toLowerCase()} since{" "}
-            {data.competitor.foundedYear}. CAGos is built specifically for Indian CA firm
+            {data.competitor.foundedYear}. CAGOS is built specifically for Indian CA firm
             workflows. Here&apos;s how the two stack up across the dimensions that matter
             for practice management.
           </p>
@@ -212,10 +212,10 @@ export function VsLayout({ data }: { data: VsPageData }) {
                       </div>
                       <div className="md:border-l md:border-white/5 md:pl-6">
                         <p className="text-xs font-bold text-brand-400 mb-1.5 md:hidden">
-                          CAGos
+                          CAGOS
                         </p>
                         <p className="text-xs font-bold text-brand-400 mb-1.5 hidden md:block">
-                          CAGos
+                          CAGOS
                         </p>
                         <CellRender cell={row.cagos} />
                       </div>
@@ -238,7 +238,7 @@ export function VsLayout({ data }: { data: VsPageData }) {
       <section className="px-6 pb-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-            Pricing — CAGos vs {competitorName}
+            Pricing — CAGOS vs {competitorName}
           </h2>
           <p className="text-slate-400 mb-8 max-w-3xl">
             Direct cost comparison for an Indian CA firm. Prices are publicly listed
@@ -248,7 +248,7 @@ export function VsLayout({ data }: { data: VsPageData }) {
           <div className="rounded-2xl border border-white/8 bg-white/2 overflow-hidden">
             <div className="grid grid-cols-[1fr_1fr_1fr] px-6 py-4 bg-white/3 border-b border-white/8 text-xs font-bold uppercase tracking-wider text-slate-400">
               <p>Tier / Use case</p>
-              <p className="text-brand-400">CAGos</p>
+              <p className="text-brand-400">CAGOS</p>
               <p className="text-slate-500">{competitorName}</p>
             </div>
             <div className="divide-y divide-white/5">
@@ -305,7 +305,7 @@ export function VsLayout({ data }: { data: VsPageData }) {
                     }`}
                   >
                     {s.winner === "cagos"
-                      ? "CAGos wins"
+                      ? "CAGOS wins"
                       : s.winner === "competitor"
                       ? `${competitorName} wins`
                       : "Tie"}
@@ -330,7 +330,7 @@ export function VsLayout({ data }: { data: VsPageData }) {
             <strong className="text-slate-300">Last verified: {data.lastVerified}.</strong>{" "}
             Competitor pricing, features, and product positioning change frequently —
             refer to {competitorName}&apos;s official site for the most current information.
-            CAGos&apos;s own pricing and feature set is documented at{" "}
+            CAGOS&apos;s own pricing and feature set is documented at{" "}
             <Link to="/" className="text-brand-400 hover:underline">
               cagos.io
             </Link>

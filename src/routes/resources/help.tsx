@@ -12,12 +12,12 @@ export const Route = createFileRoute("/resources/help")({
   head: () =>
     seoHead({
       path: "/resources/help",
-      title: "CAGos Help Center | Support, Guides & Tutorials for CA Firms",
+      title: "CAGOS Help Center | Support, Guides & Tutorials for CA Firms",
       description:
-        "Find answers, step-by-step guides, and video tutorials for CAGos. Live chat support for Growth and Enterprise plans. Get your CA firm up and running fast.",
-      ogTitle: "CAGos Help Center — Guides, Tutorials & Support",
+        "Find answers, step-by-step guides, and video tutorials for CAGOS. Live chat support for Growth and Enterprise plans. Get your CA firm up and running fast.",
+      ogTitle: "CAGOS Help Center — Guides, Tutorials & Support",
       ogDescription:
-        "Find answers fast. Step-by-step guides, video walkthroughs, and live chat support for CAGos users.",
+        "Find answers fast. Step-by-step guides, video walkthroughs, and live chat support for CAGOS users.",
       schema: [
         breadcrumbSchema([
           { name: "Home", path: "/" },

@@ -106,7 +106,7 @@ export function IntegrationsSection() {
               inView ? "animate-fade-in-up animation-delay-400" : "opacity-0"
             }`}
           >
-            CAGos plugs into Razorpay for end-to-end billing and into the email / WhatsApp
+            CAGOS plugs into Razorpay for end-to-end billing and into the email / WhatsApp
             share workflow your clients already use — no extra tools required.
           </p>
           <ul

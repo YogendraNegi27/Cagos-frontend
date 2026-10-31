@@ -14,15 +14,15 @@ export const Route = createFileRoute("/solutions/advisors")({
   head: () =>
     seoHead({
       path: "/solutions/advisors",
-      title: "CAGos for Financial Advisors | HNI Client Management & Advisory Platform",
+      title: "CAGOS for Financial Advisors | HNI Client Management & Advisory Platform",
       description:
-        "CAGos helps financial advisors and wealth managers deliver a premium experience to HNI clients — white-labeled portals, AUM dashboards, retainer billing, and secure document sharing.",
-      ogTitle: "CAGos for Financial Advisors",
+        "CAGOS helps financial advisors and wealth managers deliver a premium experience to HNI clients — white-labeled portals, AUM dashboards, retainer billing, and secure document sharing.",
+      ogTitle: "CAGOS for Financial Advisors",
       ogDescription:
         "Deliver a premium advisory experience to your HNI clients. White-labeled portal, AUM tracking, and automated billing built for Indian financial advisors.",
       schema: [
         serviceSchema({
-          name: "CAGos for Financial Advisors",
+          name: "CAGOS for Financial Advisors",
           description:
             "Advisory-firm platform with white-labeled portals, AUM dashboards, retainer billing, and secure document sharing for HNI client management.",
           path: "/solutions/advisors",
@@ -56,7 +56,7 @@ const features = [
     icon: Share2,
     color: "violet",
     title: "White-labeled Client Portal",
-    desc: "Your HNI clients log into a premium portal under your firm's brand and domain — not CAGos. They view invoices, upload documents, and track ongoing advisory tasks.",
+    desc: "Your HNI clients log into a premium portal under your firm's brand and domain — not CAGOS. They view invoices, upload documents, and track ongoing advisory tasks.",
   },
   {
     icon: Target,
@@ -98,24 +98,24 @@ const steps = [
 
 const faqs = [
   {
-    q: "Can CAGos track multi-generational family wealth relationships?",
+    q: "Can CAGOS track multi-generational family wealth relationships?",
     a: "Yes. The HNI profile supports family linkages — you can connect a patriarch's profile to their children, trusts, and corporate entities. The relationship map shows the full family structure at a glance.",
   },
   {
     q: "How white-labeled is the client portal?",
-    a: "The portal shows your firm's name, logo, and brand colors — no CAGos branding anywhere. You can also map it to your own domain (e.g., clients.yourfirm.in) so it appears as your proprietary platform.",
+    a: "The portal shows your firm's name, logo, and brand colors — no CAGOS branding anywhere. You can also map it to your own domain (e.g., clients.yourfirm.in) so it appears as your proprietary platform.",
   },
   {
     q: "Can I bill on AUM percentage instead of fixed retainers?",
-    a: "Yes. CAGos supports AUM-based fee invoices. You set the fee percentage and link it to the client's AUM figure in their profile. The invoice amount auto-calculates quarterly.",
+    a: "Yes. CAGOS supports AUM-based fee invoices. You set the fee percentage and link it to the client's AUM figure in their profile. The invoice amount auto-calculates quarterly.",
   },
   {
-    q: "Does CAGos integrate with portfolio management systems?",
+    q: "Does CAGOS integrate with portfolio management systems?",
     a: "We support manual AUM entry today. API integrations with portfolio management software are on the roadmap for Q4 2026 — early access is available for enterprise clients.",
   },
   {
-    q: "Is CAGos SEBI-registered advisory compliant?",
-    a: "CAGos is a practice management tool, not a regulatory compliance system. It does not generate SEBI-required disclosures. However, it can store and share all required documents and track regulatory deadlines for your SEBI RIA or RA registration.",
+    q: "Is CAGOS SEBI-registered advisory compliant?",
+    a: "CAGOS is a practice management tool, not a regulatory compliance system. It does not generate SEBI-required disclosures. However, it can store and share all required documents and track regulatory deadlines for your SEBI RIA or RA registration.",
   },
 ];
 
@@ -137,7 +137,7 @@ function AdvisorsPage() {
               <span className="text-gradient-teal">to Your HNI Clients</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              Your HNI clients expect a premium experience. CAGos gives you a white-labeled client portal, AUM tracking, secure document sharing, and automated retainer billing — so you look like a large wealth management firm even if you&apos;re a boutique advisory practice.
+              Your HNI clients expect a premium experience. CAGOS gives you a white-labeled client portal, AUM tracking, secure document sharing, and automated retainer billing — so you look like a large wealth management firm even if you&apos;re a boutique advisory practice.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">
@@ -241,7 +241,7 @@ function AdvisorsPage() {
               The advisory infrastructure your clients expect
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
-              HNI clients compare you to large private banks. CAGos gives you the platform to compete on experience without the enterprise price tag.
+              HNI clients compare you to large private banks. CAGOS gives you the platform to compete on experience without the enterprise price tag.
             </p>
           </div>
           <FeaturesWithPanel items={features} />

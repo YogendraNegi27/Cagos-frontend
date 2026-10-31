@@ -14,15 +14,15 @@ export const Route = createFileRoute("/solutions/audit")({
   head: () =>
     seoHead({
       path: "/solutions/audit",
-      title: "CAGos for Audit Firms | Audit Engagement Management & Workpapers",
+      title: "CAGOS for Audit Firms | Audit Engagement Management & Workpapers",
       description:
-        "CAGos helps audit firms manage engagements from planning to report — audit checklists, structured workpapers, evidence linking, client data matrices, and ICAI peer-review-ready audit trails.",
-      ogTitle: "CAGos for Audit Firms",
+        "CAGOS helps audit firms manage engagements from planning to report — audit checklists, structured workpapers, evidence linking, client data matrices, and ICAI peer-review-ready audit trails.",
+      ogTitle: "CAGOS for Audit Firms",
       ogDescription:
         "Deliver high-quality audits with less friction. Audit checklists, workpapers, evidence trails, and ICAI peer review readiness — built in.",
       schema: [
         serviceSchema({
-          name: "CAGos for Audit Firms",
+          name: "CAGOS for Audit Firms",
           description:
             "Audit engagement management — checklists, structured workpapers, evidence linking, client data matrices, and ICAI peer-review-ready audit trails.",
           path: "/solutions/audit",
@@ -109,7 +109,7 @@ const auditTypes = [
 
 const faqs = [
   {
-    q: "Does CAGos support SA (Standards on Auditing) aligned checklists?",
+    q: "Does CAGOS support SA (Standards on Auditing) aligned checklists?",
     a: "Yes. Our built-in templates cover risk assessment (SA 315), materiality (SA 320), sampling (SA 530), management representation (SA 580), and more. You can also build custom templates for your firm's specific audit methodology.",
   },
   {
@@ -122,7 +122,7 @@ const faqs = [
   },
   {
     q: "How is the peer review documentation compiled?",
-    a: "CAGos auto-generates an engagement summary document that lists all procedures performed, evidence referenced, and sign-off timestamps — in the format expected during an ICAI peer review. One click to download.",
+    a: "CAGOS auto-generates an engagement summary document that lists all procedures performed, evidence referenced, and sign-off timestamps — in the format expected during an ICAI peer review. One click to download.",
   },
   {
     q: "Can we handle multiple concurrent audit engagements?",
@@ -148,7 +148,7 @@ function AuditPage() {
               <span className="text-gradient-teal">with Less Friction</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-              From planning to final report — CAGos gives your audit team structured checklists, organized workpapers, client data request tracking, and an immutable audit trail that satisfies ICAI peer reviewers.
+              From planning to final report — CAGOS gives your audit team structured checklists, organized workpapers, client data request tracking, and an immutable audit trail that satisfies ICAI peer reviewers.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/register" className="glow-button px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold flex items-center gap-2 transition-all">

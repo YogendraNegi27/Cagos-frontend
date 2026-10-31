@@ -1,27 +1,206 @@
-import ScrollFAQAccordion from '../ui/scroll-faqaccordion'
-import CardFanCarousel from '../ui/card-fan-carousel'
-import { StickyFeatureSection } from '../ui/sticky-scroll-cards-section'
-import { websiteFaqs } from '../../lib/website-faqs'
-import { Link } from '@tanstack/react-router'
-import { ArrowRight, ArrowUpRight, Users, CalendarDays, Receipt, FolderLock, Workflow, ShieldCheck } from 'lucide-react'
-import { Footer } from './landing/Footer'
-import { ReferenceHero } from './ReferenceHero'
-
-const modules = [
-  { name: 'Compliance', icon: CalendarDays, title: 'Every deadline. Already on your radar.', text: 'Bring GST, ITR, TDS and ROC work into one organised view. Assign owners, track preparation and keep reviews moving.', to: '/products/compliance', tasks: ['GSTR-3B preparation', 'ITR document review', 'TDS return checklist'] },
-  { name: 'Client CRM', icon: Users, title: 'A little more personal. A lot more organised.', text: 'Keep client details, service history and your next steps together. Give every relationship the attention it deserves.', to: '/products/client-crm', tasks: ['Client onboarding', 'Document follow-up', 'Quarterly review'] },
-  { name: 'Billing', icon: Receipt, title: 'Great work deserves a smoother payday.', text: 'Create GST invoices, manage retainers and follow payments from one place, with Razorpay payment collection.', to: '/products/billing', tasks: ['Monthly retainer invoice', 'Payment reconciliation', 'Invoice review'] },
-  { name: 'Documents', icon: FolderLock, title: 'The right document. Right where it belongs.', text: 'Keep client files together in a document vault, with clear requests and a dedicated client portal.', to: '/products/document-vault', tasks: ['Bank statement request', 'Working paper review', 'Client document upload'] },
-]
+import { useEffect, useRef } from "react";
+import { Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  Check,
+  BriefcaseBusiness,
+  MessagesSquare,
+  Headset,
+} from "lucide-react";
+import { PracticeFAQ } from "./PracticeFAQ";
+import { Footer } from "./landing/Footer";
+import { PracticeEcosystem } from "./PracticeEcosystem";
+import { ReferenceHero } from "./ReferenceHero";
+import { PracticeToolsGallery } from "./PracticeToolsGallery";
+import { ClientShowcase } from "./ClientShowcase";
+import "./editorial-home.css";
 
 export function WebsiteHome() {
-  return <div className="fresh-home"><a className="skip-link" href="#main">Skip to content</a><main id="main">
-    <ReferenceHero />
-    <CardFanCarousel />
-    <section className="fresh-wrap fresh-section workspace-section" id="workspace"><div className="section-heading"><div><div className="fresh-eyebrow">LESS BUSYWORK. MORE GOOD WORK.</div><h2>One workspace.<br /><em>A whole lot of possibility.</em></h2></div><p>From the first client conversation to the final invoice, give your practice a place where everything connects.</p></div><StickyFeatureSection features={modules} /></section>
-    <section className="fresh-benefits fresh-section"><div className="fresh-wrap"><div className="fresh-eyebrow">A BETTER WAY TO PRACTISE</div><h2>Built for your work.<br /><em>And the people behind it.</em></h2><div className="benefit-grid">{[{ icon: Users, title: 'Clients feel looked after.', text: 'A dedicated client portal keeps requests, documents and updates in one place.', to: '/products/client-crm' }, { icon: Workflow, title: 'Your team moves together.', text: 'Clear assignments and review stages turn scattered follow-ups into shared progress.', to: '/products/workflow' }, { icon: ShieldCheck, title: 'You stay in the picture.', text: 'Bring work, people and finances into view, with access designed around each role.', to: '/solutions/smb' }].map((b, i) => <Link to={b.to as never} className="benefit-card" key={b.title}><span className={`benefit-icon tone-${i}`}><b.icon size={24} /></span><h3>{b.title}</h3><p>{b.text}</p><span className="text-link">See how it works <ArrowUpRight size={17} /></span></Link>)}</div></div></section>
-    <section className="fresh-wrap fresh-section journey-section"><div className="journey-copy"><div className="fresh-eyebrow">A CLEARER WAY TO WORK</div><h2>From task to done.<br /><em>All in one flow.</em></h2><p>Keep client work moving with a clear view of assignments, follow-ups and the time your team spends.</p><Link to="/products/workflow" className="fresh-button">Explore workflow <ArrowRight size={17} /></Link><Link to="/pricing" className="fresh-secondary">Explore plans <ArrowRight size={16} /></Link></div><div className="journey-board" aria-label="Illustrative CAGOS workflow"><div className="journey-panel journey-tasks"><header><strong>In progress</strong><span>3 tasks</span></header><div className="journey-progress" />{[['GSTR-3B preparation','Mehta Industries'],['ITR document review','Kapoor & Co.'],['Client onboarding','Verma Enterprises']].map(([title, client]) => <div className="journey-row" key={title}><strong>{title}</strong><small>{client}</small><span>In progress</span></div>)}</div><div className="journey-label journey-label-top">Schedule activities ↘</div><div className="journey-panel journey-activity"><header><strong>Schedule activity</strong><CalendarDays size={16}/></header><div className="journey-tags"><span>To-do</span><span>Call</span><span>Meeting</span></div><small>SUMMARY</small><strong>Review client documents</strong><small>DUE DATE</small><strong>20 November</strong><small>ASSIGNED TO</small><strong>Practice team</strong><div className="journey-save">Save activity</div></div><div className="journey-label journey-label-bottom">Track time ↗</div><div className="journey-panel journey-time"><header><strong>Timesheets</strong><span>This week</span></header>{[['GST return review','2h 00m'],['Client follow-up','45m'],['Document review','1h 30m']].map(([task,time]) => <div className="journey-time-row" key={task}><span>{task}</span><strong>{time}</strong></div>)}</div></div></section>
-    <ScrollFAQAccordion data={websiteFaqs} scrollDriven />
-    <section className="fresh-wrap home-cta-section"><div className="fresh-cta"><span className="fresh-eyebrow">MAKE SPACE FOR WHAT’S NEXT</span><h2>Your practice, with<br /><em>a little more breathing room.</em></h2><p>Bring your work together. Give your team a clearer tomorrow.</p><Link to="/register" className="fresh-button">Let’s get started <ArrowUpRight size={18} /></Link><small>14-day free trial · No credit card required</small></div></section>
-  </main><Footer /></div>
+  const root = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("ed-reveal-pending");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08 },
+    );
+    root.current
+      ?.querySelectorAll<HTMLElement>("[data-reveal]")
+      .forEach((element) => {
+        if (element.getBoundingClientRect().top > window.innerHeight)
+          element.classList.add("ed-reveal-pending");
+        observer.observe(element);
+      });
+    return () => observer.disconnect();
+  }, []);
+  return (
+    <div className="editorial-home" ref={root}>
+      <a className="ed-skip" href="#main">
+        Skip to content
+      </a>
+      <main id="main">
+        <ReferenceHero />
+        <PracticeEcosystem />
+        <PracticeToolsGallery />
+        <ClientShowcase />
+        <section className="ed-workflow-band" aria-labelledby="workflow-title">
+          <div className="ed-wrap ed-section ed-workflow" data-reveal>
+            <div className="ed-workflow-copy">
+              <p className="ed-eyebrow">A CLEARER WAY TO WORK</p>
+              <h2 id="workflow-title">
+                From task to done.
+                <br />
+                All in one flow.
+              </h2>
+              <p>
+                Keep client work moving with a clear view of assignments,
+                follow-ups and the time your team spends.
+              </p>
+              <Link to="/products/workflow" className="ed-text-link">
+                Explore workflow <ArrowRight size={17} aria-hidden="true" />
+              </Link>
+            </div>
+            <div className="ed-workflow-board">
+              <div className="ed-board-top">
+                <span>CLIENT WORK / GSTR-3B PREPARATION</span>
+                <span className="ed-status">In progress</span>
+              </div>
+              <h3>
+                A clear next step.
+                <br />
+                For everyone involved.
+              </h3>
+              <ol>
+                {[
+                  {
+                    n: "01",
+                    title: "Collect client documents",
+                    text: "Document request sent",
+                    done: true,
+                  },
+                  {
+                    n: "02",
+                    title: "Prepare the return",
+                    text: "Assigned to your team",
+                    done: true,
+                  },
+                  {
+                    n: "03",
+                    title: "Review the working papers",
+                    text: "Ready for manager review",
+                    done: false,
+                  },
+                  {
+                    n: "04",
+                    title: "Complete & invoice",
+                    text: "Keep billing connected",
+                    done: false,
+                  },
+                ].map((step) => (
+                  <li key={step.n}>
+                    <span className={step.done ? "is-done" : undefined}>
+                      {step.done ? (
+                        <Check size={15} aria-hidden="true" />
+                      ) : (
+                        step.n
+                      )}
+                    </span>
+                    <div>
+                      <strong>{step.title}</strong>
+                      <p>{step.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <small>Illustrative workflow · Sample data</small>
+            </div>
+          </div>
+        </section>
+        <section
+          className="ed-wrap ed-section ed-benefits"
+          aria-labelledby="benefits-title"
+          data-reveal
+        >
+          <div className="ed-benefits-panel">
+            <div className="ed-benefits-heading">
+              <p className="ed-eyebrow">BUILT AROUND THE WAY YOU PRACTISE</p>
+              <h2 id="benefits-title">
+                What makes <span>CAGOS special?</span>
+              </h2>
+              <p>
+                Professional focus. Room for your ideas. A helping hand when you
+                need it.
+              </p>
+            </div>
+            <div className="ed-benefit-grid">
+              {[
+                {
+                  tone: "practice",
+                  icon: BriefcaseBusiness,
+                  title: "Built for CA professionals.",
+                  text: "Your practice has its own rhythm. Bring clients, compliance, documents and billing together in a workspace designed for Indian CA firms.",
+                  action: "Find your fit",
+                  to: "/solutions/smb",
+                },
+                {
+                  tone: "feedback",
+                  icon: MessagesSquare,
+                  title: "Your experience. Your input.",
+                  text: "You know your everyday challenges best. Share your ideas, tell us what slows your team down and help shape a better way to work.",
+                  action: "Share your feedback",
+                  to: "/contact",
+                },
+                {
+                  tone: "support",
+                  icon: Headset,
+                  title: "Support that stays close.",
+                  text: "From exploring CAGOS to planning your setup, find clear guidance in our help centre or connect with the team for your next step.",
+                  action: "Get support",
+                  to: "/resources/help",
+                },
+              ].map((item) => (
+                <Link
+                  className="ed-benefit"
+                  key={item.to}
+                  to={item.to as never}
+                >
+                  <span
+                    className={`ed-benefit-icon ed-benefit-icon-${item.tone}`}
+                  >
+                    <item.icon size={25} aria-hidden="true" />
+                  </span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                  <span className="ed-text-link">{item.action}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+        <PracticeFAQ />
+        <section className="ed-closing">
+          <div className="ed-wrap" data-reveal>
+            <p className="ed-eyebrow">MAKE SPACE FOR WHAT’S NEXT</p>
+            <h2>
+              Your practice, with a little
+              <br />
+              <em>more breathing room.</em>
+            </h2>
+            <p>Bring your work together. Give your team a clearer tomorrow.</p>
+            <Link to="/register" className="ed-button">
+              Start free trial <ArrowRight size={17} aria-hidden="true" />
+            </Link>
+            <small>14-day free trial · No credit card required</small>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
 }

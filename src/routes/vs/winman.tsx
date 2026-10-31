@@ -18,14 +18,14 @@ const data: VsPageData = {
   },
   hero: {
     eyebrow: "Winman alternative for modern CA firms",
-    headline: "CAGos vs Winman: cloud-native practice management or desktop CA-ERP?",
+    headline: "CAGOS vs Winman: cloud-native practice management or desktop CA-ERP?",
     subheadline:
       "Winman has served Indian CA firms for two decades — its ITR and audit modules are deep and trusted. But it's a desktop-era product, and the cloud, mobile, and integration assumptions of a 2026 firm aren't its native habitat. Here's how the two compare honestly.",
   },
   verdict: {
     summary:
-      "Winman is mature filing software with a CA-firm DNA — its ITR and audit depth is excellent. CAGos is a cloud-native firm OS — its CRM, workflow, HRMS, and client portal are excellent. If you're starting fresh or modernizing, CAGos. If you're an established Winman shop happy with desktop workflows, the migration cost is real.",
-    chooseCagosIf: [
+      "Winman is mature filing software with a CA-firm DNA — its ITR and audit depth is excellent. CAGOS is a cloud-native firm OS — its CRM, workflow, HRMS, and client portal are excellent. If you're starting fresh or modernizing, CAGOS. If you're an established Winman shop happy with desktop workflows, the migration cost is real.",
+    chooseCAGOSIf: [
       "You want cloud-native access (laptop, mobile, branch office)",
       "You need integrated CRM, HRMS, billing, and client portal in one product",
       "Your team is younger and prefers web-first UX over Windows-only software",
@@ -256,55 +256,55 @@ const data: VsPageData = {
     {
       title: "You're an audit firm doing 200+ statutory audits a year",
       description:
-        "Winman's audit module has been refined over 20 years — workpaper templates, evidence linking, ICAI peer review prep are deep. CAGos covers audit engagements well but doesn't have Winman's edge-case maturity. For a pure-audit firm, Winman's depth is hard to match.",
+        "Winman's audit module has been refined over 20 years — workpaper templates, evidence linking, ICAI peer review prep are deep. CAGOS covers audit engagements well but doesn't have Winman's edge-case maturity. For a pure-audit firm, Winman's depth is hard to match.",
       winner: "competitor",
     },
     {
       title: "You're starting a new CA firm in 2026",
       description:
-        "CAGos gives you everything new firms need in one cloud product — CRM, workflow, billing, HRMS, compliance, portal. Setting up a new firm on Winman + Tally + Zoho People + custom Excel is what most legacy firms did; the choice now is whether to repeat that or consolidate.",
+        "CAGOS gives you everything new firms need in one cloud product — CRM, workflow, billing, HRMS, compliance, portal. Setting up a new firm on Winman + Tally + Zoho People + custom Excel is what most legacy firms did; the choice now is whether to repeat that or consolidate.",
       winner: "cagos",
     },
     {
       title: "Your team is hybrid / multi-branch / works from home",
       description:
-        "CAGos's cloud-native model is built for this. Winman's desktop-first architecture means each workstation needs setup, license activation, and VPN to share files. Real-time multi-user collaboration on the same client is much harder on desktop.",
+        "CAGOS's cloud-native model is built for this. Winman's desktop-first architecture means each workstation needs setup, license activation, and VPN to share files. Real-time multi-user collaboration on the same client is much harder on desktop.",
       winner: "cagos",
     },
     {
       title: "You handle 500+ ITRs per season at high volume",
       description:
-        "Both work. Winman's ITR engine is exceptionally fast and well-known to practitioners. CAGos handles the volume too and adds workflow automation (bulk document collection, client follow-ups, status pipeline). Depends on whether filing speed or firm-level workflow is your bottleneck.",
+        "Both work. Winman's ITR engine is exceptionally fast and well-known to practitioners. CAGOS handles the volume too and adds workflow automation (bulk document collection, client follow-ups, status pipeline). Depends on whether filing speed or firm-level workflow is your bottleneck.",
       winner: "tie",
     },
     {
       title: "You want one product for the whole firm",
       description:
-        "CAGos is consolidating. Winman is filing-focused — for CRM, HRMS, client portal, and modern billing, you'd add separate tools. Most mid-size firms running Winman also run 2-4 other tools alongside it.",
+        "CAGOS is consolidating. Winman is filing-focused — for CRM, HRMS, client portal, and modern billing, you'd add separate tools. Most mid-size firms running Winman also run 2-4 other tools alongside it.",
       winner: "cagos",
     },
     {
       title: "Your team has used Winman for 10+ years",
       description:
-        "Switching cost is real. Your team knows Winman's keyboard shortcuts, forms, and reports. CAGos onboarding usually takes 1-2 weeks for proficiency. If your team is productive on Winman and you don't need cloud or firm management features, staying is rational.",
+        "Switching cost is real. Your team knows Winman's keyboard shortcuts, forms, and reports. CAGOS onboarding usually takes 1-2 weeks for proficiency. If your team is productive on Winman and you don't need cloud or firm management features, staying is rational.",
       winner: "competitor",
     },
   ],
   faqs: [
     {
-      question: "Is CAGos a replacement for Winman, or a complement?",
+      question: "Is CAGOS a replacement for Winman, or a complement?",
       answer:
-        "For most firms, CAGos can replace Winman entirely — it covers ITR, GST, TDS, ROC, audit, and adds CRM/HRMS/billing/portal. Where Winman still leads is filing depth for unusual ITR/audit scenarios its 20-year customer base has encountered. Standard CA-firm workflows are well-covered by CAGos.",
+        "For most firms, CAGOS can replace Winman entirely — it covers ITR, GST, TDS, ROC, audit, and adds CRM/HRMS/billing/portal. Where Winman still leads is filing depth for unusual ITR/audit scenarios its 20-year customer base has encountered. Standard CA-firm workflows are well-covered by CAGOS.",
     },
     {
-      question: "Can CAGos import data from Winman?",
+      question: "Can CAGOS import data from Winman?",
       answer:
-        "Yes. CAGos imports client masters, ITR historical data, GST registrations, and compliance histories from Winman's export formats. Migration is typically completed in 1-2 weeks; many firms run both in parallel during the first filing season after switching.",
+        "Yes. CAGOS imports client masters, ITR historical data, GST registrations, and compliance histories from Winman's export formats. Migration is typically completed in 1-2 weeks; many firms run both in parallel during the first filing season after switching.",
     },
     {
-      question: "Does CAGos handle the audit module that Winman is known for?",
+      question: "Does CAGOS handle the audit module that Winman is known for?",
       answer:
-        "CAGos provides audit engagement management — checklists, structured workpapers, evidence linking, client data matrices, and ICAI peer-review-ready audit trails. Winman's audit module has 20 years of edge-case maturity; CAGos covers the standard cases well. For pure audit firms doing heavy statutory audit work, Winman's depth may still be the right fit.",
+        "CAGOS provides audit engagement management — checklists, structured workpapers, evidence linking, client data matrices, and ICAI peer-review-ready audit trails. Winman's audit module has 20 years of edge-case maturity; CAGOS covers the standard cases well. For pure audit firms doing heavy statutory audit work, Winman's depth may still be the right fit.",
     },
     {
       question: "Why move from desktop to cloud?",
@@ -314,17 +314,17 @@ const data: VsPageData = {
     {
       question: "Is the cloud secure for client data?",
       answer:
-        "CAGos is ISO 27001-aligned with AES-256 encryption at rest, TLS in transit, and SOC 2-style audit logging. Data is stored on Cloudflare's India edge with no third-country transit. For most firms, this is materially better than desktop file shares on local NAS or USB drives.",
+        "CAGOS is ISO 27001-aligned with AES-256 encryption at rest, TLS in transit, and SOC 2-style audit logging. Data is stored on Cloudflare's India edge with no third-country transit. For most firms, this is materially better than desktop file shares on local NAS or USB drives.",
     },
     {
       question: "What's the total cost of ownership difference?",
       answer:
-        "Year 1: CAGos is usually 20-40% cheaper because Winman charges per module (ITR + GST + audit + ERP) and you add 3rd-party CRM/HRMS/billing. Years 2-5: comparable. Where CAGos consistently saves is the avoided 'tool sprawl' cost — running 5 products is more expensive than running 1 in licensing, integration time, and team training.",
+        "Year 1: CAGOS is usually 20-40% cheaper because Winman charges per module (ITR + GST + audit + ERP) and you add 3rd-party CRM/HRMS/billing. Years 2-5: comparable. Where CAGOS consistently saves is the avoided 'tool sprawl' cost — running 5 products is more expensive than running 1 in licensing, integration time, and team training.",
     },
     {
-      question: "Can I keep Winman for audit and use CAGos for everything else?",
+      question: "Can I keep Winman for audit and use CAGOS for everything else?",
       answer:
-        "Yes — CAGos's API allows two-way sync with external filing tools. Some firms keep Winman's audit module while moving CRM/HRMS/billing/compliance tracking to CAGos. Long-term most consolidate to reduce stack complexity.",
+        "Yes — CAGOS's API allows two-way sync with external filing tools. Some firms keep Winman's audit module while moving CRM/HRMS/billing/compliance tracking to CAGOS. Long-term most consolidate to reduce stack complexity.",
     },
   ],
   lastVerified: "2026-05-11",
@@ -334,19 +334,19 @@ export const Route = createFileRoute("/vs/winman")({
   head: () =>
     seoHead({
       path: "/vs/winman",
-      title: "CAGos vs Winman: Cloud Practice Management vs Desktop CA-ERP (2026)",
+      title: "CAGOS vs Winman: Cloud Practice Management vs Desktop CA-ERP (2026)",
       description:
-        "Detailed comparison of CAGos and Winman for Indian CA firms — feature matrix, pricing, deployment models, and which one wins for solo, small, and mid-size firms.",
-      ogTitle: "CAGos vs Winman — A Modern CA Firm's Comparison",
+        "Detailed comparison of CAGOS and Winman for Indian CA firms — feature matrix, pricing, deployment models, and which one wins for solo, small, and mid-size firms.",
+      ogTitle: "CAGOS vs Winman — A Modern CA Firm's Comparison",
       ogDescription:
-        "Winman is mature desktop filing software. CAGos is cloud-native practice management. See the side-by-side feature matrix and pricing.",
+        "Winman is mature desktop filing software. CAGOS is cloud-native practice management. See the side-by-side feature matrix and pricing.",
       schema: [
         comparisonSchema({
           path: "/vs/winman",
-          headline: "CAGos vs Winman for Indian CA Firms",
+          headline: "CAGOS vs Winman for Indian CA Firms",
           description:
-            "Comparison of CAGos and Winman across filing, practice management, deployment, and pricing for Indian CA firms.",
-          about: ["CAGos", "Winman", "CA-ERP", "Practice Management Software India"],
+            "Comparison of CAGOS and Winman across filing, practice management, deployment, and pricing for Indian CA firms.",
+          about: ["CAGOS", "Winman", "CA-ERP", "Practice Management Software India"],
           datePublished: "2026-05-11",
           dateModified: "2026-05-11",
         }),

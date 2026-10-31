@@ -140,7 +140,7 @@ export function PainSection() {
             </div>
           </div>
 
-          {/* ── RIGHT: The CAGos Way (dark teal) ──────────── */}
+          {/* ── RIGHT: The CAGOS Way (dark teal) ──────────── */}
           <div className="bg-[#0a1a2e] rounded-3xl p-8 border border-teal-500/20 shadow-xl shadow-teal-500/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-72 h-72 bg-teal-500/6 rounded-full blur-3xl pointer-events-none" />
 
@@ -150,7 +150,7 @@ export function PainSection() {
                   <CheckCircle className="w-5 h-5 text-teal-400" />
                 </div>
                 <div>
-                  <p className="font-extrabold text-white text-lg">The CAGos Way</p>
+                  <p className="font-extrabold text-white text-lg">The CAGOS Way</p>
                   <p className="text-xs text-slate-400 mt-0.5">Automated, organised, and stress-free</p>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export function PainSection() {
                   <TrendingUp className="w-4 h-4 text-white" />
                 </div>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Firms on CAGos grow revenue by{" "}
+                  Firms on CAGOS grow revenue by{" "}
                   <span className="font-extrabold text-teal-400">38% on average</span> in the first
                   year — by taking on more clients without adding headcount.
                 </p>
